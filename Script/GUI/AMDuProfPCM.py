@@ -154,7 +154,7 @@ class AMDuProfPCM(QWidget):
         # Write code to go to the next page
 
 
-class TimeAndDuration(QWidget):
+class TargetSelect(QWidget):
     def __init__(self):
         super().__init__()
         self.options_selected = None
@@ -273,3 +273,90 @@ class TimeAndDuration(QWidget):
             self.buttons[idx].setStyleSheet("background-color: gold; color: black")
         else:
             self.buttons[idx].setStyleSheet("")
+
+
+class TimeAndDuration(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.options_selected = None
+        self.setWindowTitle("AMDuProf PCM Customizer")
+        self.setStyleSheet(
+            """
+            QMainWindow {
+                background-color: #000000;
+            }
+
+            QLabel#heading_label {
+                color: #FFFFFF;
+                font-family: "Arial";
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            QPushButton {
+                background-color: #4C4C4C;
+                color: #FFFFFF;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                font-family: "Arial";
+                font-size: 18px;
+            }
+
+            QPushButton:hover {
+                background-color: #777777;
+            }
+            """
+        )
+        self.resize(850, 500)
+
+        # Add the subheading label
+        self.subheading_label = QLabel("<font color='gold'><center><h2>Enter Profiling Duration & Frequency.</font></h2></center>", self)
+        self.subheading_label.setObjectName("subheading_label")
+        self.layout.addWidget(self.subheading_label)
+
+         # Add bullet points for additional information
+        self.bullet_points_label = QLabel(self)
+        self.bullet_points_label.setFont(self.custom_font)
+        self.bullet_points_label.setText(
+            "<ul>"
+            "<li><font color='gold'>Number of Entries = Duration/PMC Interval.</font></li>"
+            "<li><font color='gold'>Frequency = 1/PMC Interval.</font></li>"
+            "</ul>"
+        )
+        self.bullet_points_label.setWordWrap(True)
+
+        self.custom_font = QFont("Cascadia Mono", 13)
+
+        # Take input for the Address of AMDuProf/bin/ file
+        input_layout = QHBoxLayout()
+        self.label = QLabel(f"<font color='white'>Duration [in seconds]</font>")
+        self.label.setFont(self.custom_font)
+        input_layout.addWidget(self.label)
+
+        self.input_box = QLineEdit(self)
+        self.input_box.setFont(self.custom_font)
+        self.input_box.setStyleSheet("background-color: grey;")
+        self.input_box.setGeometry(50, 50, 300, 30)  # user_input = self.input_box.text()
+        input_layout.addWidget(self.input_box)
+
+        self.layout.addLayout(input_layout)
+
+        # Take input for the Address of AMDuProf/bin/ file
+        input_layout2 = QHBoxLayout()
+        self.label2 = QLabel(f"<font color='white'>Duration [in seconds]</font>")
+        self.label2.setFont(self.custom_font)
+        input_layout2.addWidget(self.label2)
+
+        self.input_box2 = QLineEdit(self)
+        self.input_box2.setFont(self.custom_font)
+        self.input_box2.setStyleSheet("background-color: grey;")
+        self.input_box2.setGeometry(50, 50, 300, 30)  # user_input = self.input_box2.text()
+        input_layout2.addWidget(self.input_box2)
+
+        self.layout.addLayout(input_layout2)
+
+
+
+        self.layout = QVBoxLayout()
+        self.custom_font = QFont("Cascadia Mono", 13)

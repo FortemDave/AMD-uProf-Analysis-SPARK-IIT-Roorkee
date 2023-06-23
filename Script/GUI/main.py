@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHB
 from PyQt5.QtGui import QFont
 from TitleWindow import TitleWindow
 from AMDuProfPCM import AMDuProfPCM
-from AMDuProfPCM import TimeAndDuration
+from AMDuProfPCM import TargetSelect
 
 
 class MainWindow(QMainWindow):
@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
 
         self.TitleWindow = TitleWindow()
         self.AMDuProfPCM = AMDuProfPCM()
-        self.TimeAndDuration = TimeAndDuration()
+        self.TimeAndDuration = TargetSelect()
 
 
         self.stacked_widget.addWidget(self.TitleWindow)
@@ -60,9 +60,14 @@ class MainWindow(QMainWindow):
     def navigate_to_PCM_Page_3(self):
         if self.TimeAndDuration.options_selected is None:
             # TODO: Warn to Select
-            pass
+            # pass
+            1 == 1
         elif self.TimeAndDuration.options_selected == all:
             # TODO: Go to the Next Page
+            1 == 1
+        
+        return
+
         
 
 # if __name__ == "__main__":
