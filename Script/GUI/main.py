@@ -60,14 +60,15 @@ class MainWindow(QMainWindow):
     def navigate_to_PCM_Page_3(self):
         if self.TimeAndDuration.options_selected is None:
             # TODO: Warn to Select
-            # pass
-            1 == 1
+            pass
         elif self.TimeAndDuration.options_selected == all:
             # TODO: Go to the Next Page
-            1 == 1
-        
-        return
-
+            pass
+        else:
+            # if the range is not set
+                # throw error
+            # go to the next Time and Duration Page
+            pass
         
 
 # if __name__ == "__main__":
