@@ -1,0 +1,68 @@
+{
+    "__comment": "GPU: AMD family MI100, model gfx908",
+    "view": {
+        "name": "GPU All",
+        "dc_config": [
+            "gpu"
+        ],
+        "event": [
+            {
+                "title": "GPU_UTIL (%)",
+                "sort": "descending"
+            },
+            {
+                "title": "VALU_INSTR (IPW)",
+                "sort": "none"
+            },
+            {
+                "title": "SALU_INSTR (IPW)",
+                "sort": "none"
+            },
+            {
+                "title": "SMEM_INSTR (IPW)",
+                "sort": "none"
+            },
+            {
+                "title": "LDS_INSTR (IPW)",
+                "sort": "none"
+            },
+            {
+                "title": "GDS_INSTR (IPW)",
+                "sort": "none"
+            },
+            {
+                "title": "VALU_UTIL (%)",
+                "sort": "none"
+            },
+            {
+                "title": "VALU_THREAD_DIVERGENCE (%)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_CACHE_HITS (PW)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_CACHE_MISSES (PW)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_CACHE_HIT_RATE (%)",
+                "sort": "none"
+            },
+            {
+                "title": "EA_32B_READ (PW)",
+                "sort": "none"
+            },
+            {
+                "title": "EA_64B_READ (PW)",
+                "sort": "none"
+            },
+            {
+                "title": "EA_READ_BW (GB/sec)",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of all GPU Profile samples."
+    }
+}

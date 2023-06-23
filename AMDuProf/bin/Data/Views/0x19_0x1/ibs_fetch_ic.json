@@ -1,0 +1,36 @@
+{
+    "__comment": "Processor: AMD family 19h, model 10h-1Fh",
+    "view": {
+        "name": "IBS fetch instruction cache",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_FETCH_ATTEMPT",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_COMP",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_IC_MISS",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_IC_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_LAT",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_FETCH_LATENCY",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of IBS attempted fetch instruction cache (IC) miss data."
+    }
+}

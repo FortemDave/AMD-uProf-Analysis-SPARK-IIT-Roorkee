@@ -1,0 +1,481 @@
+{ "events":
+[
+{
+  "EventName": "act_cmd.enable",
+  "EventCode": "0x5",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x80000000",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "act_cmd.rd_wr_mask",
+  "EventCode": "0x5",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x100",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "act_cmd.event_select",
+  "EventCode": "0x5",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "cas_cmd.enable",
+  "EventCode": "0xA",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x80000000",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "cas_cmd.rd_wr_mask",
+  "EventCode": "0xA",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x100",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "cas_cmd.event_select",
+  "EventCode": "0xA",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "data_slot_clks.enable",
+  "EventCode": "0x14",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x80000000",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "data_slot_clks.rd_wr_mask",
+  "EventCode": "0x14",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x100",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "data_slot_clks.event_select",
+  "EventCode": "0x14",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "mem_clk.enable",
+  "EventCode": "0x0",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x80000000",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "mem_clk.event_select",
+  "EventCode": "0x0",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "pchg_cmd.enable",
+  "EventCode": "0x6",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x80000000",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "pchg_cmd.rd_wr_mask",
+  "EventCode": "0x6",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x100",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "EventName": "pchg_cmd.event_select",
+  "EventCode": "0x6",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "umc",
+  "EventType": "FP"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0000",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0001",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0002",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_act_cmd_0002",
+  "EventCode": "0x5",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_0002",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0003",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_pchg_0003",
+  "EventCode": "0x6",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0004",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_low_0004",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0xe",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_med_0004",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0xd",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_high_0004",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0xb",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_urg_0004",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x7",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0005",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_rd_0005",
+  "EventCode": "0xa",
+  "RwMask": "0x1",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_wr_0005",
+  "EventCode": "0xa",
+  "RwMask": "0x2",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd32_b_0005",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x2",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd64_b_0005",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x1",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0006",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0007",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_data_slot_clks_0007",
+  "EventCode": "0x14",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0008",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0009",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0010",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_act_cmd_cs0_0010",
+  "EventCode": "0x5",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xe"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_cs0_0010",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xe"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0011",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0012",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_act_cmd_cs1_0012",
+  "EventCode": "0x5",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xd"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_cs1_0012",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xd"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0013",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0014",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0015",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_act_cmd_cs2_0015",
+  "EventCode": "0x5",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xb"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_cs2_0015",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0xb"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0016",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_act_cmd_cs3_0016",
+  "EventCode": "0x5",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x7"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "umc_cas_cmd_cs3_0016",
+  "EventCode": "0xa",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x7"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0017",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+},
+{
+  "CounterType": "UMC",
+  "EventName": "ip_clk_0018",
+  "EventCode": "0x0",
+  "RwMask": "0x0",
+  "PriorityMask": "0x0",
+  "SizeMask": "0x0",
+  "ChipSelMask": "0x0"
+}
+]
+}

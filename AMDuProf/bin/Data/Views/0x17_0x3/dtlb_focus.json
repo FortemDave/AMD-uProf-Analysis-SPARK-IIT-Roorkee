@@ -1,0 +1,48 @@
+{
+    "__comment": "Processor: AMD family 17h, model 30h-3Fh",
+    "view": {
+        "name": "DTLB",
+        "dc_config": [
+            "data_access"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DTLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_DTLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DTLB_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L2_DTLB_MISS_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to break out data translation lookaside buffer (DTLB) miss rates by level (L1 and L2.)"
+    }
+}

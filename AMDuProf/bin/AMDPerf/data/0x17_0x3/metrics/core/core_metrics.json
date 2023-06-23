@@ -1,0 +1,1204 @@
+{ "metric":
+[
+{
+	 "Abbreviation": "SectionIPCandProcessorUtilization",
+	 "Name": "#Section: IPC AND PROCESSOR UTILIZATION",
+	 "Expression": "",
+	 "Description": "Section: IPC AND PROCESSOR UTILIZATION",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionLs",
+	 "Name": "#Section: LS",
+	 "Expression": "",
+	 "Description": "Section: LS",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionICAndTlb",
+	 "Name": "#Section: IC and TLB",
+	 "Expression": "",
+	 "Description": "Section: IC and TLB",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionMs",
+	 "Name": "#Section: MS",
+	 "Expression": "",
+	 "Description": "Section: MS",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionDispatch",
+	 "Name": "#Section: DISPATCH",
+	 "Expression": "",
+	 "Description": "Section: DISPATCH",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionBpExFp",
+	 "Name": "#Section: BP - EX and FP",
+	 "Expression": "",
+	 "Description": "Section: BP - EX and FP",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SectionL2",
+	 "Name": "#Section: L2",
+	 "Expression": "",
+	 "Description": "Section: L2",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgIPC(w/halt)",
+	 "Name": "Avg IPC (w/ halt)",
+	 "Expression": "(OsUserInst)/((tsc)*(aperf)/(mperf))",
+	 "Description": "Avg IPC (w/ halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgUPC(w/halt)",
+	 "Name": "Avg UPC (w/ halt)",
+	 "Expression": "((ExRetCops:k)+(ExRetCops:u))/((tsc)*(aperf)/(mperf))",
+	 "Description": "Avg UPC (w/ halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgCPI(w/halt)",
+	 "Name": "Avg CPI (w/ halt)",
+	 "Expression": "((tsc)*(aperf)/(mperf))/(OsUserInst)",
+	 "Description": "Avg CPI (w/ halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgCPU(w/halt)",
+	 "Name": "Avg CPU (w/ halt)",
+	 "Expression": "((tsc)*(aperf)/(mperf))/((ExRetCops:k)+(ExRetCops:u))",
+	 "Description": "Avg CPU (w/ halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgIPC(w/ohalt)",
+	 "Name": "Avg IPC (w/o halt)",
+	 "Expression": "(OsUserInst)/(aperf)",
+	 "Description": "Avg IPC (w/o halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgUPC(w/ohalt)",
+	 "Name": "Avg UPC (w/o halt)",
+	 "Expression": "((ExRetCops:k)+(ExRetCops:u))/(aperf)",
+	 "Description": "Avg UPC (w/o halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgCPI(w/ohalt)",
+	 "Name": "Avg CPI (w/o halt)",
+	 "Expression": "(aperf)/(OsUserInst)",
+	 "Description": "Avg CPI (w/o halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "AvgCPU(w/ohalt)",
+	 "Name": "Avg CPU (w/o halt)",
+	 "Expression": "(aperf)/((ExRetCops:k)+(ExRetCops:u))",
+	 "Description": "Avg CPU (w/o halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "UserIPC",
+	 "Name": "User IPC",
+	 "Expression": "(retired_instructions:u)/(LsNotHaltedCyc:u)",
+	 "Description": "User IPC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "UserUPC",
+	 "Name": "User UPC",
+	 "Expression": "(ExRetCops:u)/(LsNotHaltedCyc:u)",
+	 "Description": "User UPC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SystemIPC",
+	 "Name": "System IPC",
+	 "Expression": "(retired_instructions:k)/(LsNotHaltedCyc:k)",
+	 "Description": "System IPC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SystemUPC",
+	 "Name": "System UPC",
+	 "Expression": "(ExRetCops:k)/(LsNotHaltedCyc:k)",
+	 "Description": "System UPC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "UserCPI",
+	 "Name": "User CPI",
+	 "Expression": "(LsNotHaltedCyc:u)/(retired_instructions:u)",
+	 "Description": "User CPI",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "UserCPU",
+	 "Name": "User CPU",
+	 "Expression": "(LsNotHaltedCyc:u)/(ExRetCops:u)",
+	 "Description": "User CPU",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SystemCPI",
+	 "Name": "System CPI",
+	 "Expression": "(LsNotHaltedCyc:k)/(retired_instructions:k)",
+	 "Description": "System CPI",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SystemCPU",
+	 "Name": "System CPU",
+	 "Expression": "(LsNotHaltedCyc:k)/(ExRetCops:k)",
+	 "Description": "System CPU",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Totalclocks(M)",
+	 "Name": "Total clocks (M)",
+	 "Expression": "(fEventSets)*(tsc)/1000000.0",
+	 "Description": "Total clocks (M)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Totalinst(M)",
+	 "Name": "Total inst (M)",
+	 "Expression": "(fEventSets)*((retired_instructions:k)+(retired_instructions:u))/1000000.0",
+	 "Description": "Total inst (M)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Totaluops(M)",
+	 "Name": "Total uops (M)",
+	 "Expression": "(fEventSets)*((ExRetCops:k)+(ExRetCops:u))/1000000.0",
+	 "Description": "Total uops (M)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Userinst(PercOf)",
+	 "Name": "User inst (%)",
+	 "Expression": "(retired_instructions:u)*100.0/((retired_instructions:u)+(retired_instructions:k))",
+	 "Description": "User inst (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Systeminst(PercOf)",
+	 "Name": "System inst (%)",
+	 "Expression": "(retired_instructions:k)*100.0/((retired_instructions:u)+(retired_instructions:k))",
+	 "Description": "System inst (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Usertime(PercOf)",
+	 "Name": "User time (%)",
+	 "Expression": "(LsNotHaltedCyc:u)*100.00/(aperf)",
+	 "Description": "User time (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Systemtime(PercOf)",
+	 "Name": "System time (%)",
+	 "Expression": "(LsNotHaltedCyc:k)*100.00/(aperf)",
+	 "Description": "System time (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Overallutilization(PercOf)",
+	 "Name": "Overall utilization (%)",
+	 "Expression": "((mperf))*100.0/(tsc)",
+	 "Description": "Overall utilization (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "CPUreference(MHz)",
+	 "Name": "CPU reference (MHz)",
+	 "Expression": "(fCpuMhz)",
+	 "Description": "CPU reference (MHz)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "CPUeffective(Mhz)",
+	 "Name": "CPU effective (Mhz)",
+	 "Expression": "((aperf)/(mperf))*(fCpuMhz)",
+	 "Description": "CPU effective (Mhz)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "Timer(MHz)",
+	 "Name": "Timer (MHz)",
+	 "Expression": "fTimerMhz",
+	 "Description": "Timer (MHz)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "LSuopdisp",
+	 "Name": "LS uop disp",
+	 "Expression": "(((LsDispatch.LdDispatch)+(LsDispatch.StoreDispatch)+(LsDispatch.LdStDispatch))*1000.0)/(OsUserInst)",
+	 "Description": "LS uop disp",
+	 "Child": "LS uop disp Ld, LS uop disp St, LS uop disp Ld-Op-St",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "LSuopdispLd",
+	 "Name": "LS uop disp Ld",
+	 "Expression": "((LsDispatch.LdDispatch)*1000.0)/(OsUserInst)",
+	 "Description": "LS uop disp Ld",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "LSuopdispSt",
+	 "Name": "LS uop disp St",
+	 "Expression": "((LsDispatch.StoreDispatch)*1000.0)/(OsUserInst)",
+	 "Description": "LS uop disp St",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "LSuopdispLd-Op-St",
+	 "Name": "LS uop disp Ld-Op-St",
+	 "Expression": "((LsDispatch.LdStDispatch)*1000.0)/(OsUserInst)",
+	 "Description": "LS uop disp Ld-Op-St",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReq",
+	 "Name": "DTLB Req",
+	 "Expression": "((((LsDispatch.LdDispatch)+(LsDispatch.StoreDispatch)+(LsDispatch.LdStDispatch))*1000.0)/(OsUserInst))",
+	 "Description": "DTLB Req",
+	 "Child": "DTLB Req Hit, DTLB Req Miss, DTLB Req L2 DTLB Hit",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqHit",
+	 "Name": "DTLB Req Hit",
+	 "Expression": "((((LsDispatch.LdDispatch)+(LsDispatch.StoreDispatch)+(LsDispatch.LdStDispatch))*1000.0)/(OsUserInst))-(((((((LsL1DTlbMiss.TlbReload4KL2Hit)+(LsL1DTlbMiss.TlbReloadCoalescedPageHit)+(LsL1DTlbMiss.TlbReload2ML2Hit)+(LsL1DTlbMiss.TlbReload1GL2Hit)))+(((LsL1DTlbMiss.TlbReload4KL2Miss)+(LsL1DTlbMiss.TlbReloadCoalescedPageMiss)+(LsL1DTlbMiss.TlbReload2ML2Miss)+(LsL1DTlbMiss.TlbReload1GL2Miss)))))*1000.0)/(OsUserInst))",
+	 "Description": "DTLB Req Hit",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqMiss",
+	 "Name": "DTLB Req Miss",
+	 "Expression": "((((((LsL1DTlbMiss.TlbReload4KL2Hit)+(LsL1DTlbMiss.TlbReloadCoalescedPageHit)+(LsL1DTlbMiss.TlbReload2ML2Hit)+(LsL1DTlbMiss.TlbReload1GL2Hit)))+(((LsL1DTlbMiss.TlbReload4KL2Miss)+(LsL1DTlbMiss.TlbReloadCoalescedPageMiss)+(LsL1DTlbMiss.TlbReload2ML2Miss)+(LsL1DTlbMiss.TlbReload1GL2Miss)))))*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req Miss",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHit",
+	 "Name": "DTLB Req L2 DTLB Hit",
+	 "Expression": "((((LsL1DTlbMiss.TlbReload4KL2Hit)+(LsL1DTlbMiss.TlbReloadCoalescedPageHit)+(LsL1DTlbMiss.TlbReload2ML2Hit)+(LsL1DTlbMiss.TlbReload1GL2Hit)))*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit",
+	 "Child": "DTLB Req L2 DTLB Hit 4K, DTLB Req L2 DTLB Hit 4K+, DTLB Req L2 DTLB Hit 2M, DTLB Req L2 DTLB Hit 1G, DTLB Req L2 DTLB Hit Miss",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHit4K",
+	 "Name": "DTLB Req L2 DTLB Hit 4K",
+	 "Expression": "((LsL1DTlbMiss.TlbReload4KL2Hit)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit 4K",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHit4K+",
+	 "Name": "DTLB Req L2 DTLB Hit 4K+",
+	 "Expression": "((LsL1DTlbMiss.TlbReloadCoalescedPageHit)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit 4K+",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHit2M",
+	 "Name": "DTLB Req L2 DTLB Hit 2M",
+	 "Expression": "((LsL1DTlbMiss.TlbReload2ML2Hit)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit 2M",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHit1G",
+	 "Name": "DTLB Req L2 DTLB Hit 1G",
+	 "Expression": "((LsL1DTlbMiss.TlbReload1GL2Hit)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit 1G",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHitMiss",
+	 "Name": "DTLB Req L2 DTLB Hit Miss",
+	 "Expression": "((((LsL1DTlbMiss.TlbReload4KL2Miss)+(LsL1DTlbMiss.TlbReloadCoalescedPageMiss)+(LsL1DTlbMiss.TlbReload2ML2Miss)+(LsL1DTlbMiss.TlbReload1GL2Miss)))*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit Miss",
+	 "Child": "DTLB Req L2 DTLB Hit Miss 4K, DTLB Req L2 DTLB Hit Miss 4K+, DTLB Req L2 DTLB Hit Miss 2M, DTLB Req L2 DTLB Hit Miss 1G",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHitMiss4K",
+	 "Name": "DTLB Req L2 DTLB Hit Miss 4K",
+	 "Expression": "((LsL1DTlbMiss.TlbReload4KL2Miss)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit Miss 4K",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHitMiss4K+",
+	 "Name": "DTLB Req L2 DTLB Hit Miss 4K+",
+	 "Expression": "((LsL1DTlbMiss.TlbReloadCoalescedPageMiss)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit Miss 4K+",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHitMiss2M",
+	 "Name": "DTLB Req L2 DTLB Hit Miss 2M",
+	 "Expression": "((LsL1DTlbMiss.TlbReload2ML2Miss)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit Miss 2M",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DTLBReqL2DTLBHitMiss1G",
+	 "Name": "DTLB Req L2 DTLB Hit Miss 1G",
+	 "Expression": "((LsL1DTlbMiss.TlbReload1GL2Miss)*1000.0)/(OsUserInst)",
+	 "Description": "DTLB Req L2 DTLB Hit Miss 1G",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "T0/T1/T2/W",
+	 "Name": "Sw Pf Instr T0/T1/T2/W",
+	 "Expression": "((LsPrefInstrDisp.Prefetch)*1000.0)/(OsUserInst)",
+	 "Description": "Sw Pf Instr T0/T1/T2/W",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "LdNTA",
+	 "Name": "Sw Pf Instr Ld NTA",
+	 "Expression": "((LsPrefInstrDisp.PrefetchNTA)*1000.0)/(OsUserInst)",
+	 "Description": "Sw Pf Instr Ld NTA",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SwPfIneff",
+	 "Name": "Sw Pf Ineff",
+	 "Expression": "(((LsInefSwPref.DataPipeSwPfDcHit)+(LsInefSwPref.MabMchCnt))*1000.0)/(OsUserInst)",
+	 "Description": "Sw Pf Ineff",
+	 "Child": "Sw Pf Ineff Dc Hit, Sw Pf Ineff Mab Hit",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SwPfIneffDcHit",
+	 "Name": "Sw Pf Ineff Dc Hit",
+	 "Expression": "((LsInefSwPref.DataPipeSwPfDcHit)*1000.0)/(OsUserInst)",
+	 "Description": "Sw Pf Ineff Dc Hit",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SwPfIneffMabHit",
+	 "Name": "Sw Pf Ineff Mab Hit",
+	 "Expression": "((LsInefSwPref.MabMchCnt)*1000.0)/(OsUserInst)",
+	 "Description": "Sw Pf Ineff Mab Hit",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L2",
+	 "Name": "DC Fill (local) demand L2",
+	 "Expression": "((LsRefillsFromSys.MABRESP_LCL_L2)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) demand L2",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "othercache",
+	 "Name": "DC Fill (local) demand other cache",
+	 "Expression": "((LsRefillsFromSys.LS_MABRESP_LCL_CACHE)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) demand other cache",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "mem",
+	 "Name": "DC Fill (local) demand mem",
+	 "Expression": "((LsRefillsFromSys.LS_MABRESP_LCL_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) demand mem",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L2",
+	 "Name": "DC Fill (local) hw pf L2",
+	 "Expression": "((LsHwPfDcFills.MABRESP_LCL_L2)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) hw pf L2",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "othercache",
+	 "Name": "DC Fill (local) hw pf other cache",
+	 "Expression": "((LsHwPfDcFills.LS_MABRESP_LCL_CACHE)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) hw pf other cache",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "mem",
+	 "Name": "DC Fill (local) hw pf mem",
+	 "Expression": "((LsHwPfDcFills.LS_MABRESP_LCL_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) hw pf mem",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "swpf",
+	 "Name": "DC Fill (local) sw pf",
+	 "Expression": "((LsSwPfDcFills.MABRESP_LCL_L2.LS_MABRESP_LCL_CACHE.LS_MABRESP_LCL_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (local) sw pf",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "demand",
+	 "Name": "DC Fill (remote) demand",
+	 "Expression": "((((LsRefillsFromSys.LS_MABRESP_RMT_CACHE)+(LsRefillsFromSys.LS_MABRESP_RMT_DRAM)))*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) demand",
+	 "Child": "DC Fill (remote) demand cache, DC Fill (remote) demand mem",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "demandcache",
+	 "Name": "DC Fill (remote) demand cache",
+	 "Expression": "((LsRefillsFromSys.LS_MABRESP_RMT_CACHE)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) demand cache",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "demandmem",
+	 "Name": "DC Fill (remote) demand mem",
+	 "Expression": "((LsRefillsFromSys.LS_MABRESP_RMT_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) demand mem",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "hwpf",
+	 "Name": "DC Fill (remote) hw pf",
+	 "Expression": "((((LsHwPfDcFills.LS_MABRESP_RMT_CACHE)+(LsHwPfDcFills.LS_MABRESP_RMT_DRAM)))*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) hw pf",
+	 "Child": "DC Fill (remote) hw pf cache, DC Fill (remote) hw pf mem",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "hwpfcache",
+	 "Name": "DC Fill (remote) hw pf cache",
+	 "Expression": "((LsHwPfDcFills.LS_MABRESP_RMT_CACHE)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) hw pf cache",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "hwpfmem",
+	 "Name": "DC Fill (remote) hw pf mem",
+	 "Expression": "((LsHwPfDcFills.LS_MABRESP_RMT_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) hw pf mem",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "swpf",
+	 "Name": "DC Fill (remote) sw pf",
+	 "Expression": "((LsSwPfDcFills.LS_MABRESP_RMT_CACHE.LS_MABRESP_RMT_DRAM)*1000.0)/(OsUserInst)",
+	 "Description": "DC Fill (remote) sw pf",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "CPUIDInstruction",
+	 "Name": "CPUID Instruction",
+	 "Expression": "((LsRetCpuid)*1000.0)/(OsUserInst)",
+	 "Description": "CPUID Instruction",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "CLFLUSHInstruction",
+	 "Name": "CLFLUSH Instruction",
+	 "Expression": "((LsRetClClush)*1000.0)/(OsUserInst)",
+	 "Description": "CLFLUSH Instruction",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L1Ifetchreq(32B)",
+	 "Name": "L1I fetch req(32B)",
+	 "Expression": "((((BpL1TlbFetchHit.IF4K.IF2M.IF1G)+(((BpL1TlbMissL2TlbHit)+(BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G)))))*1000.0)/(OsUserInst)",
+	 "Description": "L1I fetch req(32B)",
+	 "Child": "L1I fetch req(32B) hit (32B), L1I fetch req(32B) miss (64B)",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L1Ifetchreq(32B)hit(32B)",
+	 "Name": "L1I fetch req(32B) hit (32B)",
+	 "Expression": "(((((BpL1TlbFetchHit.IF4K.IF2M.IF1G)+(((BpL1TlbMissL2TlbHit)+(BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G)))))-(L2CacheReqStat.IcFillMiss.IcFillHitS.IcFillHitX))*1000.0)/(OsUserInst)",
+	 "Description": "L1I fetch req(32B) hit (32B)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L1Ifetchreq(32B)miss(64B)",
+	 "Name": "L1I fetch req(32B) miss (64B)",
+	 "Expression": "((L2CacheReqStat.IcFillMiss.IcFillHitS.IcFillHitX)*1000.0)/(OsUserInst)",
+	 "Description": "L1I fetch req(32B) miss (64B)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L2fill",
+	 "Name": "IC MAB req L2 fill",
+	 "Expression": "((IcCacheFillL2)*1000.0)/(OsUserInst)",
+	 "Description": "IC MAB req L2 fill",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "L3/Memfill",
+	 "Name": "IC MAB req L3/Mem fill",
+	 "Expression": "((IcCacheFillSys)*1000.0)/(OsUserInst)",
+	 "Description": "IC MAB req L3/Mem fill",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ITLBReq",
+	 "Name": "ITLB Req",
+	 "Expression": "((((BpL1TlbFetchHit.IF4K.IF2M.IF1G)+(((BpL1TlbMissL2TlbHit)+(BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G)))))*1000.0)/(OsUserInst)",
+	 "Description": "ITLB Req",
+	 "Child": "ITLB Req Hit, ITLB Req Miss, ITLB Req L2 ITLB Hit",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ITLBReqHit",
+	 "Name": "ITLB Req Hit",
+	 "Expression": "((BpL1TlbFetchHit.IF4K.IF2M.IF1G)*1000.0)/(OsUserInst)",
+	 "Description": "ITLB Req Hit",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ITLBReqMiss",
+	 "Name": "ITLB Req Miss",
+	 "Expression": "((((BpL1TlbMissL2TlbHit)+(BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G)))*1000.0)/(OsUserInst)",
+	 "Description": "ITLB Req Miss",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ITLBReqL2ITLBHit",
+	 "Name": "ITLB Req L2 ITLB Hit",
+	 "Expression": "((BpL1TlbMissL2TlbHit)*1000.0)/(OsUserInst)",
+	 "Description": "ITLB Req L2 ITLB Hit",
+	 "Child": "ITLB Req L2 ITLB Hit Miss",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ITLBReqL2ITLBHitMiss",
+	 "Name": "ITLB Req L2 ITLB Hit Miss",
+	 "Expression": "((BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G)*1000.0)/(OsUserInst)",
+	 "Description": "ITLB Req L2 ITLB Hit Miss",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IFTotalRedirect/Fixups",
+	 "Name": "IF Total Redirect/Fixups",
+	 "Expression": "(((BpL1BTBCorrect)+(BpL2BTBCorrect)+(BpDeReDirect))*1000.0)/(OsUserInst)",
+	 "Description": "IF Total Redirect/Fixups",
+	 "Child": "IF Total Redirect/Fixups L1 BTB, IF Total Redirect/Fixups L2 BTB, IF Total Redirect/Fixups DE",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IFTotalRedirect/FixupsL1BTB",
+	 "Name": "IF Total Redirect/Fixups L1 BTB",
+	 "Expression": "((BpL1BTBCorrect)*1000.0)/(OsUserInst)",
+	 "Description": "IF Total Redirect/Fixups L1 BTB",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IFTotalRedirect/FixupsL2BTB",
+	 "Name": "IF Total Redirect/Fixups L2 BTB",
+	 "Expression": "((BpL2BTBCorrect)*1000.0)/(OsUserInst)",
+	 "Description": "IF Total Redirect/Fixups L2 BTB",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IFTotalRedirect/FixupsDE",
+	 "Name": "IF Total Redirect/Fixups DE",
+	 "Expression": "((BpDeReDirect)*1000.0)/(OsUserInst)",
+	 "Description": "IF Total Redirect/Fixups DE",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "RETURNInstRetired",
+	 "Name": "RETURN Inst Retired",
+	 "Expression": "(((ExRetNearRet)*1000.0)/(OsUserInst))",
+	 "Description": "RETURN Inst Retired",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "instr/1000-ret-instr",
+	 "Name": "OC way-set accessed instr/1000-ret-instr",
+	 "Expression": "((DeDisUopsFromDecoder.OpCacheDispatched)*1000)/(OsUserInst)",
+	 "Description": "OC way-set accessed instr/1000-ret-instr",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "TotalSPECinstr(M)",
+	 "Name": "Total SPEC instr (M)",
+	 "Expression": "(fEventSets)*((DeDisUopsFromDecoder.DecoderDispatched)+(DeDisUopsFromDecoder.OpCacheDispatched))/1000000.0",
+	 "Description": "Total SPEC instr (M)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "InstrwrtoUopQ",
+	 "Name": "Instr wr to UopQ",
+	 "Expression": "(((DeDisUopsFromDecoder.DecoderDispatched)+(DeDisUopsFromDecoder.OpCacheDispatched))*1000.0)/(OsUserInst)",
+	 "Description": "Instr wr to UopQ",
+	 "Child": "Instr wr to UopQ DE (%), Instr wr to UopQ Uop$ (%)",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "InstrwrtoUopQDE(PercOf)",
+	 "Name": "Instr wr to UopQ DE (%)",
+	 "Expression": "((DeDisUopsFromDecoder.DecoderDispatched)*100.0)/((DeDisUopsFromDecoder.DecoderDispatched)+(DeDisUopsFromDecoder.OpCacheDispatched))",
+	 "Description": "Instr wr to UopQ DE (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "InstrwrtoUopQUop$(PercOf)",
+	 "Name": "Instr wr to UopQ Uop$ (%)",
+	 "Expression": "((DeDisUopsFromDecoder.OpCacheDispatched)*100.0)/((DeDisUopsFromDecoder.DecoderDispatched)+(DeDisUopsFromDecoder.OpCacheDispatched))",
+	 "Description": "Instr wr to UopQ Uop$ (%)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DSPIPC(w/ohalt)",
+	 "Name": "DSP IPC (w/o halt)",
+	 "Expression": "(((OsUserInst)))/(aperf)",
+	 "Description": "DSP IPC (w/o halt)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "clksper1000instr",
+	 "Name": "clks per 1000 instr",
+	 "Expression": "((aperf)*1000.0)/(OsUserInst)",
+	 "Description": "clks per 1000 instr",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetired",
+	 "Name": "Branches Retired",
+	 "Expression": "((ExRetBrn)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired",
+	 "Child": "Branches Retired mispred, Branches Retired taken, Branches Retired not-taken, Branches Retired conditional, Branches Retired indirect jump, Branches Retired near return, Branches Retired far-ctrl-trnsfr",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredmispred",
+	 "Name": "Branches Retired mispred",
+	 "Expression": "((ExRetBrnMisp)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired mispred",
+	 "Child": "Branches Retired mispred %",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredmispredPercOf",
+	 "Name": "Branches Retired mispred %",
+	 "Expression": "100.0*(ExRetBrnMisp)/(ExRetBrn)",
+	 "Description": "Branches Retired mispred %",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredtaken",
+	 "Name": "Branches Retired taken",
+	 "Expression": "((ExRetBrnTkn)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired taken",
+	 "Child": "Branches Retired taken mispred",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredtakenmispred",
+	 "Name": "Branches Retired taken mispred",
+	 "Expression": "((ExRetBrnTknMisp)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired taken mispred",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetirednot-taken",
+	 "Name": "Branches Retired not-taken",
+	 "Expression": "(((ExRetBrn)-(ExRetBrnTkn))*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired not-taken",
+	 "Child": "Branches Retired not-taken mispred",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetirednot-takenmispred",
+	 "Name": "Branches Retired not-taken mispred",
+	 "Expression": "(((ExRetBrnMisp)-(ExRetBrnTknMisp))*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired not-taken mispred",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredconditional",
+	 "Name": "Branches Retired conditional",
+	 "Expression": "((ExRetCond)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired conditional",
+	 "Child": "Branches Retired conditional mispred",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredconditionalmispred",
+	 "Name": "Branches Retired conditional mispred",
+	 "Expression": "((ExRetMsprdBrnchInstrDirMsmtch)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired conditional mispred",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredindirectjump",
+	 "Name": "Branches Retired indirect jump",
+	 "Expression": "((BpDynIndPred)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired indirect jump",
+	 "Child": "Branches Retired indirect jump mispred",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredindirectjumpmispred",
+	 "Name": "Branches Retired indirect jump mispred",
+	 "Expression": "((ExRetBrnIndMisp)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired indirect jump mispred",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetirednearreturn",
+	 "Name": "Branches Retired near return",
+	 "Expression": "((ExRetNearRet)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired near return",
+	 "Child": "Branches Retired near return mispred",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetirednearreturnmispred",
+	 "Name": "Branches Retired near return mispred",
+	 "Expression": "((ExRetNearRetMispred)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired near return mispred",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesRetiredfar-ctrl-trnsfr",
+	 "Name": "Branches Retired far-ctrl-trnsfr",
+	 "Expression": "((ExRetBrnFar)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Retired far-ctrl-trnsfr",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BranchesFused",
+	 "Name": "Branches Fused",
+	 "Expression": "((ExRetFusBrnchInst)*1000.0)/(OsUserInst)",
+	 "Description": "Branches Fused",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "EXDIVOps",
+	 "Name": "EX DIV Ops",
+	 "Expression": "((ExDivCount)*1000.0)/(OsUserInst)",
+	 "Description": "EX DIV Ops",
+	 "Child": "EX DIV Ops lat (CCLKs)",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "EXDIVOpslat(CCLKs)",
+	 "Name": "EX DIV Ops lat (CCLKs)",
+	 "Expression": "((ExDivBusy)/(ExDivCount))",
+	 "Description": "EX DIV Ops lat (CCLKs)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPInstrRetired",
+	 "Name": "FP Instr Retired",
+	 "Expression": "(((ExRetMmxFpInstr.SseInstr)+(ExRetMmxFpInstr.MmxInstr)+(ExRetMmxFpInstr.X87Instr))*1000.0)/(OsUserInst)",
+	 "Description": "FP Instr Retired",
+	 "Child": "FP Instr Retired avx/sse, FP Instr Retired mmx, FP Instr Retired x87",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPInstrRetiredavx/sse",
+	 "Name": "FP Instr Retired avx/sse",
+	 "Expression": "((ExRetMmxFpInstr.SseInstr)*1000.0)/(OsUserInst)",
+	 "Description": "FP Instr Retired avx/sse",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPInstrRetiredmmx",
+	 "Name": "FP Instr Retired mmx",
+	 "Expression": "((ExRetMmxFpInstr.MmxInstr)*1000.0)/(OsUserInst)",
+	 "Description": "FP Instr Retired mmx",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPInstrRetiredx87",
+	 "Name": "FP Instr Retired x87",
+	 "Expression": "((ExRetMmxFpInstr.X87Instr)*1000.0)/(OsUserInst)",
+	 "Description": "FP Instr Retired x87",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPSpill/FillFaults",
+	 "Name": "FP Spill/Fill Faults",
+	 "Expression": "((FpDispFaults.x87FillFault.XmmFillFault.YmmFillFault.YmmSpillFault)*1000.0)/(OsUserInst)",
+	 "Description": "FP Spill/Fill Faults",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FPSerializingUopRet",
+	 "Name": "FP Serializing Uop Ret",
+	 "Expression": "((FpRetiredSerOps.X87CtrlRet.X87BotRet.SseCtrlRet.SseBotRet)*1000.0)/(OsUserInst)",
+	 "Description": "FP Serializing Uop Ret",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPperinstr",
+	 "Name": "FLOP per instr",
+	 "Expression": "((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))/(OsUserInst)",
+	 "Description": "FLOP per instr",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPpercclk",
+	 "Name": "FLOP per cclk",
+	 "Expression": "((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))/(aperf)",
+	 "Description": "FLOP per cclk",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPs(GFLOPs)",
+	 "Name": "FLOPs (GFLOPs)",
+	 "Expression": "((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))/(mperf)*(fCpuMhz)/1000.0",
+	 "Description": "FLOPs (GFLOPs)",
+	 "Child": "FLOPs (GFLOPs) % add or sub, FLOPs (GFLOPs) % mul, FLOPs (GFLOPs) % div, FLOPs (GFLOPs) % fmac",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPs(GFLOPs)PercOfaddorsub",
+	 "Name": "FLOPs (GFLOPs) % add or sub",
+	 "Expression": "(100.0*(FpRetSseAvxOps.AddSubFLOPs))/((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))",
+	 "Description": "FLOPs (GFLOPs) % add or sub",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPs(GFLOPs)PercOfmul",
+	 "Name": "FLOPs (GFLOPs) % mul",
+	 "Expression": "(100.0*(FpRetSseAvxOps.MultFLOPs))/((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))",
+	 "Description": "FLOPs (GFLOPs) % mul",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPs(GFLOPs)PercOfdiv",
+	 "Name": "FLOPs (GFLOPs) % div",
+	 "Expression": "(100.0*(FpRetSseAvxOps.DivFLOPs))/((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))",
+	 "Description": "FLOPs (GFLOPs) % div",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "FLOPs(GFLOPs)PercOffmac",
+	 "Name": "FLOPs (GFLOPs) % fmac",
+	 "Expression": "(100.0*((FpRetSseAvxOps.MacFLOPs)))/((FpRetSseAvxOps.AddSubFLOPs)+(FpRetSseAvxOps.MultFLOPs)+(FpRetSseAvxOps.DivFLOPs)+((FpRetSseAvxOps.MacFLOPs)))",
+	 "Description": "FLOPs (GFLOPs) % fmac",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DC",
+	 "Name": "L2 Req DC",
+	 "Expression": "(((L2RequestG1.RdBlkL)+(L2RequestG1.RdBlkX)+(L2RequestG1.ChangeToX))*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req DC",
+	 "Child": "L2 Req DC RdBlkL, L2 Req DC RdBlkX, L2 Req DC Chg2X",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCRdBlkL",
+	 "Name": "L2 Req DC RdBlkL",
+	 "Expression": "((L2RequestG1.RdBlkL)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req DC RdBlkL",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCRdBlkX",
+	 "Name": "L2 Req DC RdBlkX",
+	 "Expression": "((L2RequestG1.RdBlkX)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req DC RdBlkX",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCChg2X",
+	 "Name": "L2 Req DC Chg2X",
+	 "Expression": "((L2RequestG1.ChangeToX)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req DC Chg2X",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IC",
+	 "Name": "L2 Req IC",
+	 "Expression": "((L2RequestG1.CacheableIcRead)*1000.0)/(OsUserInst)+(((L2RequestG2.IcRdSized)+(L2RequestG2.IcRdSizedNC))*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req IC",
+	 "Child": "L2 Req IC $able/clean, L2 Req IC nt-$able/ coherent, L2 Req IC nt-$able/nt-coherent",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IC$able/clean",
+	 "Name": "L2 Req IC $able/clean",
+	 "Expression": "((L2RequestG1.CacheableIcRead)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req IC $able/clean",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ICnt-$able/coherent",
+	 "Name": "L2 Req IC nt-$able/ coherent",
+	 "Expression": "((L2RequestG2.IcRdSized)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req IC nt-$able/ coherent",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ICnt-$able/nt-coherent",
+	 "Name": "L2 Req IC nt-$able/nt-coherent",
+	 "Expression": "((L2RequestG2.IcRdSizedNC)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req IC nt-$able/nt-coherent",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "TableWalker/RdBlkCS",
+	 "Name": "L2 Req Table Walker / RdBlkCS",
+	 "Expression": "((L2RequestG1.LsRdBlkC_S)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req Table Walker / RdBlkCS",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "other",
+	 "Name": "L2 Req other",
+	 "Expression": "((L2RequestG1.Group2)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req other",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "WC+(wcbNTstore)",
+	 "Name": "L2 Req WC+ (wcb NT store)",
+	 "Expression": "((L2RequestG2.LsRdSized)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req WC+ (wcb NT store)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "WC(IO)",
+	 "Name": "L2 Req WC(IO)",
+	 "Expression": "((L2RequestG2.LsRdSizedNC)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req WC(IO)",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "SMCInvld",
+	 "Name": "L2 Req SMC Invld",
+	 "Expression": "((L2RequestG2.SmcInval)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req SMC Invld",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BusLockOrig",
+	 "Name": "L2 Req Bus Lock Orig",
+	 "Expression": "((L2RequestG2.BusLocksOriginator)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req Bus Lock Orig",
+	 "Child": "L2 Req Bus Lock Orig Resp",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "BusLockOrigResp",
+	 "Name": "L2 Req Bus Lock Orig Resp",
+	 "Expression": "((L2RequestG2.BusLocksResponses)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Req Bus Lock Orig Resp",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DC",
+	 "Name": "L2 Hit DC",
+	 "Expression": "(((L2CacheReqStat.LsRdBlkX)+(L2CacheReqStat.LsRdBlkLHitS)+(L2CacheReqStat.LsRdBlkLHitX))*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit DC",
+	 "Child": "L2 Hit DC RdBlkL Hit E, L2 Hit DC RdBlkX/Chg2X HitE",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCRdBlkLHitE",
+	 "Name": "L2 Hit DC RdBlkL Hit E",
+	 "Expression": "((L2CacheReqStat.LsRdBlkLHitX)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit DC RdBlkL Hit E",
+	 "Child": "L2 Hit DC RdBlkL Hit E Hit S",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCRdBlkLHitEHitS",
+	 "Name": "L2 Hit DC RdBlkL Hit E Hit S",
+	 "Expression": "((L2CacheReqStat.LsRdBlkLHitS)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit DC RdBlkL Hit E Hit S",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DCRdBlkX/Chg2XHitE",
+	 "Name": "L2 Hit DC RdBlkX/Chg2X HitE",
+	 "Expression": "((L2CacheReqStat.LsRdBlkX)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit DC RdBlkX/Chg2X HitE",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IC",
+	 "Name": "L2 Hit IC",
+	 "Expression": "(((L2CacheReqStat.IcFillHitS)+(L2CacheReqStat.IcFillHitX))*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit IC",
+	 "Child": "L2 Hit IC Hit E, L2 Hit IC Hit S",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ICHitE",
+	 "Name": "L2 Hit IC Hit E",
+	 "Expression": "((L2CacheReqStat.IcFillHitX)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit IC Hit E",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "ICHitS",
+	 "Name": "L2 Hit IC Hit S",
+	 "Expression": "((L2CacheReqStat.IcFillHitS)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit IC Hit S",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "TableWalker/RdBlkCS",
+	 "Name": "L2 Hit Table Walker / RdBlkCS",
+	 "Expression": "((L2CacheReqStat.LsRdBlkCS)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Hit Table Walker / RdBlkCS",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "DC",
+	 "Name": "L2 Miss DC",
+	 "Expression": "((L2CacheReqStat.LsRdBlkC)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Miss DC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "IC",
+	 "Name": "L2 Miss IC",
+	 "Expression": "((L2CacheReqStat.IcFillMiss)*1000.0)/(OsUserInst)",
+	 "Description": "L2 Miss IC",
+	 "Child": "",
+	 "Unit": "unit"
+},
+{
+	 "Abbreviation": "possiblyinIC",
+	 "Name": "L3 Probes To L2 Invld possibly in IC",
+	 "Expression": "((LsNotHaltedP0Cyc.P0FreqCyc)*1000.0)/(OsUserInst)",
+	 "Description": "L3 Probes To L2 Invld possibly in IC",
+	 "Child": "",
+	 "Unit": "unit"
+}
+]
+}

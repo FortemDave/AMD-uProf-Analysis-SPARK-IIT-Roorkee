@@ -1,0 +1,131 @@
+---
+ cpu:
+    - family:0x19
+    - modelLow:0x10
+    - modelHigh:0x1F
+ events:
+      group0:
+          - aperf
+          - mperf
+          - irperf
+          - tsc
+      group1:
+          - de_no_dispatch_per_slot.stall_reason
+          - ls_not_halted_cyc
+          - de_no_dispatch_per_slot.stall_reason.cmask0x6
+          - ex_ret_ops
+          - ex_ret_ops:k
+          - ex_ret_ops:u
+      group2:
+          - ex_ret_instr:u
+          - ls_not_halted_cyc:u
+          - ex_ret_instr:k
+          - ls_not_halted_cyc:k
+          - ex_ret_ucode_instr
+          - de_src_op_disp.decoder
+      group3:
+          - de_src_op_disp.op_cache
+          - de_src_op_disp.loop_buffer
+          - ex_ret_brn
+          - ex_ret_brn_misp
+          - ex_ret_brn_tkn
+          - ex_ret_brn_tkn_misp
+      group4:
+          - ex_ret_cond
+          - ex_ret_msprd_brnch_instr_dir_msmtch
+          - ex_ret_uncond_brnch_instr
+          - ex_ret_near_ret
+          - ex_ret_ind_brch_instr
+          - ex_ret_brn_ind_misp
+      group5:
+          - ex_ret_near_ret_mispred
+          - ex_ret_brn_far
+          - bp_l2_btb_correct
+          - bp_dyn_ind_pred
+          - ic_cache_fill_l2
+          - ic_cache_fill_sys
+      group6:
+          - bp_l1_tlb_miss_l2_tlb_hit
+          - op_cache_hit_miss.op_cache_accesses
+          - ic_tag_hit_miss.ic_access_types
+          - ex_div_count
+          - ex_div_busy
+          - ex_ret_mmx_fp_instr.sse_instr
+      group7:
+          - ex_ret_mmx_fp_instr.mmx_instr
+          - ex_ret_mmx_fp_instr.x87_instr
+          - ex_ret_ops.cmask0x1
+          - ex_no_retire.empty
+          - ex_no_retire.not_complete
+          - ex_no_retire.other
+      group8:
+          - ex_no_retire.thread_not_selected
+          - fp_ret_sse_avx_ops.mac_flo_ps
+          - fp_ret_sse_avx_ops.add_sub_flo_ps
+          - fp_ret_sse_avx_ops.mult_flo_ps
+          - fp_ret_sse_avx_ops.div_flo_ps
+          - fp_ops_retired_by_type.scalar_fp_op_type
+      group9:
+          - fp_pack_ops_retired.fp128_op_type
+          - fp_pack_ops_retired.fp256_op_type
+          - fp_ops_retired_by_width.pack512u_ops_retired
+          - packed_int_op_type.int128_op_type
+          - packed_int_op_type.int256_op_type
+          - ls_dispatch.ld_dispatch
+      group10:
+          - ls_dispatch.store_dispatch
+          - ls_dispatch.ld_st_dispatch
+          - ls_l1_d_tlb_miss.tlb_reload4_kl2_hit
+          - ls_l1_d_tlb_miss.tlb_reload_coalesced_page_hit
+          - ls_l1_d_tlb_miss.tlb_reload2_ml2_hit
+          - ls_l1_d_tlb_miss.tlb_reload1_gl2_hit
+      group11:
+          - ls_l1_d_tlb_miss.tlb_reload4_kl2_miss
+          - ls_l1_d_tlb_miss.tlb_reload_coalesced_page_miss
+          - ls_l1_d_tlb_miss.tlb_reload2_ml2_miss
+          - ls_l1_d_tlb_miss.tlb_reload1_gl2_miss
+          - ls_bad_status2.stli_other
+          - ls_st_commit_cancel2.st_commit_cancel_wcb_full
+      group12:
+          - ls_pref_instr_disp.prefetch
+          - ls_inef_sw_pref.data_pipe_sw_pf_dc_hit
+          - ls_inef_sw_pref.mab_mch_cnt
+          - ls_alloc_mab_count
+          - ls_any_fills_from_sys.dram_io_near
+          - ls_any_fills_from_sys.dram_io_far
+      group13:
+          - ls_any_fills_from_sys.far_cache_near_far
+          - ls_any_fills_from_sys.local_l2
+          - ls_any_fills_from_sys.local_ccx
+          - ls_any_fills_from_sys.ext_cache_local
+          - ls_dmnd_fills_from_sys.local_l2
+          - ls_dmnd_fills_from_sys.local_ccx
+      group14:
+          - ls_dmnd_fills_from_sys.near_cache_near_far
+          - ls_dmnd_fills_from_sys.dram_io_near
+          - ls_hw_pf_dc_fills.local_l2
+          - ls_hw_pf_dc_fills.local_ccx
+          - ls_hw_pf_dc_fills.near_cache_near_far
+          - ls_hw_pf_dc_fills.dram_io_near
+      group15:
+          - ls_dmnd_fills_from_sys.far_cache_near_far
+          - ls_dmnd_fills_from_sys.dram_io_far
+          - ls_hw_pf_dc_fills.far_cache_near_far
+          - ls_hw_pf_dc_fills.dram_io_far
+          - ls_locks.bus_lock:k
+          - ls_locks.bus_lock:u
+      group16:
+          - ls_stlf
+          - ls_ret_cpuid
+          - ls_ret_cl_clush
+
+ reports:
+       - Section:topdown
+       - Section:ipc
+       - Section:de
+       - Section:bp
+       - Section:IcOc
+       - Section:ex
+       - Section:fp
+       - Section:ls
+       - Section:l2

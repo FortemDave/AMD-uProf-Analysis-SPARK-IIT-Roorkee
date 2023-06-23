@@ -1,0 +1,16 @@
+{
+    "__comment": "Processor: AMD family 19h, model 60h-6Fh",
+    "view": {
+        "name": "IBS NB local/remote access",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD",
+                "sort": "descending"
+            }
+        ],
+        "description": "Use this view to show the number and latency of local and remote accesses through the Northbridge."
+    }
+}

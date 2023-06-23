@@ -1,0 +1,1794 @@
+{
+    "syscalls":[
+        {
+            "id"        : 0,
+            "name"      : "read",
+            "trace"     : true
+        },
+        {
+            "id"        : 1,
+            "name"      : "write",
+            "trace"     : true
+        },
+        {
+            "id"        : 2,
+            "name"      : "open",
+            "trace"     : true
+        },
+        {
+            "id"        : 3,
+            "name"      : "close",
+            "trace"     : true
+        },
+        {
+            "id"        : 4,
+            "name"      : "stat",
+            "trace"     : false
+        },
+        {
+            "id"        : 5,
+            "name"      : "fstat",
+            "trace"     : false
+        },
+        {
+            "id"        : 6,
+            "name"      : "lstat",
+            "trace"     : false
+        },
+        {
+            "id"        : 7,
+            "name"      : "poll",
+            "trace"     : true
+        },
+        {
+            "id"        : 8,
+            "name"      : "lseek",
+            "trace"     : false
+        },
+        {
+            "id"        : 9,
+            "name"      : "mmap",
+            "trace"     : true
+        },
+        {
+            "id"        : 10,
+            "name"      : "mprotect",
+            "trace"     : true
+        },
+        {
+            "id"        : 11,
+            "name"      : "munmap",
+            "trace"     : true
+        },
+        {
+            "id"        : 12,
+            "name"      : "brk",
+            "trace"     : true
+        },
+        {
+            "id"        : 13,
+            "name"      : "rt_sigaction",
+            "trace"     : true
+        },
+        {
+            "id"        : 14,
+            "name"      : "rt_sigprocmask",
+            "trace"     : true
+        },
+        {
+            "id"        : 15,
+            "name"      : "rt_sigreturn",
+            "trace"     : true
+        },
+        {
+            "id"        : 16,
+            "name"      : "ioctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 17,
+            "name"      : "pread64",
+            "trace"     : true
+        },
+        {
+            "id"        : 18,
+            "name"      : "pwrite64",
+            "trace"     : true
+        },
+        {
+            "id"        : 19,
+            "name"      : "readv",
+            "trace"     : true
+        },
+        {
+            "id"        : 20,
+            "name"      : "writev",
+            "trace"     : true
+        },
+        {
+            "id"        : 21,
+            "name"      : "access",
+            "trace"     : false
+        },
+        {
+            "id"        : 22,
+            "name"      : "pipe",
+            "trace"     : true
+        },
+        {
+            "id"        : 23,
+            "name"      : "select",
+            "trace"     : true
+        },
+        {
+            "id"        : 24,
+            "name"      : "sched_yield",
+            "trace"     : true
+        },
+        {
+            "id"        : 25,
+            "name"      : "mremap",
+            "trace"     : true
+        },
+        {
+            "id"        : 26,
+            "name"      : "msync",
+            "trace"     : true
+        },
+        {
+            "id"        : 27,
+            "name"      : "mincore",
+            "trace"     : true
+        },
+        {
+            "id"        : 28,
+            "name"      : "madvise",
+            "trace"     : true
+        },
+        {
+            "id"        : 29,
+            "name"      : "shmget",
+            "trace"     : true
+        },
+        {
+            "id"        : 30,
+            "name"      : "shmat",
+            "trace"     : true
+        },
+        {
+            "id"        : 31,
+            "name"      : "shmctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 32,
+            "name"      : "dup",
+            "trace"     : true
+        },
+        {
+            "id"        : 33,
+            "name"      : "dup2",
+            "trace"     : true
+        },
+        {
+            "id"        : 34,
+            "name"      : "pause",
+            "trace"     : true
+        },
+        {
+            "id"        : 35,
+            "name"      : "nanosleep",
+            "trace"     : true
+        },
+        {
+            "id"        : 36,
+            "name"      : "getitimer",
+            "trace"     : false
+        },
+        {
+            "id"        : 37,
+            "name"      : "alarm",
+            "trace"     : true
+        },
+        {
+            "id"        : 38,
+            "name"      : "setitimer",
+            "trace"     : true
+        },
+        {
+            "id"        : 39,
+            "name"      : "getpid",
+            "trace"     : false
+        },
+        {
+            "id"        : 40,
+            "name"      : "sendfile",
+            "trace"     : true
+        },
+        {
+            "id"        : 41,
+            "name"      : "socket",
+            "trace"     : true
+        },
+        {
+            "id"        : 42,
+            "name"      : "connect",
+            "trace"     : true
+        },
+        {
+            "id"        : 43,
+            "name"      : "accept",
+            "trace"     : true
+        },
+        {
+            "id"        : 44,
+            "name"      : "sendto",
+            "trace"     : true
+        },
+        {
+            "id"        : 45,
+            "name"      : "recvfrom",
+            "trace"     : true
+        },
+        {
+            "id"        : 46,
+            "name"      : "sendmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 47,
+            "name"      : "recvmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 48,
+            "name"      : "shutdown",
+            "trace"     : true
+        },
+        {
+            "id"        : 49,
+            "name"      : "bind",
+            "trace"     : true
+        },
+        {
+            "id"        : 50,
+            "name"      : "listen",
+            "trace"     : true
+        },
+        {
+            "id"        : 51,
+            "name"      : "getsockname",
+            "trace"     : false
+        },
+        {
+            "id"        : 52,
+            "name"      : "getpeername",
+            "trace"     : false
+        },
+        {
+            "id"        : 53,
+            "name"      : "socketpair",
+            "trace"     : true
+        },
+        {
+            "id"        : 54,
+            "name"      : "setsockopt",
+            "trace"     : true
+        },
+        {
+            "id"        : 55,
+            "name"      : "getsockopt",
+            "trace"     : false
+        },
+        {
+            "id"        : 56,
+            "name"      : "clone",
+            "trace"     : true
+        },
+        {
+            "id"        : 57,
+            "name"      : "fork",
+            "trace"     : true
+        },
+        {
+            "id"        : 58,
+            "name"      : "vfork",
+            "trace"     : true
+        },
+        {
+            "id"        : 59,
+            "name"      : "execve",
+            "trace"     : true
+        },
+        {
+            "id"        : 60,
+            "name"      : "exit",
+            "trace"     : true
+        },
+        {
+            "id"        : 61,
+            "name"      : "wait4",
+            "trace"     : true
+        },
+        {
+            "id"        : 62,
+            "name"      : "kill",
+            "trace"     : true
+        },
+        {
+            "id"        : 63,
+            "name"      : "uname",
+            "trace"     : false
+        },
+        {
+            "id"        : 64,
+            "name"      : "semget",
+            "trace"     : true
+        },
+        {
+            "id"        : 65,
+            "name"      : "semop",
+            "trace"     : true
+        },
+        {
+            "id"        : 66,
+            "name"      : "semctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 67,
+            "name"      : "shmdt",
+            "trace"     : true
+        },
+        {
+            "id"        : 68,
+            "name"      : "msgget",
+            "trace"     : true
+        },
+        {
+            "id"        : 69,
+            "name"      : "msgsnd",
+            "trace"     : true
+        },
+        {
+            "id"        : 70,
+            "name"      : "msgrcv",
+            "trace"     : true
+        },
+        {
+            "id"        : 71,
+            "name"      : "msgctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 72,
+            "name"      : "fcntl",
+            "trace"     : true
+        },
+        {
+            "id"        : 73,
+            "name"      : "flock",
+            "trace"     : true
+        },
+        {
+            "id"        : 74,
+            "name"      : "fsync",
+            "trace"     : true
+        },
+        {
+            "id"        : 75,
+            "name"      : "fdatasync",
+            "trace"     : true
+        },
+        {
+            "id"        : 76,
+            "name"      : "truncate",
+            "trace"     : true
+        },
+        {
+            "id"        : 77,
+            "name"      : "ftruncate",
+            "trace"     : true
+        },
+        {
+            "id"        : 78,
+            "name"      : "getdents",
+            "trace"     : false
+        },
+        {
+            "id"        : 79,
+            "name"      : "getcwd",
+            "trace"     : false
+        },
+        {
+            "id"        : 80,
+            "name"      : "chdir",
+            "trace"     : false
+        },
+        {
+            "id"        : 81,
+            "name"      : "fchdir",
+            "trace"     : false
+        },
+        {
+            "id"        : 82,
+            "name"      : "rename",
+            "trace"     : false
+        },
+        {
+            "id"        : 83,
+            "name"      : "mkdir",
+            "trace"     : false
+        },
+        {
+            "id"        : 84,
+            "name"      : "rmdir",
+            "trace"     : false
+        },
+        {
+            "id"        : 85,
+            "name"      : "creat",
+            "trace"     : true
+        },
+        {
+            "id"        : 86,
+            "name"      : "link",
+            "trace"     : true
+        },
+        {
+            "id"        : 87,
+            "name"      : "unlink",
+            "trace"     : true
+        },
+        {
+            "id"        : 88,
+            "name"      : "symlink",
+            "trace"     : true
+        },
+        {
+            "id"        : 89,
+            "name"      : "readlink",
+            "trace"     : true
+        },
+        {
+            "id"        : 90,
+            "name"      : "chmod",
+            "trace"     : false
+        },
+        {
+            "id"        : 91,
+            "name"      : "fchmod",
+            "trace"     : false
+        },
+        {
+            "id"        : 92,
+            "name"      : "chown",
+            "trace"     : false
+        },
+        {
+            "id"        : 93,
+            "name"      : "fchown",
+            "trace"     : false
+        },
+        {
+            "id"        : 94,
+            "name"      : "lchown",
+            "trace"     : false
+        },
+        {
+            "id"        : 95,
+            "name"      : "umask",
+            "trace"     : false
+        },
+        {
+            "id"        : 96,
+            "name"      : "gettimeofday",
+            "trace"     : false
+        },
+        {
+            "id"        : 97,
+            "name"      : "getrlimit",
+            "trace"     : false
+        },
+        {
+            "id"        : 98,
+            "name"      : "getrusage",
+            "trace"     : false
+        },
+        {
+            "id"        : 99,
+            "name"      : "sysinfo",
+            "trace"     : true
+        },
+        {
+            "id"        : 100,
+            "name"      : "times",
+            "trace"     : false
+        },
+        {
+            "id"        : 101,
+            "name"      : "ptrace",
+            "trace"     : false
+        },
+        {
+            "id"        : 102,
+            "name"      : "getuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 103,
+            "name"      : "syslog",
+            "trace"     : false
+        },
+        {
+            "id"        : 104,
+            "name"      : "getgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 105,
+            "name"      : "setuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 106,
+            "name"      : "setgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 107,
+            "name"      : "geteuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 108,
+            "name"      : "getegid",
+            "trace"     : false
+        },
+        {
+            "id"        : 109,
+            "name"      : "setpgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 110,
+            "name"      : "getppid",
+            "trace"     : false
+        },
+        {
+            "id"        : 111,
+            "name"      : "getpgrp",
+            "trace"     : false
+        },
+        {
+            "id"        : 112,
+            "name"      : "setsid",
+            "trace"     : false
+        },
+        {
+            "id"        : 113,
+            "name"      : "setreuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 114,
+            "name"      : "setregid",
+            "trace"     : false
+        },
+        {
+            "id"        : 115,
+            "name"      : "getgroups",
+            "trace"     : false
+        },
+        {
+            "id"        : 116,
+            "name"      : "setgroups",
+            "trace"     : false
+        },
+        {
+            "id"        : 117,
+            "name"      : "setresuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 118,
+            "name"      : "getresuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 119,
+            "name"      : "setresgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 120,
+            "name"      : "getresgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 121,
+            "name"      : "getpgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 122,
+            "name"      : "setfsuid",
+            "trace"     : false
+        },
+        {
+            "id"        : 123,
+            "name"      : "setfsgid",
+            "trace"     : false
+        },
+        {
+            "id"        : 124,
+            "name"      : "getsid",
+            "trace"     : false
+        },
+        {
+            "id"        : 125,
+            "name"      : "capget",
+            "trace"     : false
+        },
+        {
+            "id"        : 126,
+            "name"      : "capset",
+            "trace"     : true
+        },
+        {
+            "id"        : 127,
+            "name"      : "rt_sigpending",
+            "trace"     : true
+        },
+        {
+            "id"        : 128,
+            "name"      : "rt_sigtimedwait",
+            "trace"     : true
+        },
+        {
+            "id"        : 129,
+            "name"      : "rt_sigqueueinfo",
+            "trace"     : true
+        },
+        {
+            "id"        : 130,
+            "name"      : "rt_sigsuspend",
+            "trace"     : true
+        },
+        {
+            "id"        : 131,
+            "name"      : "sigaltstack",
+            "trace"     : true
+        },
+        {
+            "id"        : 132,
+            "name"      : "utime",
+            "trace"     : false
+        },
+        {
+            "id"        : 133,
+            "name"      : "mknod",
+            "trace"     : true
+        },
+        {
+            "id"        : 134,
+            "name"      : "uselib",
+            "trace"     : true
+        },
+        {
+            "id"        : 135,
+            "name"      : "personality",
+            "trace"     : true
+        },
+        {
+            "id"        : 136,
+            "name"      : "ustat",
+            "trace"     : false
+        },
+        {
+            "id"        : 137,
+            "name"      : "statfs",
+            "trace"     : false
+        },
+        {
+            "id"        : 138,
+            "name"      : "fstatfs",
+            "trace"     : false
+        },
+        {
+            "id"        : 139,
+            "name"      : "sysfs",
+            "trace"     : false
+        },
+        {
+            "id"        : 140,
+            "name"      : "getpriority",
+            "trace"     : false
+        },
+        {
+            "id"        : 141,
+            "name"      : "setpriority",
+            "trace"     : true
+        },
+        {
+            "id"        : 142,
+            "name"      : "sched_setparam",
+            "trace"     : true
+        },
+        {
+            "id"        : 143,
+            "name"      : "sched_getparam",
+            "trace"     : false
+        },
+        {
+            "id"        : 144,
+            "name"      : "sched_setscheduler",
+            "trace"     : true
+        },
+        {
+            "id"        : 145,
+            "name"      : "sched_getscheduler",
+            "trace"     : false
+        },
+        {
+            "id"        : 146,
+            "name"      : "sched_get_priority_max",
+            "trace"     : true
+        },
+        {
+            "id"        : 147,
+            "name"      : "sched_get_priority_min",
+            "trace"     : false
+        },
+        {
+            "id"        : 148,
+            "name"      : "sched_rr_get_interval",
+            "trace"     : false
+        },
+        {
+            "id"        : 149,
+            "name"      : "mlock",
+            "trace"     : true
+        },
+        {
+            "id"        : 150,
+            "name"      : "munlock",
+            "trace"     : true
+        },
+        {
+            "id"        : 151,
+            "name"      : "mlockall",
+            "trace"     : true
+        },
+        {
+            "id"        : 152,
+            "name"      : "munlockall",
+            "trace"     : true
+        },
+        {
+            "id"        : 153,
+            "name"      : "vhangup",
+            "trace"     : true
+        },
+        {
+            "id"        : 154,
+            "name"      : "modify_ldt",
+            "trace"     : true
+        },
+        {
+            "id"        : 155,
+            "name"      : "pivot_root",
+            "trace"     : true
+        },
+        {
+            "id"        : 156,
+            "name"      : "_sysctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 157,
+            "name"      : "prctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 158,
+            "name"      : "arch_prctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 159,
+            "name"      : "adjtimex",
+            "trace"     : true
+        },
+        {
+            "id"        : 160,
+            "name"      : "setrlimit",
+            "trace"     : true
+        },
+        {
+            "id"        : 161,
+            "name"      : "chroot",
+            "trace"     : true
+        },
+        {
+            "id"        : 162,
+            "name"      : "sync",
+            "trace"     : true
+        },
+        {
+            "id"        : 163,
+            "name"      : "acct",
+            "trace"     : true
+        },
+        {
+            "id"        : 164,
+            "name"      : "settimeofday",
+            "trace"     : true
+        },
+        {
+            "id"        : 165,
+            "name"      : "mount",
+            "trace"     : true
+        },
+        {
+            "id"        : 166,
+            "name"      : "umount2",
+            "trace"     : true
+        },
+        {
+            "id"        : 167,
+            "name"      : "swapon",
+            "trace"     : true
+        },
+        {
+            "id"        : 168,
+            "name"      : "swapoff",
+            "trace"     : true
+        },
+        {
+            "id"        : 169,
+            "name"      : "reboot",
+            "trace"     : true
+        },
+        {
+            "id"        : 170,
+            "name"      : "sethostname",
+            "trace"     : true
+        },
+        {
+            "id"        : 171,
+            "name"      : "setdomainname",
+            "trace"     : true
+        },
+        {
+            "id"        : 172,
+            "name"      : "iopl",
+            "trace"     : true
+        },
+        {
+            "id"        : 173,
+            "name"      : "ioperm",
+            "trace"     : true
+        },
+        {
+            "id"        : 174,
+            "name"      : "create_module",
+            "trace"     : true
+        },
+        {
+            "id"        : 175,
+            "name"      : "init_module",
+            "trace"     : true
+        },
+        {
+            "id"        : 176,
+            "name"      : "delete_module",
+            "trace"     : true
+        },
+        {
+            "id"        : 177,
+            "name"      : "get_kernel_syms",
+            "trace"     : true
+        },
+        {
+            "id"        : 178,
+            "name"      : "query_module",
+            "trace"     : true
+        },
+        {
+            "id"        : 179,
+            "name"      : "quotactl",
+            "trace"     : true
+        },
+        {
+            "id"        : 180,
+            "name"      : "nfsservctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 181,
+            "name"      : "getpmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 182,
+            "name"      : "putpmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 183,
+            "name"      : "afs_syscall",
+            "trace"     : true
+        },
+        {
+            "id"        : 184,
+            "name"      : "tuxcall",
+            "trace"     : true
+        },
+        {
+            "id"        : 185,
+            "name"      : "security",
+            "trace"     : true
+        },
+        {
+            "id"        : 186,
+            "name"      : "gettid",
+            "trace"     : false
+        },
+        {
+            "id"        : 187,
+            "name"      : "readahead",
+            "trace"     : true
+        },
+        {
+            "id"        : 188,
+            "name"      : "setxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 189,
+            "name"      : "lsetxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 190,
+            "name"      : "fsetxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 191,
+            "name"      : "getxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 192,
+            "name"      : "lgetxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 193,
+            "name"      : "fgetxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 194,
+            "name"      : "listxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 195,
+            "name"      : "llistxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 196,
+            "name"      : "flistxattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 197,
+            "name"      : "removexattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 198,
+            "name"      : "lremovexattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 199,
+            "name"      : "fremovexattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 200,
+            "name"      : "tkill",
+            "trace"     : true
+        },
+        {
+            "id"        : 201,
+            "name"      : "time",
+            "trace"     : false
+        },
+        {
+            "id"        : 202,
+            "name"      : "futex",
+            "trace"     : true
+        },
+        {
+            "id"        : 203,
+            "name"      : "sched_setaffinity",
+            "trace"     : true
+        },
+        {
+            "id"        : 204,
+            "name"      : "sched_getaffinity",
+            "trace"     : false
+        },
+        {
+            "id"        : 205,
+            "name"      : "set_thread_area",
+            "trace"     : true
+        },
+        {
+            "id"        : 206,
+            "name"      : "io_setup",
+            "trace"     : true
+        },
+        {
+            "id"        : 207,
+            "name"      : "io_destroy",
+            "trace"     : true
+        },
+        {
+            "id"        : 208,
+            "name"      : "io_getevents",
+            "trace"     : false
+        },
+        {
+            "id"        : 209,
+            "name"      : "io_submit",
+            "trace"     : true
+        },
+        {
+            "id"        : 210,
+            "name"      : "io_cancel",
+            "trace"     : true
+        },
+        {
+            "id"        : 211,
+            "name"      : "get_thread_area",
+            "trace"     : false
+        },
+        {
+            "id"        : 212,
+            "name"      : "lookup_dcookie",
+            "trace"     : true
+        },
+        {
+            "id"        : 213,
+            "name"      : "epoll_create",
+            "trace"     : true
+        },
+        {
+            "id"        : 214,
+            "name"      : "epoll_ctl_old",
+            "trace"     : true
+        },
+        {
+            "id"        : 215,
+            "name"      : "epoll_wait_old",
+            "trace"     : true
+        },
+        {
+            "id"        : 216,
+            "name"      : "remap_file_pages",
+            "trace"     : true
+        },
+        {
+            "id"        : 217,
+            "name"      : "getdents64",
+            "trace"     : false
+        },
+        {
+            "id"        : 218,
+            "name"      : "set_tid_address",
+            "trace"     : true
+        },
+        {
+            "id"        : 219,
+            "name"      : "restart_syscall",
+            "trace"     : true
+        },
+        {
+            "id"        : 220,
+            "name"      : "semtimedop",
+            "trace"     : true
+        },
+        {
+            "id"        : 221,
+            "name"      : "fadvise64",
+            "trace"     : true
+        },
+        {
+            "id"        : 222,
+            "name"      : "timer_create",
+            "trace"     : true
+        },
+        {
+            "id"        : 223,
+            "name"      : "timer_settime",
+            "trace"     : true
+        },
+        {
+            "id"        : 224,
+            "name"      : "timer_gettime",
+            "trace"     : false
+        },
+        {
+            "id"        : 225,
+            "name"      : "timer_getoverrun",
+            "trace"     : false
+        },
+        {
+            "id"        : 226,
+            "name"      : "timer_delete",
+            "trace"     : true
+        },
+        {
+            "id"        : 227,
+            "name"      : "clock_settime",
+            "trace"     : true
+        },
+        {
+            "id"        : 228,
+            "name"      : "clock_gettime",
+            "trace"     : false
+        },
+        {
+            "id"        : 229,
+            "name"      : "clock_getres",
+            "trace"     : false
+        },
+        {
+            "id"        : 230,
+            "name"      : "clock_nanosleep",
+            "trace"     : true
+        },
+        {
+            "id"        : 231,
+            "name"      : "exit_group",
+            "trace"     : true
+        },
+        {
+            "id"        : 232,
+            "name"      : "epoll_wait",
+            "trace"     : true
+        },
+        {
+            "id"        : 233,
+            "name"      : "epoll_ctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 234,
+            "name"      : "tgkill",
+            "trace"     : true
+        },
+        {
+            "id"        : 235,
+            "name"      : "utimes",
+            "trace"     : false
+        },
+        {
+            "id"        : 236,
+            "name"      : "vserver",
+            "trace"     : true
+        },
+        {
+            "id"        : 237,
+            "name"      : "mbind",
+            "trace"     : true
+        },
+        {
+            "id"        : 238,
+            "name"      : "set_mempolicy",
+            "trace"     : true
+        },
+        {
+            "id"        : 239,
+            "name"      : "get_mempolicy",
+            "trace"     : false
+        },
+        {
+            "id"        : 240,
+            "name"      : "mq_open",
+            "trace"     : true
+        },
+        {
+            "id"        : 241,
+            "name"      : "mq_unlink",
+            "trace"     : true
+        },
+        {
+            "id"        : 242,
+            "name"      : "mq_timedsend",
+            "trace"     : true
+        },
+        {
+            "id"        : 243,
+            "name"      : "mq_timedreceive",
+            "trace"     : true
+        },
+        {
+            "id"        : 244,
+            "name"      : "mq_notify",
+            "trace"     : true
+        },
+        {
+            "id"        : 245,
+            "name"      : "mq_getsetattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 246,
+            "name"      : "kexec_load",
+            "trace"     : true
+        },
+        {
+            "id"        : 247,
+            "name"      : "waitid",
+            "trace"     : true
+        },
+        {
+            "id"        : 248,
+            "name"      : "add_key",
+            "trace"     : true
+        },
+        {
+            "id"        : 249,
+            "name"      : "request_key",
+            "trace"     : true
+        },
+        {
+            "id"        : 250,
+            "name"      : "keyctl",
+            "trace"     : true
+        },
+        {
+            "id"        : 251,
+            "name"      : "ioprio_set",
+            "trace"     : true
+        },
+        {
+            "id"        : 252,
+            "name"      : "ioprio_get",
+            "trace"     : false
+        },
+        {
+            "id"        : 253,
+            "name"      : "inotify_init",
+            "trace"     : true
+        },
+        {
+            "id"        : 254,
+            "name"      : "inotify_add_watch",
+            "trace"     : true
+        },
+        {
+            "id"        : 255,
+            "name"      : "inotify_rm_watch",
+            "trace"     : true
+        },
+        {
+            "id"        : 256,
+            "name"      : "migrate_pages",
+            "trace"     : true
+        },
+        {
+            "id"        : 257,
+            "name"      : "openat",
+            "trace"     : true
+        },
+        {
+            "id"        : 258,
+            "name"      : "mkdirat",
+            "trace"     : false
+        },
+        {
+            "id"        : 259,
+            "name"      : "mknodat",
+            "trace"     : true
+        },
+        {
+            "id"        : 260,
+            "name"      : "fchownat",
+            "trace"     : false
+        },
+        {
+            "id"        : 261,
+            "name"      : "futimesat",
+            "trace"     : false
+        },
+        {
+            "id"        : 262,
+            "name"      : "newfstatat",
+            "trace"     : false
+        },
+        {
+            "id"        : 263,
+            "name"      : "unlinkat",
+            "trace"     : true
+        },
+        {
+            "id"        : 264,
+            "name"      : "renameat",
+            "trace"     : false
+        },
+        {
+            "id"        : 265,
+            "name"      : "linkat",
+            "trace"     : true
+        },
+        {
+            "id"        : 266,
+            "name"      : "symlinkat",
+            "trace"     : true
+        },
+        {
+            "id"        : 267,
+            "name"      : "readlinkat",
+            "trace"     : true
+        },
+        {
+            "id"        : 268,
+            "name"      : "fchmodat",
+            "trace"     : false
+        },
+        {
+            "id"        : 269,
+            "name"      : "faccessat",
+            "trace"     : false
+        },
+        {
+            "id"        : 270,
+            "name"      : "pselect6",
+            "trace"     : true
+        },
+        {
+            "id"        : 271,
+            "name"      : "ppoll",
+            "trace"     : true
+        },
+        {
+            "id"        : 272,
+            "name"      : "unshare",
+            "trace"     : true
+        },
+        {
+            "id"        : 273,
+            "name"      : "set_robust_list",
+            "trace"     : true
+        },
+        {
+            "id"        : 274,
+            "name"      : "get_robust_list",
+            "trace"     : false
+        },
+        {
+            "id"        : 275,
+            "name"      : "splice",
+            "trace"     : true
+        },
+        {
+            "id"        : 276,
+            "name"      : "tee",
+            "trace"     : true
+        },
+        {
+            "id"        : 277,
+            "name"      : "sync_file_range",
+            "trace"     : true
+        },
+        {
+            "id"        : 278,
+            "name"      : "vmsplice",
+            "trace"     : true
+        },
+        {
+            "id"        : 279,
+            "name"      : "move_pages",
+            "trace"     : true
+        },
+        {
+            "id"        : 280,
+            "name"      : "utimensat",
+            "trace"     : false
+        },
+        {
+            "id"        : 281,
+            "name"      : "epoll_pwait",
+            "trace"     : true
+        },
+        {
+            "id"        : 282,
+            "name"      : "signalfd",
+            "trace"     : true
+        },
+        {
+            "id"        : 283,
+            "name"      : "timerfd_create",
+            "trace"     : true
+        },
+        {
+            "id"        : 284,
+            "name"      : "eventfd",
+            "trace"     : true
+        },
+        {
+            "id"        : 285,
+            "name"      : "fallocate",
+            "trace"     : true
+        },
+        {
+            "id"        : 286,
+            "name"      : "timerfd_settime",
+            "trace"     : true
+        },
+        {
+            "id"        : 287,
+            "name"      : "timerfd_gettime",
+            "trace"     : false
+        },
+        {
+            "id"        : 288,
+            "name"      : "accept4",
+            "trace"     : true
+        },
+        {
+            "id"        : 289,
+            "name"      : "signalfd4",
+            "trace"     : true
+        },
+        {
+            "id"        : 290,
+            "name"      : "eventfd2",
+            "trace"     : true
+        },
+        {
+            "id"        : 291,
+            "name"      : "epoll_create1",
+            "trace"     : true
+        },
+        {
+            "id"        : 292,
+            "name"      : "dup3",
+            "trace"     : true
+        },
+        {
+            "id"        : 293,
+            "name"      : "pipe2",
+            "trace"     : true
+        },
+        {
+            "id"        : 294,
+            "name"      : "inotify_init1",
+            "trace"     : true
+        },
+        {
+            "id"        : 295,
+            "name"      : "preadv",
+            "trace"     : true
+        },
+        {
+            "id"        : 296,
+            "name"      : "pwritev",
+            "trace"     : true
+        },
+        {
+            "id"        : 297,
+            "name"      : "rt_tgsigqueueinfo",
+            "trace"     : true
+        },
+        {
+            "id"        : 298,
+            "name"      : "perf_event_open",
+            "trace"     : true
+        },
+        {
+            "id"        : 299,
+            "name"      : "recvmmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 300,
+            "name"      : "fanotify_init",
+            "trace"     : true
+        },
+        {
+            "id"        : 301,
+            "name"      : "fanotify_mark",
+            "trace"     : true
+        },
+        {
+            "id"        : 302,
+            "name"      : "prlimit64",
+            "trace"     : true
+        },
+        {
+            "id"        : 303,
+            "name"      : "name_to_handle_at",
+            "trace"     : true
+        },
+        {
+            "id"        : 304,
+            "name"      : "open_by_handle_at",
+            "trace"     : true
+        },
+        {
+            "id"        : 305,
+            "name"      : "clock_adjtime",
+            "trace"     : true
+        },
+        {
+            "id"        : 306,
+            "name"      : "syncfs",
+            "trace"     : true
+        },
+        {
+            "id"        : 307,
+            "name"      : "sendmmsg",
+            "trace"     : true
+        },
+        {
+            "id"        : 308,
+            "name"      : "setns",
+            "trace"     : true
+        },
+        {
+            "id"        : 309,
+            "name"      : "getcpu",
+            "trace"     : false
+        },
+        {
+            "id"        : 310,
+            "name"      : "process_vm_readv",
+            "trace"     : true
+        },
+        {
+            "id"        : 311,
+            "name"      : "process_vm_writev",
+            "trace"     : true
+        },
+        {
+            "id"        : 312,
+            "name"      : "kcmp",
+            "trace"     : true
+        },
+        {
+            "id"        : 313,
+            "name"      : "finit_module",
+            "trace"     : true
+        },
+        {
+            "id"        : 314,
+            "name"      : "sched_setattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 315,
+            "name"      : "sched_getattr",
+            "trace"     : false
+        },
+        {
+            "id"        : 316,
+            "name"      : "renameat2",
+            "trace"     : false
+        },
+        {
+            "id"        : 317,
+            "name"      : "seccomp",
+            "trace"     : true
+        },
+        {
+            "id"        : 318,
+            "name"      : "getrandom",
+            "trace"     : false
+        },
+        {
+            "id"        : 319,
+            "name"      : "memfd_create",
+            "trace"     : true
+        },
+        {
+            "id"        : 320,
+            "name"      : "kexec_file_load",
+            "trace"     : true
+        },
+        {
+            "id"        : 321,
+            "name"      : "bpf",
+            "trace"     : true
+        },
+        {
+            "id"        : 322,
+            "name"      : "execveat",
+            "trace"     : true
+        },
+        {
+            "id"        : 323,
+            "name"      : "userfaultfd",
+            "trace"     : true
+        },
+        {
+            "id"        : 324,
+            "name"      : "membarrier",
+            "trace"     : true
+        },
+        {
+            "id"        : 325,
+            "name"      : "mlock2",
+            "trace"     : true
+        },
+        {
+            "id"        : 326,
+            "name"      : "copy_file_range",
+            "trace"     : true
+        },
+        {
+            "id"        : 327,
+            "name"      : "preadv2",
+            "trace"     : true
+        },
+        {
+            "id"        : 328,
+            "name"      : "pwritev2",
+            "trace"     : true
+        },
+        {
+            "id"        : 329,
+            "name"      : "pkey_mprotect",
+            "trace"     : true
+        },
+        {
+            "id"        : 330,
+            "name"      : "pkey_alloc",
+            "trace"     : true
+        },
+        {
+            "id"        : 331,
+            "name"      : "pkey_free",
+            "trace"     : true
+        },
+        {
+            "id"        : 332,
+            "name"      : "statx",
+            "trace"     : false
+        },
+        {
+            "id"        : 333,
+            "name"      : "io_pgetevents",
+            "trace"     : false
+        },
+        {
+            "id"        : 334,
+            "name"      : "rseq",
+            "trace"     : true
+        },
+        {
+            "id"        : 424,
+            "name"      : "pidfd_send_signal",
+            "trace"     : true
+        },
+        {
+            "id"        : 425,
+            "name"      : "io_uring_setup",
+            "trace"     : true
+        },
+        {
+            "id"        : 426,
+            "name"      : "io_uring_enter",
+            "trace"     : true
+        },
+        {
+            "id"        : 427,
+            "name"      : "io_uring_register",
+            "trace"     : true
+        },
+        {
+            "id"        : 428,
+            "name"      : "open_tree",
+            "trace"     : true
+        },
+        {
+            "id"        : 429,
+            "name"      : "move_mount",
+            "trace"     : true
+        },
+        {
+            "id"        : 430,
+            "name"      : "fsopen",
+            "trace"     : true
+        },
+        {
+            "id"        : 431,
+            "name"      : "fsconfig",
+            "trace"     : true
+        },
+        {
+            "id"        : 432,
+            "name"      : "fsmount",
+            "trace"     : true
+        },
+        {
+            "id"        : 433,
+            "name"      : "fspick",
+            "trace"     : true
+        },
+        {
+            "id"        : 434,
+            "name"      : "pidfd_open",
+            "trace"     : true
+        },
+        {
+            "id"        : 435,
+            "name"      : "clone3",
+            "trace"     : true
+        },
+        {
+            "id"        : 436,
+            "name"      : "close_range",
+            "trace"     : true
+        },
+        {
+            "id"        : 437,
+            "name"      : "openat2",
+            "trace"     : true
+        },
+        {
+            "id"        : 438,
+            "name"      : "pidfd_getfd",
+            "trace"     : false
+        },
+        {
+            "id"        : 439,
+            "name"      : "faccessat2",
+            "trace"     : false
+        },
+        {
+            "id"        : 440,
+            "name"      : "process_madvise",
+            "trace"     : true
+        },
+        {
+            "id"        : 441,
+            "name"      : "epoll_pwait2",
+            "trace"     : true
+        },
+        {
+            "id"        : 442,
+            "name"      : "mount_setattr",
+            "trace"     : true
+        },
+        {
+            "id"        : 443,
+            "name"      : "reserved",
+            "trace"     : true
+        },
+        {
+            "id"        : 444,
+            "name"      : "landlock_create_ruleset",
+            "trace"     : true
+        },
+        {
+            "id"        : 445,
+            "name"      : "landlock_add_rule",
+            "trace"     : true
+        },
+        {
+            "id"        : 446,
+            "name"      : "landlock_restrict_self",
+            "trace"     : true
+        }
+    ]
+}

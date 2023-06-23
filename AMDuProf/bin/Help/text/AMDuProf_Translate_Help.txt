@@ -1,0 +1,136 @@
+AMDUPROFCLI-TRANSLATE(1)      AMDuProfCLI Manual      AMDUPROFCLI-TRANSLATE(1)
+
+
+
+NAME
+       AMDuProfCLI  translate - Process raw data files (created by AMDuProfCLI
+       collect) and generate the sample info database files.
+
+SYNOPSIS
+       AMDuProfCLI translate [<options>]
+
+
+DESCRIPTION
+       This translate command processes the raw data files and  generates  the
+       database  files.  The  generated database files can be used as input to
+       the report command or can be imported into GUI.
+
+OPTIONS
+       -h, --help
+              Displays this help information.
+
+       -i, --input-dir <directory-path>
+              Path to the directory containing collected data.
+
+       --category <PROFILE>
+              Process only the specific profiling  category.  Comma  separated
+              multiple  categories  can be specified. If this option not used,
+              then all categories  raw  data  files  are  processed.  Multiple
+              instance of --category is allowed. Supported categories are:
+
+              ?  cpu - CPU Profiling
+
+              ?  mpi - MPI Tracing
+
+              ?  os - OS Tracing
+
+              ?  gputrace - GPU Tracing
+
+              ?  gpuprof - GPU Profiling
+
+              Example:
+
+              ?  --category cpu,mpi,os,gputrace,gpuprof
+
+              ?  --category  mpi  --category cpu --category os --category gpu-
+                 trace --category gpuprof
+
+       --host <host-name>
+              This option is used along with  the  --input-dir  option.Process
+              samples belonging to a specific host. Supported options are:
+
+              ?  <hostname>:  Translate only the processes belonging to a spe-
+                 cific host.
+
+              ?  all: Translate all processes
+
+              Note: If --host is not used, then only the  processes  belonging
+              to  the  current  system  is translated. In case the system is a
+              master node in a cluster, then processing will be done  for  the
+              lexicographically first host in that cluster.
+
+       --inline
+              Inline function extraction for C, C++ executables.
+
+              Note: If you are interested in the inlined functions, then use this option.
+
+
+       --time-filter <T1:T2>
+              Restricts the processing to the time interval between T1 and T2,
+              where T1, T2 are time in seconds from profile start time.
+
+       --agg-interval <INTERVAL>
+              Accumulation of samples for the given INTERVAL in  milliseconds.
+              Default  INTERVAL is 1 second. If the interval value set to 0 or
+              negative, granularity of the data aggregation would be the  com-
+              plete profile duration.
+
+       --bin-path <path>
+              Binary file path. Multiple use of --bin-path is allowed.
+
+       --symbol-path <path>
+              Debug symbol path. Multiple use of --symbol-path is allowed.
+
+       --kallsyms-path <path>
+              Path to a file containing kallsyms info. If no path provided, it
+              defaults to /proc/kallsyms.
+
+       --vmlinux-path <path>
+              Path to Linux kernel debug info file. If no  path  provided,  it
+              searches for debug info file at the default download path.
+
+       --log-path <path-to-log-dir>
+              Specify  the  path  to where log file should be created. If this
+              option is not provided, by default the log file will be  created
+              either  in  path  set by AMDUPROF_LOGDIR environment variable or
+              $TEMP path.  The log file name will  be  of  the  format  $USER-
+              AMDuProfCLI.log.
+
+       --enable-log
+              Use this option to enable additional logging with log file.
+
+       --enable-logts
+              Use  this  option  to  capture the timestamp of the log records.
+              This option should be used together with --enable-log option.
+
+       --retranslate
+              Use this option to perform the re-translation of collected  data
+              files possibly with different set of translation options.
+
+ENVIRONMENT
+       AMDUPROF_LOGDIR
+              If AMDUPROF_LOGDIR is set, its value is used as the path to cre-
+              ate log file.
+
+EXAMPLES
+       1.  Process all the raw datafiles:
+
+              $ AMDuProfCLI translate -i /tmp/cpuprof-tbp/<SESSION-DIR>
+
+
+       2.  Process the OS Trace raw datafile:
+
+              $ AMDuProfCLI translate -i /tmp/cpuprof-os/<SESSION-DIR> --category os
+
+
+       3.  Process the GPU Trace raw datafile:
+
+              $ AMDuProfCLI translate -i /tmp/cpuprof-gpu/<SESSION-DIR> --category gputrace
+
+
+SEE ALSO
+       AMDuProfCLI collect(1), AMDuProfCLI timechart(1), AMDuProfCLI info(1).
+
+
+
+AMDuProfCLI                       04 Oct 2022         AMDUPROFCLI-TRANSLATE(1)

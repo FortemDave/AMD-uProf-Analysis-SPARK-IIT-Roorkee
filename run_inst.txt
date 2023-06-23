@@ -1,0 +1,8 @@
+sudo su
+echo 0 > /proc/sys/kernel/nmi_watchdog
+exit
+
+sudo nano /proc/sys/kernel/perf_event_paranoid
+(Set it to -1, default is 4)
+
+modprobe msr

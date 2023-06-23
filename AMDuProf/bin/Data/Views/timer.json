@@ -1,0 +1,17 @@
+{
+   "__comment": "Basic timer hotspots for all supported processors",
+   "view":
+   {
+      "name"            : "Time based hotspots",
+      "dc_config"       : ["tbp"],
+      "default_config"  : "tbp",
+      "event":
+      [
+         {
+            "title"  : "CPU_TIME",
+            "sort"   : "descending"
+         }
+      ],
+      "description"  : "Use this view to find hot-spots where the program is spending most of its time."
+   }
+}

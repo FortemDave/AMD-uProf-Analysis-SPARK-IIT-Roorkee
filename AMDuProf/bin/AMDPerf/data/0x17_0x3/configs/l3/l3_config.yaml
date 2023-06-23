@@ -1,0 +1,25 @@
+---
+ cpu:
+    - family:0x17
+    - modelLow:0x30
+    - modelHigh:0x3f
+    - corepmcs:6
+    - dfpmcs:4
+    - l3pmcs:6
+
+ events:
+      group0:
+          - tsc
+          - aperf
+          - mperf
+          - irperf
+      group1:
+          - retired_instructions
+      group2:
+          - L3LookupState
+          - XiSysFillLatency
+          - XiCcxSdpReq1
+
+ reports:
+       - L3CacheableaccessesPTI
+       - Avg_L3_rd_miss_latency

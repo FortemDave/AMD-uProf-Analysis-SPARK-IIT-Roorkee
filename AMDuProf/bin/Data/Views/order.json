@@ -1,0 +1,51 @@
+{
+    "__comment" : "Order of Events or Metrics in All Events View",
+    "order"     :
+    {
+       "name"   : "All Events View Order",
+       "event"  :
+       [
+          "CPU_TIME",
+          "CYCLES_NOT_IN_HALT",
+          "RETIRED_INST",
+          "IBS_TAG_TO_RET",
+          "IBS_ALL_OPS",
+          "IPC",
+          "CPI",
+          "RETIRED_BR_INST (PTI)",
+          "RETIRED_BR_INST_MISP (PTI)",
+          "L1_DC_ACCESSES (PTI)",
+          "L1_DC_MISSES (PTI)",
+          "L1_DEMAND_DC_REFILLS_REMOTE_DRAM (PTI)",
+          "L1_DEMAND_DC_REFILLS_REMOTE_CACHE (PTI)",
+          "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+          "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+          "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+          "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+          "MISALIGNED_LOADS (PTI)",
+          "STLI_OTHER (PTI)",
+          "SSE_AVX_STALLS (PTC)",
+          "INEFFECTIVE_SW_PF (PTI)",
+          "RETIRED_BR_INST",
+          "RETIRED_BR_INST_MISP",
+          "L1_DC_ACCESSES_ALL",
+          "L2_CACHE_ACCESS_FROM_L1_DC_MISS",
+          "L1_DEMAND_DC_REFILLS_REMOTE_DRAM",
+          "L1_DEMAND_DC_REFILLS_REMOTE_CACHE",
+          "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_REMOTE",
+          "L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+          "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL",
+          "L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+          "L1_DEMAND_DC_REFILLS_LOCAL_L2",
+          "MISALIGNED_LOADS",
+          "%RETIRED_BR_INST_MISP",
+          "%L1_DC_MISSES",
+          "%L1_DEMAND_DC_REFILLS_REMOTE_DRAM",
+          "%L1_DEMAND_DC_REFILLS_REMOTE_CACHE",
+          "%L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+          "%L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL",
+          "%L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+          "%L1_DEMAND_DC_REFILLS_LOCAL_L2"
+       ]
+    }
+ }

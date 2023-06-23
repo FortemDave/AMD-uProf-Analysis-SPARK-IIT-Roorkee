@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+    Analyze branch/near return prediction using event-based profiling
+
+    Family : 17h
+    Model  : 10h-1Fh
+    Flavor : Public
+    Copyright (c) 2022 Advanced Micro Devices, Inc.
+-->
+<dc_configuration name="Investigate Branching">
+    <ebp os="linux|windows">
+        <event select="76" mask="00" os="T" user="T" count="250000" />
+        <event select="C0" mask="00" os="T" user="T" count="250000" />
+        <event select="C2" mask="00" os="T" user="T" count="25000" />
+        <event select="C3" mask="00" os="T" user="T" count="25000" />
+        <event select="C4" mask="00" os="T" user="T" count="25000" />
+        <event select="C5" mask="00" os="T" user="T" count="25000" />
+        <event select="C8" mask="00" os="T" user="T" count="25000" />
+        <event select="C9" mask="00" os="T" user="T" count="25000" />
+        <event select="CA" mask="00" os="T" user="T" count="25000" />
+        <event select="8A" mask="00" os="T" user="T" count="25000" />
+        <event select="8B" mask="00" os="T" user="T" count="25000" />
+    </ebp>
+    <ebp os="freebsd">
+        <event select="76" mask="00" os="T" user="T" count="250000" />
+        <event select="C0" mask="00" os="T" user="T" count="250000" />
+        <event select="C2" mask="00" os="T" user="T" count="100000" />
+        <event select="C3" mask="00" os="T" user="T" count="100000" />
+        <event select="C4" mask="00" os="T" user="T" count="100000" />
+    </ebp>
+    <tool_tip>Find mispredicted branches/near returns</tool_tip>
+    <description>Use this configuration to find poorly predicted branches and near returns.</description>
+</dc_configuration>

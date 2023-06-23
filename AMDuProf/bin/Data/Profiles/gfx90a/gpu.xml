@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+    Basic assessment of GPU performance using event-based profiling.
+
+    Family : MI100
+    Model  : gfx908
+    Flavor : Public
+    Copyright (c) 2021 Advanced Micro Devices, Inc.
+-->
+<dc_configuration name="GPU Profiling">
+    <gpu os="linux">
+        <event name = "SQ_WAVES"/>
+        <event name = "SQ_INSTS_VALU"/>
+        <event name = "SQ_INSTS_SALU"/>
+        <event name = "SQ_INSTS_SMEM"/>
+        <event name = "SQ_INSTS_LDS"/>
+        <event name = "SQ_INSTS_GDS"/>
+        <event name = "SQ_ACTIVE_INST_VALU"/>
+        <event name = "SQ_THREAD_CYCLES_VALU"/>
+        <event name = "GRBM_COUNT"/>
+        <event name = "GRBM_GUI_ACTIVE"/>
+        <event name = "TCC_HIT_sum"/>
+        <event name = "TCC_MISS_sum"/>
+        <event name = "TCC_EA_RDREQ_sum"/>
+        <event name = "TCC_EA_RDREQ_32B_sum"/>
+        <event name = "TA_FLAT_READ_WAVEFRONTS_sum"/>
+        <event name = "TA_FLAT_WRITE_WAVEFRONTS_sum"/>
+    </gpu>
+    <tool_tip>Get overall GPU Metrics</tool_tip>
+    <description>Use this configuration to get an overall assessment of GPU Metrics and to find potential issues for further investigation.</description>
+</dc_configuration>

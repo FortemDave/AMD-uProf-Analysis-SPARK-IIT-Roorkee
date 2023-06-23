@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+    Instruction-based sampling (IBS) data collection configuration
+
+    Family : 17h
+    Model  : 70h-7Fh
+    Flavor : Public
+    Copyright (c) 2022 Advanced Micro Devices, Inc.
+-->
+<dc_configuration name="Cache Analysis">
+    <ibs fetch_sampling="F" op_sampling="T" fetch_max_count="0" op_max_count="500000" op_cycle_count="T" loadstore_only="T" op_call_graph="T" fetch_call_graph="F" is_cache_analysis="T" />
+    <event-set>
+        <event select="F200" />
+        <event select="F201" />
+        <event select="F202" />
+        <event select="F219" />
+        <event select="F21E" />
+        <event select="F245" />
+        <event select="F246" />
+        <event select="F249" />
+        <event select="F24D" />
+        <event select="F24E" />
+        <event select="F24F" />
+        <event select="F250" />
+        <event select="F251" />
+        <event select="F21D" />
+    </event-set>
+    <tool_tip>Collect relevant data for cache access analysis</tool_tip>
+    <description>Use this configuration to identify the false cache-line sharing issues. The profile data will be collected using IBS OP.</description>
+</dc_configuration>

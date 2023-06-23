@@ -1,0 +1,82 @@
+AMDUPROFCLI-TIMECHART(1)      AMDuProfCLI Manual      AMDUPROFCLI-TIMECHART(1)
+
+
+
+NAME
+       AMDuProfCLI  timechart - Tool to visualize total system behavior during
+       a workload.
+
+SYNOPSIS
+       AMDuProfCLI timechart [<options>] <program> [<args>]
+
+
+DESCRIPTION
+       This timechart command collects the system characteristics like  power,
+       thermal and frequency.
+
+OPTIONS
+       <program>
+              The launch application to be profiled.
+
+       <args> The list of arguments for the launch application.
+
+       -h, --help
+              Display the help information.
+
+       --list Display all the supported devices and categories.
+
+       -e, --event <type,...>
+              Collect counters for specified combination of device type and/or
+              category type.  Use command 'timechart --list' for the  list  of
+              supported devices and categories.  Note: Multiple occurrences of
+              -e are allowed.
+
+       -t, --interval <n>
+              Sampling interval n in milliseconds. The minimum value is 10ms.
+
+       -d, --duration <n>
+              Profile duration in seconds.
+
+       --affinity <core,..>
+              Setting affinity to the launched target application
+
+       -w, --working-dir <dir>
+              Setting working directory for the launched target application
+
+       -o, --output-dir <dir>
+              Output directory
+
+       -f, --format <fmt>
+              Output file format txt or csv. Default file format is csv.
+
+EXAMPLES
+       1.  Collect all the power counter values for the duration of 10 seconds
+           with sampling interval of 100 milliseconds:
+
+              $ AMDuProfCLI timechart --event power --interval 100 --duration 10
+
+
+       2.  Collect  all frequency counter values for 10 seconds, sampling them
+           every 500 milliseconds and dumping the results to a csv file:
+
+              $ AMDuProfCLI timechart --event frequency -o /tmp/PowerOutput --interval 500 --duration 10
+
+
+       3.  Collect all frequency counter values at core 0 to 3 for 10 seconds,
+           sampling  them  every 500 milliseconds and dumping the results to a
+           text file:
+
+              $ AMDuProfCLI timechart --event core=0-3,frequency -o /tmp/PowerOutput --interval 500 --duration 10 --format txt
+
+
+       4.  Display help:
+
+              $ AMDuProfCLI timechart --help
+
+
+SEE ALSO
+       AMDuProfCLI report(1), AMDuProfCLI collect(1), AMDuProfCLI info(1).
+
+
+
+AMDuProfCLI                       04 Oct 2022         AMDUPROFCLI-TIMECHART(1)

@@ -1,0 +1,59 @@
+{
+    "__comment": "Processor: AMD family 17h, model 20h-2Fh",
+    "view": {
+        "name": "IBS MEM data TLB",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_ALL_OPS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DTLB_L1M_L2H",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DTLB_L1M_L2M",
+                "sort": "none"
+            },
+            {
+                "title": "L1M_L2H_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L1M_L2M_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_DC_MISS_LAT",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "AVE_DC_MISS_LAT",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of data translation lookaside buffer (DTLB) behavior derived from IBS load/store op data."
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "__comment": "Processor: AMD family 17h, model 70h-7Fh",
+    "view": {
+        "name": "Near Return",
+        "dc_config": [
+            "branch"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "ExRetNearRet",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetNearRetMispred",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS_MISP_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS_MISP_RATIO",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to find code with poorly predicted near returns."
+    }
+}

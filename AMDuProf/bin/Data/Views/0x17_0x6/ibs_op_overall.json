@@ -1,0 +1,40 @@
+{
+    "__comment": "Processor: AMD family 17h, model 60h-6Fh",
+    "view": {
+        "name": "IBS All ops",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_ALL_OPS",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_BR",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_TAG_TO_RET",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_COMP_TO_RET",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_TAG_TO_RET",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_COMP_TO_RET",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of all IBS op samples."
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "__comment": "Processor: AMD family 17h, model 00h-0Fh",
+    "view": {
+        "name": "IBS MEM data cache",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_ALL_OPS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS_LAT",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_DC_MISS_LAT",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of data cache (DC) behavior derived from IBS load/store op samples."
+    }
+}

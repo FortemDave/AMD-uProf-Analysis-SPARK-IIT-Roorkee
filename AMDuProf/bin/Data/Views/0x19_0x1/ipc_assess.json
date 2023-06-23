@@ -1,0 +1,34 @@
+{
+    "__comment": "Processor: AMD family 19h, model 10h-1Fh",
+    "view": {
+        "name": "IPC",
+        "dc_config": [
+            "cpi",
+            "assess",
+            "assess_ext",
+            "inst_access",
+            "branch",
+            "data_access"
+        ],
+        "default_config": "cpi",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "IPC",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to find hot-spots with low instruction level paralellism."
+    }
+}

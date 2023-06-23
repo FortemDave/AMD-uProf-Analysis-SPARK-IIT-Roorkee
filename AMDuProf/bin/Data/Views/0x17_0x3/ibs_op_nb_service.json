@@ -1,0 +1,44 @@
+{
+    "__comment": "Processor: AMD family 17h, model 30h-3Fh",
+    "view": {
+        "name": "IBS NB request breakdown",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_NB_LOCAL_L3",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_LOCAL_CACHE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_REMOTE_CACHE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_LOCAL_DRAM",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_REMOTE_DRAM",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_LOCAL_OTHER",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_REMOTE_OTHER",
+                "sort": "none"
+            }
+        ],
+        "description": " Use this view to show a breakdown of Northbridge access requests (the number of each type of request handled by the NB.)"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "__comment": "Processor: AMD family 17h, model 00h-0Fh",
+    "view": {
+        "name": "Overall Assessment",
+        "dc_config": [
+            "assess"
+        ],
+        "default_config": "assess",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "IPC",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "L1_DC_ACCESSES_ALL",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "L2_CACHE_ACCESS_FROM_L1_DC_MISS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "MISALIGNED_LOADS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%RETIRED_BR_INST_MISP",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_ALL (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS (PTI)",
+                "sort": "none"
+            }
+        ],
+        "description": "This view gives an overall picture of performance. Use it to find possible issues for deeper investigation."
+    }
+}

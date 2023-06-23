@@ -1,0 +1,50 @@
+{
+    "__comment": "Processor: AMD family 17h, model 10h-1Fh",
+    "view": {
+        "name": "Branch",
+        "dc_config": [
+            "assess",
+            "branch",
+            "assess_ext"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "%RETIRED_BR_INST_MISP",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to find code with a high branch density and poorly predicted branches."
+    }
+}

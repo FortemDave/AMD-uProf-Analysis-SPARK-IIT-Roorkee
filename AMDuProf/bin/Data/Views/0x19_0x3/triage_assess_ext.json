@@ -1,0 +1,81 @@
+{
+    "__comment": "Processor: AMD family 19h, model 30h-3Fh",
+    "view": {
+        "name": "Overall Assessment (Extended)",
+        "dc_config": [
+            "assess_ext"
+        ],
+        "default_config": "assess_ext",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%RETIRED_BR_INST_MISP",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_REMOTE_DRAM (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_REMOTE_CACHE (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "STLI_OTHER (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "SSE_AVX_STALLS (PTC)",
+                "sort": "none"
+            },
+            {
+                "title": "INEFFECTIVE_SW_PF (PTI)",
+                "sort": "none"
+            }
+        ],
+        "description": "This view gives an overall picture of performance. Use it to find possible issues for deeper investigation."
+    }
+}

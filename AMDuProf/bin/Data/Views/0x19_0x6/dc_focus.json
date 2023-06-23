@@ -1,0 +1,97 @@
+{
+    "__comment": "Processor: AMD family 19h, model 60h-6Fh",
+    "view": {
+        "name": "Data Cache (Detailed)",
+        "dc_config": [
+            "data_access"
+        ],
+        "default_config": "data_access",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DEMAND_DC_REFILLS_LOCAL_L2",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DTLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_DTLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DTLB_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L2_DTLB_MISS_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to analyze L1 data cache (DC) behavior and compare misses versus refills."
+    }
+}

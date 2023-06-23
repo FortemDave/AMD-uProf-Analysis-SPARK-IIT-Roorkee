@@ -1,0 +1,46 @@
+{
+    "__comment": "Processor: AMD family 17h, model 00h-0Fh",
+    "view": {
+        "name": "Misaligned Access",
+        "dc_config": [
+            "assess",
+            "data_access",
+            "assess_ext"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES_ALL",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS_RATIO",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to identify regions of code that access misaligned data."
+    }
+}

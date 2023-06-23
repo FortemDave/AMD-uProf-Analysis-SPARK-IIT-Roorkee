@@ -1,0 +1,989 @@
+{ "events":
+[
+{
+  "EventName": "st_commit_cncl_rmw_haz_or_older_stall.umask0x44",
+  "EventCode": "0x36",
+  "BriefDescription": "StCommitCnclRmwHazOrOlderStall",
+  "PublicDescription": "Unit Masks ORed.",
+  "Umask": "0x44",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "st_commit_cncl_pty_err_ncgv.umask0x30",
+  "EventCode": "0x36",
+  "BriefDescription": "StCommitCnclPtyErrNcgv",
+  "PublicDescription": "Unit Masks ORed.",
+  "Umask": "0x30",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "hw_pf_stride_reg_pick.umask0x30",
+  "EventCode": "0x2f",
+  "BriefDescription": "HwPfStrideRegPick",
+  "PublicDescription": "Unit Masks 0-2 ORed together and then ADDed to other Unit Masks.",
+  "Umask": "0x30",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "ls_st_misalign.umask0x7",
+  "EventCode": "0x32",
+  "BriefDescription": "LsStMisalign",
+  "PublicDescription": "The number of misaligned stores.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "hw_pf_mab_alloc_stride_reg.umask0x6",
+  "EventCode": "0x57",
+  "BriefDescription": "HwPfMabAllocStrideReg",
+  "PublicDescription": "",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "merge.umask0x0",
+  "EventCode": "0xfff",
+  "BriefDescription": "merge",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "dem_pipe_mab_alloc.umask0x17",
+  "EventCode": "0x41",
+  "BriefDescription": "DemPipeMabAlloc",
+  "PublicDescription": "",
+  "Umask": "0x17",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "dem_hit_hw_pf_mab_stride_reg.umask0x6",
+  "EventCode": "0x51",
+  "BriefDescription": "DemHitHwPfMabStrideReg",
+  "PublicDescription": "Count = (Tp1 Region | Tp1 Stride | Tp1 Stream) + (Tp0 Region | Tp0 Stride | Tp0 Stream) + (Dp1 Region | Dp1 Stride | Dp1 Stream) + (Dp0 Region | Dp0 Stride | Dp0 Stream) + (Sp Region | Sp Stride | Sp Stream).",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "dc_fill_loc_sw_pf.umask0xb",
+  "EventCode": "0x59",
+  "BriefDescription": "DcFillLocSwPf",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0xb",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "dc_fill_loc_table_walk.umask0xb",
+  "EventCode": "0x5b",
+  "BriefDescription": "DcFillLocTableWalk",
+  "PublicDescription": "",
+  "Umask": "0xb",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "dc_fill_rem_sw_pf.umask0x50",
+  "EventCode": "0x59",
+  "BriefDescription": "DcFillRemSwPf",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x50",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "dc_fill_rem_table_walk.umask0x50",
+  "EventCode": "0x5b",
+  "BriefDescription": "DcFillRemTableWalk",
+  "PublicDescription": "",
+  "Umask": "0x50",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "wcb_close_premature.umask0xfe",
+  "EventCode": "0x50",
+  "BriefDescription": "WcbClosePremature",
+  "PublicDescription": "",
+  "Umask": "0xfe",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "virt_tw_return_type_spec_fault.umask0xc",
+  "EventCode": "0x170",
+  "BriefDescription": "VirtTwReturnTypeSpecFault",
+  "PublicDescription": "",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "mab_alloc_total.umask0x1f",
+  "EventCode": "0x41",
+  "BriefDescription": "MabAllocTotal",
+  "PublicDescription": "",
+  "Umask": "0x1f",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "num_mab_match_hw_pref.umask0x7",
+  "EventCode": "0x58",
+  "BriefDescription": "NumMabMatchHwPref",
+  "PublicDescription": "",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "LS"
+},
+{
+  "EventName": "ic_instr_fetch_itlb_hit.umask0x7",
+  "EventCode": "0x94",
+  "BriefDescription": "IcInstrFetchItlbHit",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "IC"
+},
+{
+  "EventName": "ic_fill.umask0x7",
+  "EventCode": "0x64",
+  "BriefDescription": "IcFill",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l1_i_tlb_miss_l2_i_tlb_miss.umask0x7",
+  "EventCode": "0x85",
+  "BriefDescription": "L1ITlbMissL2ITlbMiss",
+  "PublicDescription": "The number of instruction fetches that miss in both the L1 and L2 TLBs.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "IC"
+},
+{
+  "EventName": "oc_builds.cmask1",
+  "EventCode": "0xa2",
+  "BriefDescription": "OcBuilds",
+  "PublicDescription": "Micro-Op Cache Build Number of Ops.",
+  "Umask": "0x0",
+  "Cmask": "0x1",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "oc_set_way_ent_acc.umask0x0",
+  "EventCode": "0xa1",
+  "BriefDescription": "OcSetWayEntAcc",
+  "PublicDescription": "Number of Micro-Op Cache (OC) Fetch Entry Hits and mispredictions.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "ms_stall_serialize.umask0x1",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallSerialize",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_quiet.umask0x2",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForQuiet",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_seg_id.umask0x4",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForSegId",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_st_q.umask0x8",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForStQ",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_quiet_cur_tid.umask0x10",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForQuietCurTid",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_quiet_othr_tid.umask0x20",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForQuietOthrTid",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_mutex_stall.umask0x40",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallMutexStall",
+  "PublicDescription": "",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ms_stall_wait_for_count.umask0x80",
+  "EventCode": "0xa8",
+  "BriefDescription": "MsStallWaitForCount",
+  "PublicDescription": "",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ds_tok_stall0_int_fp_uops_dispatched.umask0xc",
+  "EventCode": "0xab",
+  "BriefDescription": "DsTokStall0IntFpUopsDispatched",
+  "PublicDescription": "Counts Cops dispatched to EX.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "dsp0_de_debug_stall.umask0x8",
+  "EventCode": "0xb5",
+  "BriefDescription": "Dsp0DeDebugStall",
+  "PublicDescription": "Cycles were there is no dispatch.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "clks2_br_in_dsp_grp.cmask1",
+  "EventCode": "0xb6",
+  "BriefDescription": "Clks2BrInDspGrp",
+  "PublicDescription": "The branch will start at 1 and subsequent cops will increment from 1.",
+  "Umask": "0x4",
+  "Cmask": "0x1",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "clks1_br_in_dsp_grp.cmask1",
+  "EventCode": "0xb6",
+  "BriefDescription": "Clks1BrInDspGrp",
+  "PublicDescription": "The branch will start at 1 and subsequent cops will increment from 1.",
+  "Umask": "0x1",
+  "Cmask": "0x1",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "clks_disp_non_zero.cmask1",
+  "EventCode": "0xb4",
+  "BriefDescription": "ClksDispNonZero",
+  "PublicDescription": "Count number of COPs Dispatched.",
+  "Umask": "0x7e",
+  "Cmask": "0x1",
+  "CounterType": "Core",
+  "EventType": "DE"
+},
+{
+  "EventName": "fp_ext2_int_int2_ext_faults.umask0xc",
+  "EventCode": "0xcf",
+  "BriefDescription": "FpExt2IntInt2ExtFaults",
+  "PublicDescription": "The number of floating point unit exceptions for microcode assists. The UnitMask may be used to isolate specific types of exceptions.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "EX"
+},
+{
+  "EventName": "fp_serializing_ops_retired.umask0xf",
+  "EventCode": "0x5",
+  "BriefDescription": "FpSerializingOpsRetired",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_mods_to_fp_cntrl_wrd.umask0x3f",
+  "EventCode": "0x7",
+  "BriefDescription": "FpModsToFpCntrlWrd",
+  "PublicDescription": "",
+  "Umask": "0x3f",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_dsp_fill_spill_faults.umask0xf",
+  "EventCode": "0xe",
+  "BriefDescription": "FpDspFillSpillFaults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "merge.umask0x0",
+  "EventCode": "0xfff",
+  "BriefDescription": "merge",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "fp_scal_all.umask0xf",
+  "EventCode": "0xa",
+  "BriefDescription": "FpScalAll",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_vec_all.umask0xf0",
+  "EventCode": "0xa",
+  "BriefDescription": "FpVecAll",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp128_all.umask0xf",
+  "EventCode": "0xc",
+  "BriefDescription": "Fp128All",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp256_all.umask0xf0",
+  "EventCode": "0xc",
+  "BriefDescription": "Fp256All",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_mmx_all.umask0xf",
+  "EventCode": "0xb",
+  "BriefDescription": "IntMmxAll",
+  "PublicDescription": "SseAvxOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). MmxOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_sse_avx_all.umask0xf0",
+  "EventCode": "0xb",
+  "BriefDescription": "IntSseAvxAll",
+  "PublicDescription": "SseAvxOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). MmxOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int128_all.umask0xf",
+  "EventCode": "0xd",
+  "BriefDescription": "Int128All",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int256_all.umask0xf0",
+  "EventCode": "0xd",
+  "BriefDescription": "Int256All",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xf0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_blend128.umask0x9",
+  "EventCode": "0xc",
+  "BriefDescription": "FpBlend128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x9",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_blend256.umask0x90",
+  "EventCode": "0xc",
+  "BriefDescription": "FpBlend256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x90",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_mul_scal.umask0x3",
+  "EventCode": "0xa",
+  "BriefDescription": "FpMulScal",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x3",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_mul128.umask0x3",
+  "EventCode": "0xc",
+  "BriefDescription": "FpMul128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x3",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_mul256.umask0x30",
+  "EventCode": "0xc",
+  "BriefDescription": "FpMul256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x30",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_shuf128.umask0xb",
+  "EventCode": "0xc",
+  "BriefDescription": "FpShuf128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xb",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_shuf256.umask0xb0",
+  "EventCode": "0xc",
+  "BriefDescription": "FpShuf256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xb0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_div_scal.umask0x5",
+  "EventCode": "0xa",
+  "BriefDescription": "FpDivScal",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x5",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_div128.umask0x5",
+  "EventCode": "0xc",
+  "BriefDescription": "FpDiv128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x5",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_div256.umask0x50",
+  "EventCode": "0xc",
+  "BriefDescription": "FpDiv256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x50",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_sqrt_scal.umask0x6",
+  "EventCode": "0xa",
+  "BriefDescription": "FpSqrtScal",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_sqrt128.umask0x6",
+  "EventCode": "0xc",
+  "BriefDescription": "FpSqrt128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_sqrt256.umask0x60",
+  "EventCode": "0xc",
+  "BriefDescription": "FpSqrt256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x60",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_pack128.umask0xc",
+  "EventCode": "0xc",
+  "BriefDescription": "FpPack128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_pack256.umask0xc0",
+  "EventCode": "0xc",
+  "BriefDescription": "FpPack256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xc0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_cmp_scal.umask0x7",
+  "EventCode": "0xa",
+  "BriefDescription": "FpCmpScal",
+  "PublicDescription": "VectorFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). ScalarFpOpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_cmp128.umask0x7",
+  "EventCode": "0xc",
+  "BriefDescription": "FpCmp128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_cmp256.umask0x70",
+  "EventCode": "0xc",
+  "BriefDescription": "FpCmp256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x70",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_logical128.umask0xd",
+  "EventCode": "0xc",
+  "BriefDescription": "FpLogical128",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xd",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_logical256.umask0xd0",
+  "EventCode": "0xc",
+  "BriefDescription": "FpLogical256",
+  "PublicDescription": "Fp256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Fp128OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (Div), 6h (Sqrt), 7h (Cmp), 8h (Cvt), 9h (Blend), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xd0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_mul128.umask0x3",
+  "EventCode": "0xd",
+  "BriefDescription": "IntMul128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x3",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_mul256.umask0x30",
+  "EventCode": "0xd",
+  "BriefDescription": "IntMul256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x30",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_cmp128.umask0x7",
+  "EventCode": "0xd",
+  "BriefDescription": "IntCmp128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_cmp256.umask0x70",
+  "EventCode": "0xd",
+  "BriefDescription": "IntCmp256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x70",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_shuf128.umask0xb",
+  "EventCode": "0xd",
+  "BriefDescription": "IntShuf128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xb",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_shuf256.umask0xb0",
+  "EventCode": "0xd",
+  "BriefDescription": "IntShuf256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xb0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_pack128.umask0xc",
+  "EventCode": "0xd",
+  "BriefDescription": "IntPack128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_pack256.umask0xc0",
+  "EventCode": "0xd",
+  "BriefDescription": "IntPack256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xc0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_logical128.umask0xd",
+  "EventCode": "0xd",
+  "BriefDescription": "IntLogical128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xd",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_logical256.umask0xd0",
+  "EventCode": "0xd",
+  "BriefDescription": "IntLogical256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xd0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_aes128.umask0x5",
+  "EventCode": "0xd",
+  "BriefDescription": "IntAes128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x5",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_aes256.umask0x50",
+  "EventCode": "0xd",
+  "BriefDescription": "IntAes256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x50",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_ld_st128.umask0xe",
+  "EventCode": "0xd",
+  "BriefDescription": "IntLdSt128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xe",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_ld_st256.umask0xe0",
+  "EventCode": "0xd",
+  "BriefDescription": "IntLdSt256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xe0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_mov128.umask0xa",
+  "EventCode": "0xd",
+  "BriefDescription": "IntMov128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xa",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_mov256.umask0xa0",
+  "EventCode": "0xd",
+  "BriefDescription": "IntMov256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0xa0",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_shift128.umask0x9",
+  "EventCode": "0xd",
+  "BriefDescription": "IntShift128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x9",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_shift256.umask0x90",
+  "EventCode": "0xd",
+  "BriefDescription": "IntShift256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x90",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_sha128.umask0x6",
+  "EventCode": "0xd",
+  "BriefDescription": "IntSha128",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "int_sha256.umask0x60",
+  "EventCode": "0xd",
+  "BriefDescription": "IntSha256",
+  "PublicDescription": "Int256OpType[3:0] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Int128OpType[3] valid values: 0h (None), 1h (Add), 2h (Sub), 3h (Mul), 4h (Mac), 5h (AES), 6h (SHA), 7h (Cmp), 8h (CLM), 9h (Shift), Ah (Mov), Bh (Shuf), Ch (Pack), Dh (Logical), Eh (Other), Fh (All). Note: Shuf uOp counts may count for instructions that are not necessarily thought of as including shuffles. For example,  Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuf type uops.",
+  "Umask": "0x60",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_throttle_pipe_clks.umask0xf",
+  "EventCode": "0x9",
+  "BriefDescription": "FpThrottlePipeClks",
+  "PublicDescription": "",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": "FP"
+},
+{
+  "EventName": "l24_ic_val1_dc_val1.umask0xc0",
+  "EventCode": "0x66",
+  "BriefDescription": "L24IcVal1DcVal1",
+  "PublicDescription": "The unit masks allow for counting various combinations of victim merit information. ICVal indicates the line may have been removed from the IC, DCVal indicates is was removed from the L1DC and DifficultVictim indicates that the IRRIP bits did not indicate any eligible line and the bits had to be incremented to find a victim. Note that the L2 is not notified when a line is removed from the IC, so ICVal is conservative; that is, if it is true, it means the line may be in the IC, but when it is false, the line is certainly not in the IC.",
+  "Umask": "0xc0",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l24_ic_val1_dc_val0.umask0x30",
+  "EventCode": "0x66",
+  "BriefDescription": "L24IcVal1DcVal0",
+  "PublicDescription": "The unit masks allow for counting various combinations of victim merit information. ICVal indicates the line may have been removed from the IC, DCVal indicates is was removed from the L1DC and DifficultVictim indicates that the IRRIP bits did not indicate any eligible line and the bits had to be incremented to find a victim. Note that the L2 is not notified when a line is removed from the IC, so ICVal is conservative; that is, if it is true, it means the line may be in the IC, but when it is false, the line is certainly not in the IC.",
+  "Umask": "0x30",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l24_ic_val0_dc_val1.umask0xc",
+  "EventCode": "0x66",
+  "BriefDescription": "L24IcVal0DcVal1",
+  "PublicDescription": "The unit masks allow for counting various combinations of victim merit information. ICVal indicates the line may have been removed from the IC, DCVal indicates is was removed from the L1DC and DifficultVictim indicates that the IRRIP bits did not indicate any eligible line and the bits had to be incremented to find a victim. Note that the L2 is not notified when a line is removed from the IC, so ICVal is conservative; that is, if it is true, it means the line may be in the IC, but when it is false, the line is certainly not in the IC.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l24_ic_val0_dc_val0.umask0x3",
+  "EventCode": "0x66",
+  "BriefDescription": "L24IcVal0DcVal0",
+  "PublicDescription": "The unit masks allow for counting various combinations of victim merit information. ICVal indicates the line may have been removed from the IC, DCVal indicates is was removed from the L1DC and DifficultVictim indicates that the IRRIP bits did not indicate any eligible line and the bits had to be incremented to find a victim. Note that the L2 is not notified when a line is removed from the IC, so ICVal is conservative; that is, if it is true, it means the line may be in the IC, but when it is false, the line is certainly not in the IC.",
+  "Umask": "0x3",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l26_l2_clks_under_dvm_sync_quiesce.umask0x2",
+  "EventCode": "0x6c",
+  "BriefDescription": "L26L2ClksUnderDvmSyncQuiesce",
+  "PublicDescription": "This multi-event counts both threads. Total cycles spent between receiving a quiesce request and a release for a bus lock operations.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l26_l2_pref_accuracy_lt40pct.umask0x1",
+  "EventCode": "0x79",
+  "BriefDescription": "L26L2PrefAccuracyLt40pct",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l211_l2_pref_hit_l3.umask0x1f",
+  "EventCode": "0x71",
+  "BriefDescription": "L211L2PrefHitL3",
+  "PublicDescription": "Counts all L2 prefetches accepted by the L2 pipeline which miss the L2 cache and hit the L3.",
+  "Umask": "0x1f",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l211_l2_pref_hit_mem.umask0x1f",
+  "EventCode": "0x72",
+  "BriefDescription": "L211L2PrefHitMem",
+  "PublicDescription": "Counts all L2 prefetches accepted by the L2 pipeline which miss the L2 and the L3 caches.",
+  "Umask": "0x1f",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l211_ic_ls_req.umask0x9",
+  "EventCode": "0x64",
+  "BriefDescription": "L211IcLsReq",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher. L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x9",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l211_promoted_ls_hw_pf_dem_cnt.umask0xc",
+  "EventCode": "0x6f",
+  "BriefDescription": "L211PromotedLsHwPfDemCnt",
+  "PublicDescription": "LS prefetches may be generated by hardware or software. Also note that each prefetch will increment exactly one of sub-events 1-7; however, a prefetch which increments sub-event 0 will also increment sub-event 1.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": "L2"
+},
+{
+  "EventName": "l211_l2_pref_accuracy40to60pct.umask0x2",
+  "EventCode": "0x79",
+  "BriefDescription": "L211L2PrefAccuracy40to60pct",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l211_l2_pref_accuracy60to80pct.umask0x4",
+  "EventCode": "0x79",
+  "BriefDescription": "L211L2PrefAccuracy60to80pct",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l211_l2_pref_accuracy_gt80pct.umask0x8",
+  "EventCode": "0x79",
+  "BriefDescription": "L211L2PrefAccuracyGt80pct",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle01.umask0x1",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle01",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle23.umask0x2",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle23",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle45.umask0x4",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle45",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle67.umask0x8",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle67",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle89.umask0x10",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle89",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle1011.umask0x20",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle1011",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle1213.umask0x40",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle1213",
+  "PublicDescription": "",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "l212_clks_mib_thrttle1415.umask0x80",
+  "EventCode": "0x7c",
+  "BriefDescription": "L212ClksMibThrttle1415",
+  "PublicDescription": "",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+}
+]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--     
+         Basic time-based profiling (TBP) data collection configuration
+ -->
+
+<dc_configuration name="Time-based Sampling">
+
+  <tbp interval="1.0" call_graph="T"/>
+
+  <tool_tip>
+      Find program hot-spots
+  </tool_tip>
+
+  <description>
+      Use this configuration to identify where programs are spending time.
+  </description>
+
+</dc_configuration>

@@ -1,0 +1,65 @@
+{
+    "__comment": "Processor: AMD family 19h, model 40h-4Fh",
+    "view": {
+        "name": "Instruction Cache",
+        "dc_config": [
+            "inst_access"
+        ],
+        "default_config": "inst_access",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "OP_CACHE_64B_FETCH_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IC_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IC_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_CACHE_ACCESSES_FROM_IC_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_CACHE_MISSES_FROM_IC_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_REQUESTS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_ITLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L2_ITLB_MISS_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to identify regions of code that miss in the instruction cache (IC.)"
+    }
+}

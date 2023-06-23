@@ -1,0 +1,228 @@
+{ "metric":
+[
+{
+  "Abbreviation": "Section:L3Thread0statistics",
+  "Name": "Section:L3 Thread 0 statistics.",
+  "Expression": "",
+  "Description": "",
+  "Child": "L3T0L3Accesses,L3T0L3AccessesPTC",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3T0L3Accesses",
+  "Name": "L3 Cacheable accesses PTI",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_t0_accessed_l3)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "L3T0MissedL3",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3T0MissedL3",
+  "Name": "L3 miss",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_t0_missed_l3)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3T0L3AccessesPTC",
+  "Name": "L3 Cacheable accesses PTC",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_t0_accessed_l3)*(1000))/(aperf)",
+  "Description": "",
+  "Child": "L3T0MissedL3PTC,L3T0MissedL3Pct",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3T0MissedL3PTC",
+  "Name": "L3 miss PTC",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_t0_missed_l3)*(1000))/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3T0MissedL3Pct",
+  "Name": "L3 miss %",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_t0_missed_l3)*(100))/(l3_lookup_state.l3_lookup_mask_l3_t0_accessed_l3)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:L3statsforentirecomplex",
+  "Name": "Section:L3 stats for entire complex",
+  "Expression": "",
+  "Description": "",
+  "Child": "L3OaL3AccessesPT0I,L3OaMissedL3Pct",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3OaL3AccessesPT0I",
+  "Name": "L3 Cacheable accesses PTI T0",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_oa_accessed_l3)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L3OaMissedL3Pct",
+  "Name": "L3 miss %",
+  "Expression": "((l3_lookup_state.l3_lookup_mask_l3_oa_missed_l3)*(100))/(l3_lookup_state.l3_lookup_mask_l3_oa_accessed_l3)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingL3PsUs",
+  "Name": "NonPrintingL3PsUs",
+  "Expression": "((tsc)/(CpuMhz))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingL3Ps2Us",
+  "Name": "NonPrintingL3Ps2Us",
+  "Expression": "((tsc)/(CpuMhz))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingSptUs",
+  "Name": "NonPrintingSptUs",
+  "Expression": "((tsc)/(CpuMhz))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingPlUs",
+  "Name": "NonPrintingPlUs",
+  "Expression": "((tsc)/(CpuMhz))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:RequestsbyIBSResponseSource(PTC)",
+  "Name": "Section:Requests by IBS Response Source (PTC)",
+  "Expression": "",
+  "Description": "",
+  "Child": "XIFillLatSrc5_Req_All,XIFillLatSrc5_Req_AllNoOther",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc5_Req_All",
+  "Name": "Average (all sources)",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc5_Req_AllNoOther",
+  "Name": "Average (all sources except for Other)",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all_no_other)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "XIFillLatSrc4_Req_Dram_Near,XIFillLatSrc4_Req_Dram_Far,XIFillLatSrc4_Req_Cache_Near,XIFillLatSrc3_Req_Cache_Far",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Req_Dram_Near",
+  "Name": "DRAM from Near CS",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_near)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Req_Dram_Far",
+  "Name": "DRAM from Far CS",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_far)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Req_Cache_Near",
+  "Name": "Cache from Near CS",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_cache_near)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc3_Req_Cache_Far",
+  "Name": "Cache from Far CS",
+  "Expression": "((l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src3_req_cache_far)*(1000))/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:AverageLatencybyIBSResponseSource(ns)",
+  "Name": "Section:Average Latency by IBS Response Source (ns)",
+  "Expression": "",
+  "Description": "",
+  "Child": "XIFillLatSrc5_Lat_All,XIFillLatSrc5_Lat_AllNoOther",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc5_Lat_All",
+  "Name": "Average (all sources)",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all))*(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc5_Lat_AllNoOther",
+  "Name": "Average (all sources except for Other)",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all_no_other)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all_no_other))*(10)",
+  "Description": "",
+  "Child": "XIFillLatSrc4_Lat_Dram_Near,XIFillLatSrc4_Lat_Dram_Far,XIFillLatSrc4_Lat_Cache_Near,XIFillLatSrc3_Lat_Cache_Far",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Lat_Dram_Near",
+  "Name": "DRAM from Near CS",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_near)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_near))*(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Lat_Dram_Far",
+  "Name": "DRAM from FarCS",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_far)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_far))*(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc4_Lat_Cache_Near",
+  "Name": "Cache from Near CS",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_cache_near)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_cache_near))*(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "XIFillLatSrc3_Lat_Cache_Far",
+  "Name": "Cache from FarCS",
+  "Expression": "((l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src3_lat_cache_far)/(l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src3_req_cache_far))*(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingSrrUs",
+  "Name": "NonPrintingSrrUs",
+  "Expression": "((tsc)/(CpuMhz))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+}
+]
+}

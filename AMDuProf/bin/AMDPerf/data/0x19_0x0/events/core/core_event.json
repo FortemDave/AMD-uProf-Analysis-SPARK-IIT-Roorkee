@@ -1,0 +1,1886 @@
+{ "events":
+[
+{
+  "EventName": "BpDynIndPred",
+  "EventCode": "0x8e",
+  "BriefDescription": "Dynamic Indirect Predictions",
+  "PublicDescription": "The number of times a branch used the indirect predictor to make a prediction.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpDynIndPred",
+  "EventCode": "0x8e",
+  "BriefDescription": "Dynamic Indirect Predictions",
+  "PublicDescription": "The number of times a branch used the indirect predictor to make a prediction.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbFetchHit.IF1G",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 TLB Hits for Instruction Fetch",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbFetchHit.IF2M",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 TLB Hits for Instruction Fetch",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbFetchHit.IF4K",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 TLB Hits for Instruction Fetch",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbFetchHit",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 TLB Hits for Instruction Fetch",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbHit",
+  "EventCode": "0x84",
+  "BriefDescription": "L1 ITLB Miss, L2 ITLB Hit",
+  "PublicDescription": "The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbHit",
+  "EventCode": "0x84",
+  "BriefDescription": "L1 ITLB Miss, L2 ITLB Hit",
+  "PublicDescription": "The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss.Coalesced4K",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss.IF1G",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss.IF2M",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss.IF4K",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL2BTBCorrect",
+  "EventCode": "0x8b",
+  "BriefDescription": "L2 Branch Prediction Overrides Existing Prediction (speculative)",
+  "PublicDescription": "Counts L2 branch prediction overrides by L2 BTB hits.  L2 BTB hits indicate a capacity limitation of the L1 BTB. L2 BTB hits may create stalls in the fetch stream.   Note that this event was intended to count all L2 prediction overrides but only counts L2 BTB based overrides.  There are PMC events for 2 other L2 prediction overrides that can be counted: PMCx181(Core::X86::Pmc::Core::BpL2TgeDirOvr) and PMCx08E (Core::X86::Pmc::Core::BpDynIndPred).  Prediction time event.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL2BTBCorrect",
+  "EventCode": "0x8b",
+  "BriefDescription": "L2 Branch Prediction Overrides Existing Prediction (speculative)",
+  "PublicDescription": "Counts L2 branch prediction overrides by L2 BTB hits.  L2 BTB hits indicate a capacity limitation of the L1 BTB. L2 BTB hits may create stalls in the fetch stream.   Note that this event was intended to count all L2 prediction overrides but only counts L2 BTB based overrides.  There are PMC events for 2 other L2 prediction overrides that can be counted: PMCx181(Core::X86::Pmc::Core::BpL2TgeDirOvr) and PMCx08E (Core::X86::Pmc::Core::BpDynIndPred).  Prediction time event.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisCopsFromDecoder.OpCountingMode",
+  "EventCode": "0xab",
+  "BriefDescription": "Types of Oops Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op type. The UnitMask value encodes which types of ops are counted.  UnitMask[4:0] encodings for op types:   00001 - fastpath (any type)   01001 - fastpath integer   00101 - fastpath FP/SIMD   00010 - microcode (any type)   01010 - microcode integer   00110 - microcode FP/SIMD   10000 - fastpath sequencer (any type)   11000 - fastpath sequencer integer   10100 - fastpath sequncer FP/SIMD   01000 - integer (any source)   00100 - FP/SIMD (any source)   other: counts 0",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisCopsFromDecoder.DispOpType",
+  "EventCode": "0xab",
+  "BriefDescription": "Types of Oops Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op type. The UnitMask value encodes which types of ops are counted.  UnitMask[4:0] encodings for op types:   00001 - fastpath (any type)   01001 - fastpath integer   00101 - fastpath FP/SIMD   00010 - microcode (any type)   01010 - microcode integer   00110 - microcode FP/SIMD   10000 - fastpath sequencer (any type)   11000 - fastpath sequencer integer   10100 - fastpath sequncer FP/SIMD   01000 - integer (any source)   00100 - FP/SIMD (any source)   other: counts 0",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisCopsFromDecoder",
+  "EventCode": "0xab",
+  "BriefDescription": "Types of Oops Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op type. The UnitMask value encodes which types of ops are counted.  UnitMask[4:0] encodings for op types:   00001 - fastpath (any type)   01001 - fastpath integer   00101 - fastpath FP/SIMD   00010 - microcode (any type)   01010 - microcode integer   00110 - microcode FP/SIMD   10000 - fastpath sequencer (any type)   11000 - fastpath sequencer integer   10100 - fastpath sequncer FP/SIMD   01000 - integer (any source)   00100 - FP/SIMD (any source)   other: counts 0",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.FpFlushRecoveryStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.FPSchRsrcStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.FpRegFileRsrcStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.TakenBrnchBufferRsrc",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.StoreQueueRsrcStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.LoadQueueRsrcStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1.IntPhyRegFileRsrcStall",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls1",
+  "EventCode": "0xae",
+  "BriefDescription": "Dispatch Resource Stall Cycles 1",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.RetireTokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.IntSch3TokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.IntSch2TokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.IntSch1TokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.IntSch0TokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeOpQueueEmpty",
+  "EventCode": "0xa9",
+  "BriefDescription": "Op Queue Empty",
+  "PublicDescription": "Cycles where the Op Queue is empty.  This event may count less cycles of UOQ empty due to DECBRTL-18451",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeOpQueueEmpty",
+  "EventCode": "0xa9",
+  "BriefDescription": "Op Queue Empty",
+  "PublicDescription": "Cycles where the Op Queue is empty.  This event may count less cycles of UOQ empty due to DECBRTL-18451",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeSrcOpDisp.OpCache",
+  "EventCode": "0xaa",
+  "BriefDescription": "Source of Op Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.  See docRevG erratum #1287.  As a result of DECBRTL-18117, this PMC event counts events from any thread. A microcode patch has been written to disable this PMC event for non-secure parts",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeSrcOpDisp.x86Decoder",
+  "EventCode": "0xaa",
+  "BriefDescription": "Source of Op Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.  See docRevG erratum #1287.  As a result of DECBRTL-18117, this PMC event counts events from any thread. A microcode patch has been written to disable this PMC event for non-secure parts",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeSrcOpDisp",
+  "EventCode": "0xaa",
+  "BriefDescription": "Source of Op Dispatched From Decoder",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.  See docRevG erratum #1287.  As a result of DECBRTL-18117, this PMC event counts events from any thread. A microcode patch has been written to disable this PMC event for non-secure parts",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExDivBusy",
+  "EventCode": "0xd3",
+  "BriefDescription": "Div Cycles Busy count",
+  "PublicDescription": "NA",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExDivBusy",
+  "EventCode": "0xd3",
+  "BriefDescription": "Div Cycles Busy count",
+  "PublicDescription": "NA",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExDivCount",
+  "EventCode": "0xd4",
+  "BriefDescription": "Div Op Count",
+  "PublicDescription": "NA",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExDivCount",
+  "EventCode": "0xd4",
+  "BriefDescription": "Div Op Count",
+  "PublicDescription": "NA",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrn",
+  "EventCode": "0xc2",
+  "BriefDescription": "Retired Branch Instructions",
+  "PublicDescription": "The number of branch instructions retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrn",
+  "EventCode": "0xc2",
+  "BriefDescription": "Retired Branch Instructions",
+  "PublicDescription": "The number of branch instructions retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnFar",
+  "EventCode": "0xc6",
+  "BriefDescription": "Retired Far Control Transfers",
+  "PublicDescription": "The number of far control transfers retired including far call/jump/return, IRET, SYSCALL and SYSRET, plus exceptions and interrupts. Far control transfers are not subject to branch prediction.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnFar",
+  "EventCode": "0xc6",
+  "BriefDescription": "Retired Far Control Transfers",
+  "PublicDescription": "The number of far control transfers retired including far call/jump/return, IRET, SYSCALL and SYSRET, plus exceptions and interrupts. Far control transfers are not subject to branch prediction.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnIndMisp",
+  "EventCode": "0xca",
+  "BriefDescription": "Retired Indirect Branch Instructions Mispredicted",
+  "PublicDescription": "The number of indirect branches retired that were not correctly predicted. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction. Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnIndMisp",
+  "EventCode": "0xca",
+  "BriefDescription": "Retired Indirect Branch Instructions Mispredicted",
+  "PublicDescription": "The number of indirect branches retired that were not correctly predicted. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction. Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnMisp",
+  "EventCode": "0xc3",
+  "BriefDescription": "Retired Branch Instructions Mispredicted",
+  "PublicDescription": "The number of retired branch instructions, that were mispredicted.   Note that only EX mispredicts (direction mispredicts and indirect target mispredicts) are counted. DE mispredicts (direct target correction misprediected unconditional direct branches) are not counted.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnMisp",
+  "EventCode": "0xc3",
+  "BriefDescription": "Retired Branch Instructions Mispredicted",
+  "PublicDescription": "The number of retired branch instructions, that were mispredicted.   Note that only EX mispredicts (direction mispredicts and indirect target mispredicts) are counted. DE mispredicts (direct target correction misprediected unconditional direct branches) are not counted.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnTkn",
+  "EventCode": "0xc4",
+  "BriefDescription": "Retired Taken Branch Instructions",
+  "PublicDescription": "The number of taken branches that were retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnTkn",
+  "EventCode": "0xc4",
+  "BriefDescription": "Retired Taken Branch Instructions",
+  "PublicDescription": "The number of taken branches that were retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnTknMisp",
+  "EventCode": "0xc5",
+  "BriefDescription": "Retired Taken Branch Instructions Mispredicted",
+  "PublicDescription": "The number of retired taken branch instructions that were mispredicted.  Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetBrnTknMisp",
+  "EventCode": "0xc5",
+  "BriefDescription": "Retired Taken Branch Instructions Mispredicted",
+  "PublicDescription": "The number of retired taken branch instructions that were mispredicted.  Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetCond",
+  "EventCode": "0xd1",
+  "BriefDescription": "Retired Conditional Branch Instructions",
+  "PublicDescription": "NA",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetCond",
+  "EventCode": "0xd1",
+  "BriefDescription": "Retired Conditional Branch Instructions",
+  "PublicDescription": "NA",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetIndBrchInstr",
+  "EventCode": "0xcc",
+  "BriefDescription": "Retired Indirect Branch Instructions",
+  "PublicDescription": "The number of indirect branches retired.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetIndBrchInstr",
+  "EventCode": "0xcc",
+  "BriefDescription": "Retired Indirect Branch Instructions",
+  "PublicDescription": "The number of indirect branches retired.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "retired_instructions",
+  "EventCode": "0xc0",
+  "BriefDescription": "Retired Instructions",
+  "PublicDescription": "The number of instructions retired (execution completed and architectural state updated). This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetInstr",
+  "EventCode": "0xc0",
+  "BriefDescription": "Retired Instructions",
+  "PublicDescription": "The number of instructions retired (execution completed and architectural state updated). This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMmxFpInstr.SseInstr",
+  "EventCode": "0xcb",
+  "BriefDescription": "Retired MMX/FP Instructions",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMmxFpInstr.MmxInstr",
+  "EventCode": "0xcb",
+  "BriefDescription": "Retired MMX/FP Instructions",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMmxFpInstr.X87Instr",
+  "EventCode": "0xcb",
+  "BriefDescription": "Retired MMX/FP Instructions",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMmxFpInstr",
+  "EventCode": "0xcb",
+  "BriefDescription": "Retired MMX/FP Instructions",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMsprdBrnchInstrDirMsmtch",
+  "EventCode": "0x1c7",
+  "BriefDescription": "Retired Mispredicted Branch Instructions due to Direction Mismatch",
+  "PublicDescription": "The number of retired conditional branch instructions that were not correctly predicted because of a branch direction mismatch.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetMsprdBrnchInstrDirMsmtch",
+  "EventCode": "0x1c7",
+  "BriefDescription": "Retired Mispredicted Branch Instructions due to Direction Mismatch",
+  "PublicDescription": "The number of retired conditional branch instructions that were not correctly predicted because of a branch direction mismatch.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetNearRet",
+  "EventCode": "0xc8",
+  "BriefDescription": "Retired Near Returns",
+  "PublicDescription": "The number of near return instructions (RET or RET Iw) retired.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetNearRet",
+  "EventCode": "0xc8",
+  "BriefDescription": "Retired Near Returns",
+  "PublicDescription": "The number of near return instructions (RET or RET Iw) retired.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetNearRetMispred",
+  "EventCode": "0xc9",
+  "BriefDescription": "Retired Near Returns Mispredicted",
+  "PublicDescription": "The number of near returns retired that were not correctly predicted by the return address predictor. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetNearRetMispred",
+  "EventCode": "0xc9",
+  "BriefDescription": "Retired Near Returns Mispredicted",
+  "PublicDescription": "The number of near returns retired that were not correctly predicted by the return address predictor. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetOps",
+  "EventCode": "0xc1",
+  "BriefDescription": "Retired Ops",
+  "PublicDescription": "The number of macro-ops retired. This count includes all processor activity (instructions, exceptions, interrupts, microcode assists, etc.). The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExRetOps",
+  "EventCode": "0xc1",
+  "BriefDescription": "Retired Ops",
+  "PublicDescription": "The number of macro-ops retired. This count includes all processor activity (instructions, exceptions, interrupts, microcode assists, etc.). The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExTaggedIbsOps.IbsCountRollover",
+  "EventCode": "0x1cf",
+  "BriefDescription": "Tagged IBS Ops",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExTaggedIbsOps.IbsTaggedOpsRet",
+  "EventCode": "0x1cf",
+  "BriefDescription": "Tagged IBS Ops",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExTaggedIbsOps.IbsTaggedOps",
+  "EventCode": "0x1cf",
+  "BriefDescription": "Tagged IBS Ops",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "ExTaggedIbsOps",
+  "EventCode": "0x1cf",
+  "BriefDescription": "Tagged IBS Ops",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults.YmmSpillFault",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults.YmmFillFault",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults.XmmFillFault",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults.x87FillFault",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpRetSseAvxOps.MacFLOPs",
+  "EventCode": "0x3",
+  "BriefDescription": "Retired SSE/AVX FLOPs",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.23.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "FP"
+},
+{
+  "EventName": "FpRetSseAvxOps.DivFLOPs",
+  "EventCode": "0x3",
+  "BriefDescription": "Retired SSE/AVX FLOPs",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.23.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "FP"
+},
+{
+  "EventName": "FpRetSseAvxOps.MultFLOPs",
+  "EventCode": "0x3",
+  "BriefDescription": "Retired SSE/AVX FLOPs",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.23.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "FP"
+},
+{
+  "EventName": "FpRetSseAvxOps.AddSubFLOPs",
+  "EventCode": "0x3",
+  "BriefDescription": "Retired SSE/AVX FLOPs",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.23.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "FP"
+},
+{
+  "EventName": "FpRetSseAvxOps",
+  "EventCode": "0x3",
+  "BriefDescription": "Retired SSE/AVX FLOPs",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.23.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "FP"
+},
+{
+  "EventName": "FpRetiredSerOps.SseBotRet",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "LS"
+},
+{
+  "EventName": "FpRetiredSerOps.SseCtrlRet",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "LS"
+},
+{
+  "EventName": "FpRetiredSerOps.X87BotRet",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "LS"
+},
+{
+  "EventName": "FpRetiredSerOps.X87CtrlRet",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "LS"
+},
+{
+  "EventName": "FpRetiredSerOps",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "MergeEvent" : "Yes",
+  "EventType": "LS"
+},
+{
+  "EventName": "IcCacheFillL2",
+  "EventCode": "0x82",
+  "BriefDescription": "Instruction Cache Refills from L2",
+  "PublicDescription": "The number of 64-byte instruction cache line was fulfilled from the L2 cache.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "IcCacheFillL2",
+  "EventCode": "0x82",
+  "BriefDescription": "Instruction Cache Refills from L2",
+  "PublicDescription": "The number of 64-byte instruction cache line was fulfilled from the L2 cache.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "IcCacheFillSys",
+  "EventCode": "0x83",
+  "BriefDescription": "Instruction Cache Refills from System",
+  "PublicDescription": "The number of 64-byte instruction cache line fulfilled from system memory or another cache.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "IcCacheFillSys",
+  "EventCode": "0x83",
+  "BriefDescription": "Instruction Cache Refills from System",
+  "PublicDescription": "The number of 64-byte instruction cache line fulfilled from system memory or another cache.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "IcTagHitMiss.IcAccessTypes",
+  "EventCode": "0x18e",
+  "BriefDescription": "IC Tag Hit/Miss Events",
+  "PublicDescription": "Counts various IC tag related hit and miss events.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "IcTagHitMiss",
+  "EventCode": "0x18e",
+  "BriefDescription": "IC Tag Hit/Miss Events",
+  "PublicDescription": "Counts various IC tag related hit and miss events.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkCS",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkLHitX",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkLHitS",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkX",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkC",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.IcFillHitX",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.IcFillHitS",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.IcFillMiss",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2PfHitL2",
+  "EventCode": "0x70",
+  "BriefDescription": "L2 Prefetch Hit in L2",
+  "PublicDescription": "Counts all L2 prefetches accepted by L2 pipeline which hit in the L2 cache.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2PfMissL2HitL3",
+  "EventCode": "0x71",
+  "BriefDescription": "L2 Prefetcher Hits in L3",
+  "PublicDescription": "Counts all L2 prefetches accepted by the L2 pipeline which miss the L2 cache and hit the L3.  Note: L2 PMC event Core::X86::Pmc::Core::L2PfMissL2HitL3 (PMCx071) will not count L2 stride prefetch events correctly. The stride prefetches get incorrectly counted as 'Stream prefetch' events.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2PfMissL2L3",
+  "EventCode": "0x72",
+  "BriefDescription": "L2 Prefetcher Misses in L3",
+  "PublicDescription": "Counts all L2 prefetches accepted by the L2 pipeline which miss the L2 and the L3 caches.  Note: L2 PMC event Core::X86::Pmc::Core::L2PfMissL2L3 (PMCx072) will not count L2 stride prefetch events correctly. The stride prefetches get incorrectly counted as 'Stream prefetch' events.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.RdBlkL",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.RdBlkX",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.LsRdBlkC_S",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.CacheableIcRead",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.ChangeToX",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.PrefetchL2Cmd",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.L2HwPf",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAllocMabCount",
+  "EventCode": "0x5f",
+  "BriefDescription": "Count of Allocated Mabs",
+  "PublicDescription": "This event counts the in-flight L1 data cache misses (allocated Miss Address Buffers) divided by 4 and rounded down each cycle unless used with the MergeEvent functionality. If the MergeEvent is used, it counts the exact number of outstanding L1 data cache misses. See 2.1.23.3 [Large Increment per Cycle Events].",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAllocMabCount",
+  "EventCode": "0x5f",
+  "BriefDescription": "Count of Allocated Mabs",
+  "PublicDescription": "This event counts the in-flight L1 data cache misses (allocated Miss Address Buffers) divided by 4 and rounded down each cycle unless used with the MergeEvent functionality. If the MergeEvent is used, it counts the exact number of outstanding L1 data cache misses. See 2.1.23.3 [Large Increment per Cycle Events].",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.MemIoRemote",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.ExtCacheRemote",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.MemIoLocal",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.ExtCacheLocal",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.IntCache",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.LclL2",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsBadStatus2.StliOther",
+  "EventCode": "0x24",
+  "BriefDescription": "Bad Status 2",
+  "PublicDescription": "Store To Load Interlock (STLI) are loads that were unable to complete because of a possible match with an older store, and the older store could not do STLF for some reason. There are a number of reasons why this occurs, and this perfmon organizes them into three major groups. UnitMask events are ORed within same pipe and then ADDed across pipes. Use PMCx02F UnitMask = 0x3 to count all picked loads.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsBadStatus2",
+  "EventCode": "0x24",
+  "BriefDescription": "Bad Status 2",
+  "PublicDescription": "Store To Load Interlock (STLI) are loads that were unable to complete because of a possible match with an older store, and the older store could not do STLF for some reason. There are a number of reasons why this occurs, and this perfmon organizes them into three major groups. UnitMask events are ORed within same pipe and then ADDed across pipes. Use PMCx02F UnitMask = 0x3 to count all picked loads.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDispatch.LdStDispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "LS Dispatch",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDispatch.StoreDispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "LS Dispatch",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDispatch.LdDispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "LS Dispatch",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "LS Dispatch",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.MemIoRemote",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.ExtCacheRemote",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.MemIoLocal",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.ExtCacheLocal",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.IntCache",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys.LclL2",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsDmndFillsFromSys",
+  "EventCode": "0x43",
+  "BriefDescription": "Demand Data Cache Fills by Data Source",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.MemIoRemote",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.ExtCacheRemote",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.MemIoLocal",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.ExtCacheLocal",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.IntCache",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills.LclL2",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsHwPfDcFills",
+  "EventCode": "0x5a",
+  "BriefDescription": "Hardware Prefetch Data Cache Fills",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsInefSwPref.MabMchCnt",
+  "EventCode": "0x52",
+  "BriefDescription": "Ineffective Software Prefetches",
+  "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsInefSwPref.DataPipeSwPfDcHit",
+  "EventCode": "0x52",
+  "BriefDescription": "Ineffective Software Prefetches",
+  "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsInefSwPref",
+  "EventCode": "0x52",
+  "BriefDescription": "Ineffective Software Prefetches",
+  "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsIntTaken",
+  "EventCode": "0x2c",
+  "BriefDescription": "Interrupts Taken",
+  "PublicDescription": "Counts the number of interrupts taken. ",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsIntTaken",
+  "EventCode": "0x2c",
+  "BriefDescription": "Interrupts Taken",
+  "PublicDescription": "Counts the number of interrupts taken. ",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload1GL2Miss",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x80",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload2ML2Miss",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReloadCoalescedPageMiss",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x20",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload4KL2Miss",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload1GL2Hit",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload2ML2Hit",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReloadCoalescedPageHit",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss.TlbReload4KL2Hit",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsL1DTlbMiss",
+  "EventCode": "0x45",
+  "BriefDescription": "L1 DTLB Misses",
+  "PublicDescription": "UnitMask events are ORed but mutually exclusive.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsLocks.BusLock",
+  "EventCode": "0x25",
+  "BriefDescription": "Retired Lock Instructions",
+  "PublicDescription": "UnitMask events are ORed.  Any combination of UnitMask[3:0] events (UnitMask events ORed), or any combination of UnitMask[6:4] events (UnitMask events ADDed), may be used. However, attempting to set UnitMasks in both the [3:0] and the [6:4] groups may result in incorrect counts.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsLocks",
+  "EventCode": "0x25",
+  "BriefDescription": "Retired Lock Instructions",
+  "PublicDescription": "UnitMask events are ORed.  Any combination of UnitMask[3:0] events (UnitMask events ORed), or any combination of UnitMask[6:4] events (UnitMask events ADDed), may be used. However, attempting to set UnitMasks in both the [3:0] and the [6:4] groups may result in incorrect counts.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsMabAlloc.LsMabAllocation",
+  "EventCode": "0x41",
+  "BriefDescription": "LS MAB Allocates by Type",
+  "PublicDescription": "Counts when a LS pipe allocates a MAB entry.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsMabAlloc",
+  "EventCode": "0x41",
+  "BriefDescription": "LS MAB Allocates by Type",
+  "PublicDescription": "Counts when a LS pipe allocates a MAB entry.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsMisalLoads.MA4K",
+  "EventCode": "0x47",
+  "BriefDescription": "Misaligned loads",
+  "PublicDescription": "The number of misaligned loads. UnitMask events are ORed within each pipe and then then ADDed across pipes.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsMisalLoads.MA64",
+  "EventCode": "0x47",
+  "BriefDescription": "Misaligned loads",
+  "PublicDescription": "The number of misaligned loads. UnitMask events are ORed within each pipe and then then ADDed across pipes.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsMisalLoads",
+  "EventCode": "0x47",
+  "BriefDescription": "Misaligned loads",
+  "PublicDescription": "The number of misaligned loads. UnitMask events are ORed within each pipe and then then ADDed across pipes.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsNotHaltedCyc",
+  "EventCode": "0x76",
+  "BriefDescription": "Cycles not in Halt",
+  "PublicDescription": "NA",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsNotHaltedCyc",
+  "EventCode": "0x76",
+  "BriefDescription": "Cycles not in Halt",
+  "PublicDescription": "NA",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsPrefInstrDisp.PREFETCHNTA",
+  "EventCode": "0x4b",
+  "BriefDescription": "Prefetch Instructions Dispatched",
+  "PublicDescription": "UnitMask events are ADDed.  Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].  Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsPrefInstrDisp.PREFETCHW",
+  "EventCode": "0x4b",
+  "BriefDescription": "Prefetch Instructions Dispatched",
+  "PublicDescription": "UnitMask events are ADDed.  Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].  Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsPrefInstrDisp.PREFETCH",
+  "EventCode": "0x4b",
+  "BriefDescription": "Prefetch Instructions Dispatched",
+  "PublicDescription": "UnitMask events are ADDed.  Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].  Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsPrefInstrDisp",
+  "EventCode": "0x4b",
+  "BriefDescription": "Prefetch Instructions Dispatched",
+  "PublicDescription": "UnitMask events are ADDed.  Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].  Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsRetClClush",
+  "EventCode": "0x26",
+  "BriefDescription": "Retired CLFLUSH Instructions",
+  "PublicDescription": "The number of retired CLFLUSH instructions. This is a non-speculative event.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsRetClClush",
+  "EventCode": "0x26",
+  "BriefDescription": "Retired CLFLUSH Instructions",
+  "PublicDescription": "The number of retired CLFLUSH instructions. This is a non-speculative event.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsRetCpuid",
+  "EventCode": "0x27",
+  "BriefDescription": "Retired CPUID Instructions",
+  "PublicDescription": "The number of CPUID instructions retired.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsRetCpuid",
+  "EventCode": "0x27",
+  "BriefDescription": "Retired CPUID Instructions",
+  "PublicDescription": "The number of CPUID instructions retired.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSTLF",
+  "EventCode": "0x35",
+  "BriefDescription": "Store to Load Forward",
+  "PublicDescription": "Number of STLF hits.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSTLF",
+  "EventCode": "0x35",
+  "BriefDescription": "Store to Load Forward",
+  "PublicDescription": "Number of STLF hits.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSmiRx",
+  "EventCode": "0x2b",
+  "BriefDescription": "SMIs Received",
+  "PublicDescription": "Counts the number of SMIs received.",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSmiRx",
+  "EventCode": "0x2b",
+  "BriefDescription": "SMIs Received",
+  "PublicDescription": "Counts the number of SMIs received.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsStCommitCancel2.StCommitCancelWcbFull",
+  "EventCode": "0x37",
+  "BriefDescription": "Store Commit Cancels 2",
+  "PublicDescription": "UnitMask events ORed.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsStCommitCancel2",
+  "EventCode": "0x37",
+  "BriefDescription": "Store Commit Cancels 2",
+  "PublicDescription": "UnitMask events ORed.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.MemIoRemote",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.ExtCacheRemote",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.MemIoLocal",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.ExtCacheLocal",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.IntCache",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.LclL2",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsTlbFlush",
+  "EventCode": "0x78",
+  "BriefDescription": "All TLB Flushes",
+  "PublicDescription": "INTERNAL because PV Status: Not Tested.    Various TLB flush events. The following UnitMask event groups are ORed before the result is ADDed: 0-3, 4-6, 7.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "Merge",
+  "EventCode": "0xfff",
+  "BriefDescription": "Merge",
+  "PublicDescription": "See 2.1.23.3 [Large Increment per Cycle Events].",
+  "Umask": "0x0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "Merge",
+  "EventCode": "0xfff",
+  "BriefDescription": "Merge",
+  "PublicDescription": "See 2.1.23.3 [Large Increment per Cycle Events].",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "OpCacheHitMiss.OpCacheAccesses",
+  "EventCode": "0x28f",
+  "BriefDescription": "Op Cache Hit/Miss",
+  "PublicDescription": "Counts Op Cache micro-tag hit/miss events.",
+  "Umask": "0x1",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "OpCacheHitMiss",
+  "EventCode": "0x28f",
+  "BriefDescription": "Op Cache Hit/Miss",
+  "PublicDescription": "Counts Op Cache micro-tag hit/miss events.",
+  "Umask": "0xff",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsLocks.CacheableLock",
+  "EventCode": "0x25",
+  "BriefDescription": "Retired Lock Instructions",
+  "PublicDescription": "Cacheable locks.",
+  "Umask": "0x0E",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.LclL2.IntCache.MemIoLocal",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.From L3 or different L2 in same CCX.From DRAM or IO connected in same node.",
+  "Umask": "0xb",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsSwPfDcFills.ExtCacheRemote.MemIoRemote",
+  "EventCode": "0x59",
+  "BriefDescription": "Software Prefetch Data Cache Fills",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.From DRAM or IO connected in different Node.",
+  "Umask": "0x50",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "LsAnyFillsFromSys.LclL2.IntCache.ExtCacheLocal.MemIoLocal.ExtCacheRemote.MemIoRemote",
+  "EventCode": "0x44",
+  "BriefDescription": "Any Data Cache Fills by Data Source",
+  "PublicDescription": "Any Data Cache Fills by Data Source.From L3 or different L2 in same CCX.From cache of different CCX in same node.From DRAM or IO connected in same node.From CCX Cache in different Node.From DRAM or IO connected in different Node.",
+  "Umask": "0x5f",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbFetchHit.IF4K.IF2M.IF1G",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 TLB Hits for Instruction Fetch",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB.L1 Instruction TLB hit (2M page size).L1 Instruction TLB hit (1G page size).",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.IcFillMiss.IcFillHitS.IcFillHitX",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).Counts IC Fill hitting line in L2 in the following states: Shared, Forwarding, Owned. See Table 53 [L2 Cache Coherence States] for cache state details. NA",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "BpL1TlbMissL2TlbMiss.IF4K.IF2M.IF1G",
+  "EventCode": "0x85",
+  "BriefDescription": "ITLB Reload from Page-Table walk",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.Walk for 2M page.Walk for 1G page.",
+  "Umask": "0x7",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "DeDisDispatchTokenStalls2.IntSch2TokenStall.IntSch3TokenStall",
+  "EventCode": "0xaf",
+  "BriefDescription": "Dynamic Tokens Dispatch Stall Cycles 2",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall.No tokens for Integer Scheduler Queue 3 available.",
+  "Umask": "0xc",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpRetiredSerOps.X87CtrlRet.X87BotRet.SseCtrlRet.SseBotRet",
+  "EventCode": "0x5",
+  "BriefDescription": "Retired Serializing Ops",
+  "PublicDescription": "The number of serializing Ops retired.x87 bottom-executing ops retired.SSE/AVX control word mispredict traps.SSE/AVX bottom-executing ops retired.",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "FpDispFaults.x87FillFault.XmmFillFault.YmmFillFault.YmmSpillFault",
+  "EventCode": "0xe",
+  "BriefDescription": "FP Dispatch Faults",
+  "PublicDescription": "Floating Point Dispatch Faults.NA",
+  "Umask": "0xf",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.ChangeToX.LsRdBlkC_S.RdBlkX.RdBlkL",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).Data Cache Shared Reads.Data Cache Stores.Data Cache Reads (including hardware and software prefetch).",
+  "Umask": "0xe8",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.LsRdBlkX.LsRdBlkLHitS.LsRdBlkLHitX.LsRdBlkCS",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch). Counts LS RdBlkX hitting lines in L2 in the following states: Shared, Forwarding, Owned. See Table 53 [L2 Cache Coherence States] for cache state details.Modifiable.NA",
+  "Umask": "0xf0",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2CacheReqStat.IcFillHitS.IcFillHitX",
+  "EventCode": "0x64",
+  "BriefDescription": "Core to L2 Cacheable Request Access Status",
+  "PublicDescription": "This event does not count accesses to the L2 cache by the L2 prefetcher, but it does count accesses by the L1 prefetcher.  L2 Cache Request Outcomes (not including L2 Prefetch).NA",
+  "Umask": "0x6",
+  "CounterType": "Core",
+  "EventType": ""
+},
+{
+  "EventName": "L2RequestG1.L2HwPf.PrefetchL2Cmd.ChangeToX.CacheableIcRead.LsRdBlkC_S.RdBlkX.RdBlkL",
+  "EventCode": "0x60",
+  "BriefDescription": "Requests to L2 Group1",
+  "PublicDescription": "All L2 Cache Requests (Breakdown 1 - Common).Does not count prefetches from core initiated by non-PrefetchL2 Cmd. Assume core should also count all types of prefetches and allow the breakdown between hardware versus software and data versus instruction.Request change to writable, check L2 for current state. Instruction Cache Reads.Data Cache Shared Reads.Data Cache Stores.Data Cache Reads (including hardware and software prefetch).",
+  "Umask": "0xfe",
+  "CounterType": "Core",
+  "EventType": ""
+}
+]
+}

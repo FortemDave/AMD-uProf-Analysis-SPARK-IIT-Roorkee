@@ -1,0 +1,46 @@
+{
+    "__comment": "Processor: AMD family 19h, model 30h-3Fh",
+    "view": {
+        "name": "Memory Access",
+        "dc_config": [
+            "memory",
+            "ibs"
+        ],
+        "default_config": "memory",
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS_LAT",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE_DC_MISS",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_LOCAL_DRAM",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_REMOTE_DRAM",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_LOAD_DC_L2_HIT",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of memory access obtained from derived IBS events for false sharing detection."
+    }
+}

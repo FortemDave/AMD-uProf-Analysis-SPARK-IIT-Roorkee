@@ -1,0 +1,32 @@
+{
+    "__comment": "Processor: AMD family 19h, model 60h-6Fh",
+    "view": {
+        "name": "IBS NB cache state",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_NB_LOCAL_CACHE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_REMOTE_CACHE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_CACHE_MODIFIED",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_NB_CACHE_OWNED",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show cache owned (O) and modified (M) state for Northbridge cache service requests."
+    }
+}

@@ -1,0 +1,36 @@
+---
+ cpu:
+    - family:0x19
+    - modelLow:0x10
+    - modelHigh:0x1F
+ events:
+      group0:
+          - aperf
+          - mperf
+          - irperf
+          - tsc
+      group1:
+          - l3_lookup_state.l3_lookup_mask_l3_t0_accessed_l3
+          - l3_lookup_state.l3_lookup_mask_l3_t0_missed_l3
+          - l3_lookup_state.l3_lookup_mask_l3_oa_accessed_l3
+          - l3_lookup_state.l3_lookup_mask_l3_oa_missed_l3
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all_no_other
+      group2:
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_near
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_far
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_cache_near
+          - l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src3_req_cache_far
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all_no_other
+      group3:
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_near
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_far
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_cache_near
+          - l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src3_lat_cache_far
+
+ reports:
+       - Section:L3Thread0statistics
+       - Section:L3statsforentirecomplex
+       - Section:RequestsbyIBSResponseSource(PTC)
+       - Section:AverageLatencybyIBSResponseSource(ns)

@@ -1,0 +1,159 @@
+---
+ cpu:
+    - family:0x19
+    - modelLow:0x10
+    - modelHigh:0x1F
+ events:
+      group0:
+          - aperf
+          - mperf
+          - irperf
+          - tsc
+      group1:
+          - dram_local_rd_ev0
+          - dram_local_rd_ev1
+          - dram_local_rd_ev2
+          - dram_local_rd_ev3
+          - dram_local_rd_ev4
+          - dram_local_rd_ev5
+          - dram_local_rd_ev6
+          - dram_local_rd_ev7
+          - dram_local_rd_ev8
+          - dram_local_rd_ev9
+          - dram_local_rd_ev10
+          - dram_local_rd_ev11
+          - dram_local_wr_ev0
+          - dram_local_wr_ev1
+          - dram_local_wr_ev2
+          - dram_local_wr_ev3
+      group2:
+          - dram_local_wr_ev4
+          - dram_local_wr_ev5
+          - dram_local_wr_ev6
+          - dram_local_wr_ev7
+          - dram_local_wr_ev8
+          - dram_local_wr_ev9
+          - dram_local_wr_ev10
+          - dram_local_wr_ev11
+          - dram_remote_rd_ev0
+          - dram_remote_rd_ev1
+          - dram_remote_rd_ev2
+          - dram_remote_rd_ev3
+          - dram_remote_rd_ev4
+          - dram_remote_rd_ev5
+          - dram_remote_rd_ev6
+          - dram_remote_rd_ev7
+      group3:
+          - dram_remote_rd_ev8
+          - dram_remote_rd_ev9
+          - dram_remote_rd_ev10
+          - dram_remote_rd_ev11
+          - dram_remote_wr_ev0
+          - dram_remote_wr_ev1
+          - dram_remote_wr_ev2
+          - dram_remote_wr_ev3
+          - dram_remote_wr_ev4
+          - dram_remote_wr_ev5
+          - dram_remote_wr_ev6
+          - dram_remote_wr_ev7
+          - dram_remote_wr_ev8
+          - dram_remote_wr_ev9
+          - dram_remote_wr_ev10
+          - dram_remote_wr_ev11
+      group4:
+          - dma_local_rd_ev0
+          - dma_local_rd_ev1
+          - dma_local_rd_ev2
+          - dma_local_rd_ev3
+          - dma_local_wr_ev0
+          - dma_local_wr_ev1
+          - dma_local_wr_ev2
+          - dma_local_wr_ev3
+          - dma_remote_rd_ev0
+          - dma_remote_rd_ev1
+          - dma_remote_rd_ev2
+          - dma_remote_rd_ev3
+          - dma_remote_wr_ev0
+          - dma_remote_wr_ev1
+          - dma_remote_wr_ev2
+          - dma_remote_wr_ev3
+      group5:
+          - inb_local_rd_ev0
+          - inb_local_rd_ev1
+          - inb_local_rd_ev2
+          - inb_local_rd_ev3
+          - inb_local_rd_ev4
+          - inb_local_rd_ev5
+          - inb_local_rd_ev6
+          - inb_local_rd_ev7
+          - inb_local_rd_ev8
+          - inb_local_rd_ev9
+          - inb_local_rd_ev10
+          - inb_local_rd_ev11
+          - inb_local_rd_ev12
+          - inb_local_rd_ev13
+          - inb_local_rd_ev14
+          - inb_local_rd_ev15
+      group6:
+          - out_local_wr_ev0
+          - out_local_wr_ev1
+          - out_local_wr_ev2
+          - out_local_wr_ev3
+          - out_local_wr_ev4
+          - out_local_wr_ev5
+          - out_local_wr_ev6
+          - out_local_wr_ev7
+          - out_local_wr_ev8
+          - out_local_wr_ev9
+          - out_local_wr_ev10
+          - out_local_wr_ev11
+          - out_local_wr_ev12
+          - out_local_wr_ev13
+          - out_local_wr_ev14
+          - out_local_wr_ev15
+      group7:
+          - inb_remote_rd_ev0
+          - inb_remote_rd_ev1
+          - inb_remote_rd_ev2
+          - inb_remote_rd_ev3
+          - inb_remote_rd_ev4
+          - inb_remote_rd_ev5
+          - inb_remote_rd_ev6
+          - inb_remote_rd_ev7
+          - inb_remote_rd_ev8
+          - inb_remote_rd_ev9
+          - inb_remote_rd_ev10
+          - inb_remote_rd_ev11
+          - inb_remote_rd_ev12
+          - inb_remote_rd_ev13
+          - inb_remote_rd_ev14
+          - inb_remote_rd_ev15
+      group8:
+          - out_remote_wr_ev0
+          - out_remote_wr_ev1
+          - out_remote_wr_ev2
+          - out_remote_wr_ev3
+          - out_remote_wr_ev4
+          - out_remote_wr_ev5
+          - out_remote_wr_ev6
+          - out_remote_wr_ev7
+          - out_remote_wr_ev8
+          - out_remote_wr_ev9
+          - out_remote_wr_ev10
+          - out_remote_wr_ev11
+          - out_remote_wr_ev12
+          - out_remote_wr_ev13
+          - out_remote_wr_ev14
+          - out_remote_wr_ev15
+      group9:
+          - out_local_all0
+          - out_local_all1
+          - out_local_all2
+          - out_local_all3
+          - out_local_all4
+          - out_local_all5
+          - out_local_all6
+          - out_local_all7
+
+ reports:
+       - Section:receipe

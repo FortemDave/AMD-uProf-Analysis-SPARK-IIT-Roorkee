@@ -1,0 +1,527 @@
+{
+    "auxiliary": {
+        "cores": 16,
+        "cpuFamily": 23,
+        "cpuModel": 96,
+        "cpuTopology": [
+            [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                3,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                4,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                5,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                6,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                7,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                8,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                9,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                10,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                11,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                12,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                13,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                14,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                15,
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "guest": false,
+        "guestKallsyms": "",
+        "guestKmodules": "",
+        "guestPid": 0,
+        "guestSymPaths": "",
+        "host": false,
+        "hypervisorEnabled": false,
+        "hypervisorVendor": "",
+        "ibsIdentifiers": 50988752,
+        "ibsOpSampling": false,
+        "isCacheline": false,
+        "osName": "LinuxLinux Mint 21.1-64 Kernel:5.15.0-67-generic",
+        "p0Freq": 2900000,
+        "profScope": "Single Application",
+        "profiledPids": ""
+    },
+    "categoriesCollected": [
+        "livePower"
+    ],
+    "collection": {
+        "callstack": {
+            "fpo": false,
+            "interval": 1,
+            "scope": 1,
+            "unwindDepth": 0
+        },
+        "dataBufferCount": 0,
+        "events": {
+            "configName": "",
+            "configType": 0,
+            "ibsEvents": {
+                "cacheAnalysis": false,
+                "fetch": false,
+                "fetchCallstack": true,
+                "fetchInterval": 0,
+                "fetchL3Miss": false,
+                "loadStoreOnly": false,
+                "op": false,
+                "opCallstack": true,
+                "opCycleCount": true,
+                "opInterval": 0,
+                "opL3Miss": false,
+                "randomize": true
+            },
+            "pmcEvents": null
+        },
+        "flags": {
+            "cssDefaultValues": false,
+            "hasCallstack": false,
+            "maxDataFileSize": 0,
+            "perEventCSSDefault": false,
+            "profileMpi": false,
+            "pythonTraceOptions": false,
+            "traceMpi": false,
+            "traceOpenmp": false
+        },
+        "livePower": {
+            "counterList": [
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 0,
+                    "name": "Thread0 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 2,
+                    "name": "Thread1 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 4,
+                    "name": "Thread2 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 6,
+                    "name": "Thread3 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 8,
+                    "name": "Thread4 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 10,
+                    "name": "Thread5 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 12,
+                    "name": "Thread6 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 14,
+                    "name": "Thread7 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 16,
+                    "name": "Thread8 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 18,
+                    "name": "Thread9 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 20,
+                    "name": "Thread10 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 22,
+                    "name": "Thread11 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 24,
+                    "name": "Thread12 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 26,
+                    "name": "Thread13 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 28,
+                    "name": "Thread14 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "Frequency",
+                    "categoryId": 1,
+                    "counterId": 30,
+                    "name": "Thread15 Core Effective Frequency",
+                    "unit": 9
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 32,
+                    "name": "Thread0 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 33,
+                    "name": "Thread1 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 34,
+                    "name": "Thread2 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 35,
+                    "name": "Thread3 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 36,
+                    "name": "Thread4 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 37,
+                    "name": "Thread5 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 38,
+                    "name": "Thread6 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 39,
+                    "name": "Thread7 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 40,
+                    "name": "Thread8 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 41,
+                    "name": "Thread9 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 42,
+                    "name": "Thread10 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 43,
+                    "name": "Thread11 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 44,
+                    "name": "Thread12 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 45,
+                    "name": "Thread13 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 46,
+                    "name": "Thread14 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "P-State",
+                    "categoryId": 5,
+                    "counterId": 47,
+                    "name": "Thread15 P-State",
+                    "unit": 1
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 48,
+                    "name": "Socket0 Package Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 50,
+                    "name": "Core0 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 52,
+                    "name": "Core1 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 54,
+                    "name": "Core2 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 56,
+                    "name": "Core3 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 58,
+                    "name": "Core4 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 60,
+                    "name": "Core5 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 62,
+                    "name": "Core6 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Power",
+                    "categoryId": 0,
+                    "counterId": 64,
+                    "name": "Core7 Power",
+                    "unit": 6
+                },
+                {
+                    "category": "Temperature",
+                    "categoryId": 2,
+                    "counterId": 66,
+                    "name": "Socket0 Temperature",
+                    "unit": 10
+                }
+            ]
+        },
+        "mmapBuffer": 0,
+        "predefinedInterval": 0,
+        "schedule": {
+            "categoryDurations": [
+                {
+                    "category": 64,
+                    "categoryName": "LIVE POWER",
+                    "end": 0,
+                    "start": 0,
+                    "type": 0
+                }
+            ],
+            "elapsed": 0,
+            "end": 0,
+            "endTs": "Wed Jun 14 01:02:27 2023",
+            "profileDuration": 10,
+            "start": 0,
+            "startDelay": 0,
+            "startTs": "Wed Jun 14 01:02:17 2023",
+            "type": 1
+        },
+        "sessionVersion": 1,
+        "target": {
+            "appArgs": "",
+            "coreAffinity": "FFFF",
+            "coreMask": "FFFF",
+            "gpuFamily": "",
+            "launchApp": "",
+            "systemWide": true,
+            "terminateApp": false,
+            "workingDir": "/home/fortemdave/SPARK_IITR_2023/AMDuProf/bin"
+        }
+    },
+    "hpc": {
+        "hostName": "fortemdave-FA506IU"
+    },
+    "profileType": 64
+}

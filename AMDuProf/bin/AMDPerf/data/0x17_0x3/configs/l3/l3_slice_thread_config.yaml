@@ -1,0 +1,26 @@
+---
+ cpu:
+    - family:0x17
+    - modelLow:0x30
+    - modelHigh:0x3f
+    - corepmcs:6
+    - dfpmcs:4
+    - l3pmcs:6
+
+ events:
+      group0.0:
+          - irperf
+          - mperf
+          - aperf
+          - tsc
+      group0:
+          - retired_instructions
+      group1:
+          - l3_t0_accessed_l3.umask0xff.thread0x1.sliceId0xf
+          - l3_oa_accessed_l3.umask0xff.thread0xff.sliceId0xf
+          - xi_fill_lat_rd_rsp_lat.umask0x0.thread0xff.sliceId0xf
+          - xi_fill_rd_rsp_cnt.umask0x1f.thread0xff.sliceId0xf
+ reports:
+       - L3CacheableaccessesPTI
+       - L3CacheableaccessesPTIT0
+       - Avg_L3_rd_miss_latency

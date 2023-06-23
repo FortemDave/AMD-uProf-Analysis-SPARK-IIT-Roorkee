@@ -1,0 +1,449 @@
+AMDUPROFCLI-COLLECT(1)        AMDuProfCLI Manual        AMDUPROFCLI-COLLECT(1)
+
+
+
+NAME
+       AMDuProfCLI  collect  - Collect the performance profile data for target
+       application, processes or the system.
+
+SYNOPSIS
+       AMDuProfCLI collect [<options>] <program> [<args>]
+
+
+DESCRIPTION
+       This collect command runs the given program and  collects  the  perfor-
+       mance  profile  data. This data can then be analyzed using 'AMDuProfCLI
+       report' command or GUI tool 'AMDuProf'.
+
+OPTIONS
+       <program>
+              The launch application to be profiled.
+
+       <args> The list of arguments for the launch application.
+
+       -h, --help
+              Displays this help information.
+
+       -o, --output-dir <directory-path>
+              Base directory path in which collected data files will be saved.
+              A new sub-directory would be created in this directory.
+
+       --config <collect-config>
+              Predefined profile configurations to collect samples.
+
+              Use command 'info --list collect-configs' for the list of supported configurations.
+
+              Multiple occurrences of --config are allowed.
+
+
+       -e, --event <EVENT> or <predefined event>
+              A  predefined  event can be directly used with -e, --event which
+              has predefined arguments.  Use command 'info --list  predefined-
+              events' for the list of supported predefined events.
+
+              Alternatively,  for  providing  more granular parameters specify
+              Timer, PMU, IBS event or a predefined event  with  arguments  in
+              the form of comma separated key=value pairs. Supported keys are:
+
+              ?  event=<timer | ibs-fetch | ibs-op> or <PMU-event>
+
+              ?  umask=<unit-mask>
+
+              ?  user=<0 | 1>
+
+              ?  os=<0 | 1>
+
+              ?  cmask=<count-mask>
+
+              ?  inv=<0 | 1>
+
+              ?  interval=<sampling-interval>
+
+              ?  ibsop-count-control=<0 | 1>
+
+              ?  <ibsopl3miss>
+
+              ?  <ibsfetchl3miss>
+
+              Note: no need to provide umask with predefined event.
+
+              Specify whether to collect callgraph for an event using the fol-
+              lowing option:
+
+              ?  call-graph
+
+              Use command 'info --list predefined-events' for the list of sup-
+              ported  predefined events.  Use command 'info --list pmu-events'
+              for the list of supported PMU-events.
+
+              When these arguments are not passed,  then  the  default  values
+              are:
+
+              ?  umask=0
+
+              ?  user=1
+
+              ?  os=1
+
+              ?  cmask=0
+
+              ?  inv=0
+
+              ?  ibsop-count-control=0
+
+              ?  interval=1.0 ms for timer event
+
+              ?  interval=250000 for <ibs-fetch | ibs-op> or <PMU-event>
+
+              Multiple occurrences of --event (-e) are allowed.
+
+       --trace <TARGET>
+              To  trace a target domain. TARGET can be one or more of the fol-
+              lowing:
+
+              ?  mpi[=<openmpi|mpich>,<lwt|full>] - provide MPI implementation
+                 type:  'openmpi'  for  tracing  OpenMPI  library, 'mpich' for
+                 tracing MPICH and it's derivative libraries, e.g. Intel  MPI.
+                 Provide tracing scope: 'lwt' for light-weight tracing, 'full'
+                 for complete tracing.  '--trace  mpi'  defaults  to  '--trace
+                 mpi=mpich,full'.
+
+              ?  openmp  -  for  tracing  OpenMP  application. This is same as
+                 option --omp.
+
+              ?  os[=<event1,event2,...>] - provide event names  and  optional
+                 threshold  with  comma  separated list.  syscall and memtrace
+                 events  will   take   the   optional   threshold   value   as
+                 <event:threshold>  Use  command  'info --list ostrace-events'
+                 for the list of OS trace events.
+
+              ?  gpu[=<hip,hsa>] - provide the  domain  for  GPU  Tracing.  By
+                 default, the domain is set to 'hip,hsa'.
+
+       --buffer-size <size>
+              Number  of  pages  to  be  allotted for OS trace buffer. Default
+              value is 256 pages per core. Increase the pages  to  reduce  the
+              trace  data  loss.  This option is only applicable to OS tracing
+              (--trace os).
+
+       --max-threads <thread-count>
+              Max number of threads for OS Tracing. Default value is 1024  for
+              launched  application  and  32768  for  System  Wide Tracing (-a
+              option).
+
+       --func <module:function-pattern>
+              Specify functions to trace from the  library  or  executable  or
+              kernel.
+
+              ?  Function-pattern  can be a function name or partial name end-
+                 ing with * or * to trace all the functions of a module.
+
+              ?  Module can be library or  executable.  To  trace  the  kernel
+                 functions, replace the module with "kernel".
+
+       --exclude-func <module:function-pattern>
+              Specify  functions  to exclude from the library or executable or
+              kernel.
+
+              ?  Function-pattern can be a function name or partial name  end-
+                 ing with * or * to trace all the functions of a module.
+
+              ?  Module  can  be  library  or  executable. To trace the kernel
+                 functions, replace the module with "kernel".
+
+       -p, --pid <PID,..>
+              Profile existing processes(processes to attach  to).Process  IDs
+              are separated by comma.
+
+       --tid <TID,..>
+              Profile  existing  threads(threads to attach to). Thread IDs are
+              separated by comma.
+
+       -m, --mmap-pages <size>
+              Set kernel mmapped data buffer to size. Size can be specified in
+              pages  Or  with  a  suffix  Bytes(B/b),  Kilo  bytes(K/k),  Mega
+              bytes(M/m), Giga Bytes(G/g).
+
+       -a, --system-wide
+              System Wide Profile (SWP).Otherwise profile  only  the  launched
+              application or the Process IDs attached with -p option.
+
+       -c, --cpu <core,..>
+              Comma  separated list of CPUs to profile. Ranges of CPUs also be
+              specified with -: 0-3.
+
+       --call-graph <F:N>
+              Enable Call stack sampling. Specify F to collect/ignore  missing
+              frames due to omission of frame pointers by compiler:
+
+              ?  fpo: Collect missing callstack frames.
+
+              ?  fp: Ignore missing callstack frames.
+
+              When  F  = fpo, N specifies the max stack-size to collect. [16 -
+              8192] If N is not multiple of 8, then it is aligned down to  the
+              nearest value multiple of 8.
+
+              Note:  Passing  a  large  N value will generate a very large raw
+              data file.
+
+              When F = fp, the value for N is ignored, hence no need  to  pass
+              it.
+
+       -g     Same as passing '--call-graph fp'
+
+       -d, --duration <num>
+              Profile duration in seconds.
+
+       --interval <num>
+              Sampling  interval  for  PMC  events.   Note: This interval will
+              override the sampling interval specified with individual events.
+
+       --no-inherit
+              Do not profile the children of the launched application.
+
+       -b, --terminate
+              Terminate the launched application after profile data collection
+              ends.  Only the launched application process will be killed. Its
+              children, if any, may continue to execute.
+
+       --affinity <core-id,..>
+              Comma separated list of CPUs. In Per-Process profile,  processor
+              affinity is set for the launched application.
+
+       --start-delay <n>
+              Start  Delay  ('n' in seconds). Start profiling after the speci-
+              fied duration. When 'n' is 0, it has no impact.
+
+       --start-paused
+              Profiling paused indefinitely. The  target  application  resumes
+              the  profiling using the profile control APIs. Refer AMDProfile-
+              Controller.h for profile control APIs.
+
+       --omp  Profile OpenMP application.
+
+              Note:
+              1. Applicable to per process and attach process profiling. Not applicable to:
+                 - System wide profiling
+                 - Java app profiling
+
+              2. Compile the OpenMP application with LLVM/Clang 8.0 or later. Supported base languages: C, C++, Fortran.
+
+
+       -w, --working-dir <dir>
+              Specify the working directory. Default will be the path  of  the
+              launched application.
+
+       --mpi  Use  this  option  to get the MPI profiling information. For MPI
+              tracing, check --trace option.
+
+       --kvm-guest <pid>
+              Specify the PID of qemu-kvm process to be  profiled  to  collect
+              guest side performance profile.
+
+       --guest-kallsyms <path>
+              Specify  the  path  of  guest /proc/kallsyms copied on the local
+              host. uProf reads it to get the guest kernel symbols.
+
+       --guest-modules <path>
+              Specify the path of guest  /proc/modules  copied  to  the  local
+              host. uProf reads it to get the guest kernel module information.
+
+       --guest-search-path <path>
+              Specify  the path of  guest vmlinux and kernel sources copied on
+              local host. uProf reads it to resolve guest kernel module infor-
+              mation.
+
+       --log-path <path-to-log-dir>
+              Specify  the  path  to where log file should be created. If this
+              option is not provided, by default the log file will be  created
+              either  in  path  set by AMDUPROF_LOGDIR environment variable or
+              $TEMP path.  The log file name will  be  of  the  format  $USER-
+              AMDuProfCLI.log.
+
+       --enable-log
+              Use this option to enable additional logging with log file.
+
+       --enable-logts
+              Use  this  option  to  capture the timestamp of the log records.
+              This option should be used together with --enable-log option.
+
+       --limit-size <n>
+              Use this option to stop the profiling once  the  collected  data
+              file size (in MBs) crosses the limit.
+
+WORKFLOW
+       Collect  - Running the application program and collect the profile data
+       AMDuProfCLI.exe collect --config tbp -o  /tmp/cpuprof-tbp  AMDTClassic-
+       MatMul-bin
+
+       Report -  Process  the profile data to aggregate and correlate and view
+              and  analyze  the  performance  data  to  identify  bottlenecks.
+              AMDuProfCLI.exe report -i /tmp/cpuprof-tbp/<SESSION-DIR>
+
+PREDEFINED SAMPLING CONFIGURATION
+       For CPU Profiling, since there are numerous micro-architecture specific
+       events are available to monitor, the tool itself groups the related and
+       interesting  events  to  monitor  - which is called Predefined Sampling
+       Configuration. For example, Assess Performance is one  such  configura-
+       tion, which is used to get the overall assessment of performance and to
+       find potential issues for investigation.
+
+CUSTOM SAMPLING CONFIGURATION
+       A Custom Sampling Configuration is the one in which the user can define
+       a  sampling  configuration  with  events of interest using -e (--event)
+       option.
+
+ENVIRONMENT
+       AMDUPROF_LOGDIR
+              If $AMDUPROF_LOGDIR is set, its value is used  as  the  path  to
+              create log file.
+
+EXAMPLES
+       AMDTClassicMatMul-bin can be found at <uProf-dir>/Examples/AMDTClassic-
+       MatMul/bin
+
+       1.  Launch 'AMDTClassicMatMul-bin' and collect 'TBP' samples:
+
+               $ AMDuProfCLI collect --config tbp -o /tmp/cpuprof-tbp AMDTClassicMatMul-bin
+
+
+       2.  Launch 'AMDTClassicMatMul-bin' and do 'Assess Performance'  profile
+           for 10 seconds:
+
+               $ AMDuProfCLI collect --config assess -o /tmp/cpuprof-assess -d 10 AMDTClassicMatMul-bin
+
+
+       3.  Launch  'AMDTClassicMatMul-bin'  and  collect  'IBS' samples in SWP
+           mode:
+
+               $ AMDuProfCLI collect --config ibs -a -o /tmp/cpuprof-ibs-swp AMDTClassicMatMul-bin
+
+
+       4.  Collect 'TBP' samples in SWP mode for 10 seconds:
+
+               $ AMDuProfCLI collect --config tbp -a -o /tmp/cpuprof-tbp-swp -d 10
+
+
+       5.  Launch 'AMDTClassicMatMul-bin' and  collect  'TBP'  with  callstack
+           sampling (unwind FPO optimized stack):
+
+               $ AMDuProfCLI collect --config tbp --call-graph fpo:512 -o /tmp/cpuprof-tbp AMDTClassicMatMul-bin
+
+
+       6.  Launch  'AMDTClassicMatMul-bin' and collect samples for PMCx076 and
+           PMCx0C0 events:
+
+               $ AMDuProfCLI collect -e event=pmcx76,interval=250000 -e event=pmcxc0,user=1,os=0,interval=250000 -o /tmp/cpuprof-pmc AMDTClassicMatMul-bin
+
+
+       7.  Launch 'AMDTClassicMatMul-bin' and collect samples for IBS OP  with
+           interval 50000:
+
+               $ AMDuProfCLI collect -e event=ibs-op,interval=50000 -o /tmp/cpuprof-ibs AMDTClassicMatMul-bin
+
+
+       8.  Attach to a thread and collect TBP samples for 10 seconds:
+
+               $ AMDuProfCLI collect --config tbp -o /tmp/cpuprof-tbp-attach -d 10 --tid <TID>
+
+
+       9.  Collect OpenMP trace info of an OpenMP application, pass --omp:
+
+               $ AMDuProfCLI collect --omp --config tbp <path-to-openmp-exe>
+
+
+       10. Launch  'AMDTClassicMatMul-bin'  and  collect  memory  accesses for
+           false cache sharing:
+
+               $ AMDuProfCLI collect --config memory -o /tmp/cpuprof-mem AMDTClassicMatMul-bin
+
+
+       11. Collect MPI profiling information:
+
+               $ mpirun -np 4 ./AMDuProfCLI collect --config assess --mpi --output-dir /tmp/cpuprof-mpi /tmp/namd <parameters>
+
+
+       12. Collect samples for PMCx076 and PMCx0C0 but collect call graph info
+           only for PMCx0C0:
+
+               $ AMDuProfCLI collect -e event=pmcx76,interval=250000 -e event=pmcxc0,interval=250000,call-graph -o /tmp/cpuprof-pmc AMDTClassicMatMul-bin
+
+
+       13. Launch  'AMDTClassicMatMul-bin'  and collect samples for predefined
+           event RETIRED_INST and L1_DC_ACCESSES.ALL events:
+
+               $ AMDuProfCLI collect -e event=RETIRED_INST,interval=250000 -e event=L1_DC_ACCESSES.ALL,user=1,os=0,interval=250000 -o /tmp/cpuprof-pmc AMDTClassicMatMul-bin
+
+
+       14. Launch 'AMDTClassicMatMul-bin' and collect  schedule,  syscall  and
+           pthread events:
+
+               $ AMDuProfCLI collect --trace os -o /tmp/cpuprof-os AMDTClassicMatMul-bin
+
+
+       15. Launch 'AMDTClassicMatMul-bin' and collect syscall which are taking
+           more than or equal to 1ms:
+
+               $ AMDuProfCLI collect --trace os=syscall:1000 -o /tmp/cpuprof-os AMDTClassicMatMul-bin
+
+
+       16. Launch 'AMDTClassicMatMul-bin' and collect the GPU Traces  for  hip
+           domain:
+
+               $ AMDuProfCLI collect --trace gpu=hip -o /tmp/cpuprof-gpu AMDTClassicMatMul-bin
+
+
+       17. Launch  'AMDTClassicMatMul-bin'  and collect the GPU Traces for hip
+           and hsa domain:
+
+               $ AMDuProfCLI collect --trace gpu -o /tmp/cpuprof-gpu AMDTClassicMatMul-bin
+
+
+       18. Launch 'AMDTClassicMatMul-bin' and collect 'TBP'  samples  and  GPU
+           Traces for hip domain:
+
+               $ AMDuProfCLI collect --config tbp --trace gpu=hip -o /tmp/cpuprof-gpu AMDTClassicMatMul-bin
+
+
+       19. Launch 'AMDTClassicMatMul-bin' and collect 'GPU' samples:
+
+               $ AMDuProfCLI collect --config gpu -o /tmp/cpuprof-gpu AMDTClassicMatMul-bin
+
+
+       20. Launch  'AMDTClassicMatMul-bin'  and  collect  'GPU' samples and OS
+           Traces for schedule, syscall and pthread:
+
+               $ AMDuProfCLI collect --config gpu --trace os -o /tmp/cpuprof-gpu-os AMDTClassicMatMul-bin
+
+
+       21. Launch 'AMDTClassicMatMul-bin' and collect 'TBP' and 'GPU' samples:
+
+               $ AMDuProfCLI collect --config gpu --config tbp -o /tmp/cpuprof-gpu-tbp AMDTClassicMatMul-bin
+
+
+       22. Launch 'AMDTClassicMatMul-bin' and collect function count  of  mal-
+           loc() called by 'AMDTClassicMatMul-bin'.
+
+               $ AMDuProfCLI collect --trace os=funccount --func c:malloc -o /tmp/cpuprof-os AMDTClassicMatMul-bin
+
+
+       23. Launch   'AMDTClassicMatMul-bin'   and  collect  context  switches,
+           syscalls, pthread API tracing and function count of malloc() called
+           by 'AMDTClassicMatMul-bin'.
+
+               $ AMDuProfCLI collect --trace os --func c:malloc -o /tmp/cpuprof-os AMDTClassicMatMul-bin
+
+
+       24. Collect  function  count of malloc(), calloc() and kernel functions
+           which match the pattern 'vfs_read*' on system wide.
+
+               $ AMDuProfCLI collect --trace os --func c:malloc,calloc,kernel:vfs_read* -o /tmp/cpuprof-os -a -d 10
+
+
+SEE ALSO
+       AMDuProfCLI report(1), AMDuProfCLI timechart(1), AMDuProfCLI info(1).
+
+
+
+AMDuProfCLI                       04 Oct 2022           AMDUPROFCLI-COLLECT(1)

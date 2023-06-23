@@ -1,0 +1,36 @@
+{
+    "__comment": "Processor: AMD family 19h, model 10h-1Fh",
+    "view": {
+        "name": "IBS MEM locked ops and access by type",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_UC_MEM_ACC",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_WC_MEM_ACC",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_LOCKED_OP",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show uncacheable (UC) memory access, write combining (WC) memory access and locked load/store operations."
+    }
+}

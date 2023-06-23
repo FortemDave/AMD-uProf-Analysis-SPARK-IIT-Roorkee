@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+    Basic assessment of performance using event-based profiling.
+
+    Family : 19h
+    Model  : 30h-3Fh
+    Flavor : Public
+    Copyright (c) 2022 Advanced Micro Devices, Inc.
+-->
+<dc_configuration name="Assess Performance">
+    <ebp os="linux|windows">
+        <event select="76" mask="00" os="T" user="T" count="1000000" call_graph="T" />
+        <event select="C0" mask="00" os="T" user="T" count="1000000" call_graph="T" />
+        <event select="C2" mask="00" os="T" user="T" count="500000" call_graph="T" />
+        <event select="C3" mask="00" os="T" user="T" count="500000" call_graph="T" />
+        <event select="29" mask="07" os="T" user="T" count="1000000" call_graph="T" />
+        <event select="60" mask="E8" os="T" user="T" count="100000" call_graph="T" />
+        <event select="43" mask="0F" os="T" user="T" count="100000" call_graph="T" />
+        <event select="43" mask="50" os="T" user="T" count="100000" call_graph="T" />
+        <event select="47" mask="03" os="T" user="T" count="100000" call_graph="T" />
+    </ebp>
+    <tool_tip>Get an overall assessment of performance</tool_tip>
+    <description>Use this configuration to get an overall assessment of performance and to find potential issues for further investigation.</description>
+</dc_configuration>

@@ -1,0 +1,956 @@
+{ "events":
+[
+{
+  "EventName": "dram_local_rd_ev0",
+  "EventCode": "0x1f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev1",
+  "EventCode": "0x5f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev2",
+  "EventCode": "0x9f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev3",
+  "EventCode": "0xdf",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev4",
+  "EventCode": "0x11f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev5",
+  "EventCode": "0x15f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev6",
+  "EventCode": "0x19f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev7",
+  "EventCode": "0x1df",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev8",
+  "EventCode": "0x21f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev9",
+  "EventCode": "0x25f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev10",
+  "EventCode": "0x29f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_rd_ev11",
+  "EventCode": "0x2df",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev0",
+  "EventCode": "0x1f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev1",
+  "EventCode": "0x5f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev2",
+  "EventCode": "0x9f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev3",
+  "EventCode": "0xdf",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev4",
+  "EventCode": "0x11f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev5",
+  "EventCode": "0x15f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev6",
+  "EventCode": "0x19f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev7",
+  "EventCode": "0x1df",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev8",
+  "EventCode": "0x21f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev9",
+  "EventCode": "0x25f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev10",
+  "EventCode": "0x29f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_local_wr_ev11",
+  "EventCode": "0x2df",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev0",
+  "EventCode": "0x1f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev1",
+  "EventCode": "0x5f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev2",
+  "EventCode": "0x9f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev3",
+  "EventCode": "0xdf",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev4",
+  "EventCode": "0x11f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev5",
+  "EventCode": "0x15f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev6",
+  "EventCode": "0x19f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev7",
+  "EventCode": "0x1df",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev8",
+  "EventCode": "0x21f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev9",
+  "EventCode": "0x25f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev10",
+  "EventCode": "0x29f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_rd_ev11",
+  "EventCode": "0x2df",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev0",
+  "EventCode": "0x1f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev1",
+  "EventCode": "0x5f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev2",
+  "EventCode": "0x9f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev3",
+  "EventCode": "0xdf",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev4",
+  "EventCode": "0x11f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev5",
+  "EventCode": "0x15f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev6",
+  "EventCode": "0x19f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev7",
+  "EventCode": "0x1df",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev8",
+  "EventCode": "0x21f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev9",
+  "EventCode": "0x25f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev10",
+  "EventCode": "0x29f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dram_remote_wr_ev11",
+  "EventCode": "0x2df",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_rd_ev0",
+  "EventCode": "0x81f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_rd_ev1",
+  "EventCode": "0x85f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_rd_ev2",
+  "EventCode": "0x89f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_rd_ev3",
+  "EventCode": "0x8df",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_wr_ev0",
+  "EventCode": "0x81f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_wr_ev1",
+  "EventCode": "0x85f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_wr_ev2",
+  "EventCode": "0x89f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_local_wr_ev3",
+  "EventCode": "0x8df",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_rd_ev0",
+  "EventCode": "0x81f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_rd_ev1",
+  "EventCode": "0x85f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_rd_ev2",
+  "EventCode": "0x89f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_rd_ev3",
+  "EventCode": "0x8df",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_wr_ev0",
+  "EventCode": "0x81f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_wr_ev1",
+  "EventCode": "0x85f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_wr_ev2",
+  "EventCode": "0x89f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "dma_remote_wr_ev3",
+  "EventCode": "0x8df",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev0",
+  "EventCode": "0x41e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev1",
+  "EventCode": "0x41f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev2",
+  "EventCode": "0x45e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev3",
+  "EventCode": "0x45f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev4",
+  "EventCode": "0x49e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev5",
+  "EventCode": "0x49f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev6",
+  "EventCode": "0x4de",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev7",
+  "EventCode": "0x4df",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev8",
+  "EventCode": "0x51e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev9",
+  "EventCode": "0x51f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev10",
+  "EventCode": "0x55e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev11",
+  "EventCode": "0x55f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev12",
+  "EventCode": "0x59e",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev13",
+  "EventCode": "0x59f",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev14",
+  "EventCode": "0x5de",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_local_rd_ev15",
+  "EventCode": "0x5df",
+  "Umask": "0x7fe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev0",
+  "EventCode": "0x41e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev1",
+  "EventCode": "0x41f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev2",
+  "EventCode": "0x45e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev3",
+  "EventCode": "0x45f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev4",
+  "EventCode": "0x49e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev5",
+  "EventCode": "0x49f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev6",
+  "EventCode": "0x4de",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev7",
+  "EventCode": "0x4df",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev8",
+  "EventCode": "0x51e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev9",
+  "EventCode": "0x51f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev10",
+  "EventCode": "0x55e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev11",
+  "EventCode": "0x55f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev12",
+  "EventCode": "0x59e",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev13",
+  "EventCode": "0x59f",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev14",
+  "EventCode": "0x5de",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_wr_ev15",
+  "EventCode": "0x5df",
+  "Umask": "0x7ff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev0",
+  "EventCode": "0x41e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev1",
+  "EventCode": "0x41f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev2",
+  "EventCode": "0x45e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev3",
+  "EventCode": "0x45f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev4",
+  "EventCode": "0x49e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev5",
+  "EventCode": "0x49f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev6",
+  "EventCode": "0x4de",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev7",
+  "EventCode": "0x4df",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev8",
+  "EventCode": "0x51e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev9",
+  "EventCode": "0x51f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev10",
+  "EventCode": "0x55e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev11",
+  "EventCode": "0x55f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev12",
+  "EventCode": "0x59e",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev13",
+  "EventCode": "0x59f",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev14",
+  "EventCode": "0x5de",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "inb_remote_rd_ev15",
+  "EventCode": "0x5df",
+  "Umask": "0xbfe",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev0",
+  "EventCode": "0x41e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev1",
+  "EventCode": "0x41f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev2",
+  "EventCode": "0x45e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev3",
+  "EventCode": "0x45f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev4",
+  "EventCode": "0x49e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev5",
+  "EventCode": "0x49f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev6",
+  "EventCode": "0x4de",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev7",
+  "EventCode": "0x4df",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev8",
+  "EventCode": "0x51e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev9",
+  "EventCode": "0x51f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev10",
+  "EventCode": "0x55e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev11",
+  "EventCode": "0x55f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev12",
+  "EventCode": "0x59e",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev13",
+  "EventCode": "0x59f",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev14",
+  "EventCode": "0x5de",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_remote_wr_ev15",
+  "EventCode": "0x5df",
+  "Umask": "0xbff",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all0",
+  "EventCode": "0xb5f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all1",
+  "EventCode": "0xb9f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all2",
+  "EventCode": "0xbdf",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all3",
+  "EventCode": "0xc1f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all4",
+  "EventCode": "0xc5f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all5",
+  "EventCode": "0xc9f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all6",
+  "EventCode": "0xcdf",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+},
+{
+  "EventName": "out_local_all7",
+  "EventCode": "0xd1f",
+  "Umask": "0xf3e",
+  "CounterType": "df",
+  "EventType": "df"
+}
+]
+}

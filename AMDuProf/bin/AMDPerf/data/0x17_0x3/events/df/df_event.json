@@ -1,0 +1,112 @@
+{ "events":
+[
+{
+  "EventName": "CAKE0_TX_DAT.Data",
+  "EventCode": "0x7c7",
+  "BriefDescription": "DF CAKE PCS Outbound (TX) Stats",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CAKE1_TX_DAT.Data",
+  "EventCode": "0x807",
+  "BriefDescription": "DF CAKE PCS Outbound (TX) Stats",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CAKE2_TX_DAT.Data",
+  "EventCode": "0x847",
+  "BriefDescription": "DF CAKE PCS Outbound (TX) Stats",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CAKE3_TX_DAT.Data",
+  "EventCode": "0x887",
+  "BriefDescription": "DF CAKE PCS Outbound (TX) Stats",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC0_REQ.RdWr",
+  "EventCode": "0x007",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC1_REQ.RdWr",
+  "EventCode": "0x047",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC2_REQ.RdWr",
+  "EventCode": "0x087",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC3_REQ.RdWr",
+  "EventCode": "0x0c7",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC4_REQ.RdWr",
+  "EventCode": "0x107",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC5_REQ.RdWr",
+  "EventCode": "0x147",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC6_REQ.RdWr",
+  "EventCode": "0x187",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+},
+{
+  "EventName": "CS_UMC7_REQ.RdWr",
+  "EventCode": "0x1c7",
+  "BriefDescription": "DF CS UMC Requests",
+  "PublicDescription": "NA",
+  "Umask": "0x38",
+  "CounterType": "DF",
+  "EventType": ""
+}
+]
+}

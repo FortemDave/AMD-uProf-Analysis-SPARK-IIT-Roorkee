@@ -1,0 +1,31 @@
+---
+ cpu:
+    - family:0x17
+    - modelLow:0x30
+    - modelHigh:0x3f
+    - corepmcs:6
+    - dfpmcs:4
+    - l3pmcs:6
+
+ events:
+      group0:
+          - tsc
+      group1.0:
+          - CAKE0_TX_DAT.Data
+          - CAKE1_TX_DAT.Data
+          - CAKE2_TX_DAT.Data
+          - CAKE3_TX_DAT.Data
+      group2.0:
+          - CS_UMC0_REQ.RdWr
+          - CS_UMC1_REQ.RdWr
+          - CS_UMC2_REQ.RdWr   
+          - CS_UMC3_REQ.RdWr
+      group3.0:
+          - CS_UMC4_REQ.RdWr
+          - CS_UMC5_REQ.RdWr
+          - CS_UMC6_REQ.RdWr
+          - CS_UMC7_REQ.RdWr
+
+ reports:
+       - RemoteLinkOutboundBytes
+       - CombinedDRAMBytes

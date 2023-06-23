@@ -1,0 +1,40 @@
+{
+    "__comment": "Processor: AMD family 19h, model 60h-6Fh",
+    "view": {
+        "name": "IBS fetch overall",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_FETCH",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_FETCH_KILLED",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_ATTEMPT",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_COMP",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_ABORT",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_LAT",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_FETCH_LATENCY",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show an overall summary of the IBS fetch sample data."
+    }
+}

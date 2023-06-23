@@ -1,0 +1,28 @@
+{
+    "__comment": "Processor: AMD family 19h, model 10h-1Fh",
+    "view": {
+        "name": "IBS fetch page translations",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_FETCH_ATTEMPT",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FETCH_COMP",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_4K_PAGE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_2M_PAGE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of the IBS L1 ITLB page translations for attempted fetches."
+    }
+}

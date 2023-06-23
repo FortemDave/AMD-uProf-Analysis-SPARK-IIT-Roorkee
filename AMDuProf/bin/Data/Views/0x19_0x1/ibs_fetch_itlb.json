@@ -1,0 +1,41 @@
+{
+    "__comment": "Processor: AMD family 19h, model 10h-1Fh",
+    "view": {
+        "name": "IBS fetch instruction TLB",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_FETCH_ATTEMPT",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_FETCH_COMP",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L1_ITLB_HIT",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_ITLB_L1M_L2H",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_ITLB_L1M_L2M",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "L2_ITLB_MISS_RATIO",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of IBS attempted fetch instruction translation lookaside buffer (ITLB) misses."
+    }
+}

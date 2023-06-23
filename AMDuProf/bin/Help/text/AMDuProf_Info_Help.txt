@@ -1,0 +1,111 @@
+AMDUPROFCLI-info(1)           AMDuProfCLI Manual           AMDUPROFCLI-info(1)
+
+
+
+NAME
+       AMDuProfCLI  info - Run a command and display generic information about
+       system, CPU etc.
+
+SYNOPSIS
+       AMDuProfCLI info [OPTION]
+
+
+DESCRIPTION
+       This info command displays generic information about system, CPU etc.
+
+OPTIONS
+       -h, --help
+              Displays this help information.
+
+       --system
+              Displays processor information of this system.
+
+       --list <type>
+              Lists the supported items for the following types:
+
+              ?  collect-configs - Predefined profile configurations that  can
+                 be used with 'collect --config' option.
+
+              ?  predefined-events  -  List of the supported predefined events
+                 that can be used with 'collect --event' option.
+
+              ?  pmu-events - Raw PMU events that can be  used  with  'collect
+                 --event' option. Alternatively, 'info --pmu-event all' can be
+                 used to print information of all the supported events.
+
+              ?  view-configs - List of the supported CPU Profile view config-
+                 urations that can be used with 'report --view' option.
+
+              ?  cacheline-events  -  List  of  event  aliases to be used with
+                 'report --sort-by' option for cache analysis.
+
+              ?  ostrace-events - List of OS Trace events  that  can  be  used
+                 with '--trace os' option.
+
+              ?  gpu-events  -  List  of GPU events can be used in gpu profile
+                 configuration.
+
+       --collect-config <name>
+              Displays details of the given profile configuration.
+
+              Use command 'info --list collect-configs' for details about each configuration.
+
+
+       --pmu-event <event>
+              Displays details of the given pmu event.
+
+              Use command 'info --list pmu-events' for the list of supported PMU-events.
+
+
+       --view-config <name>
+              Displays details of the given view configuration used in  report
+              generation.
+
+              Use command 'info --list view-configs' to get the list of supported view configurations.
+
+
+       --bpf  Displays details of the BPF support and BCC Installation.
+
+EXAMPLES
+       1.  To print system info:
+
+               $ AMDuProfCLI info --system
+
+
+       2.  To print list of predefined profiles:
+
+               $ AMDuProfCLI info --list collect-configs
+
+
+       3.  To print list of PMU events:
+
+               $ AMDuProfCLI info --list pmu-events
+
+
+       4.  To print list of predefined report views:
+
+               $ AMDuProfCLI info --list view-configs
+
+
+       5.  To print details of predefined profile like "assess_ext":
+
+               $ AMDuProfCLI info --collect-config assess_ext
+
+
+       6.  To print details of the pmu-event like "PMCx076":
+
+               $ AMDuProfCLI info --pmu-event pmcx76
+
+
+       7.  To print details of view-configuration like "ibs_op_overall":
+
+               $ AMDuProfCLI info --view-config ibs_op_overall
+
+
+SEE ALSO
+       AMDuProfCLI     collect(1),    AMDuProfCLI    report(1),    AMDuProfCLI
+       timechart(1).
+
+
+
+AMDuProfCLI                       04 Oct 2022              AMDUPROFCLI-info(1)

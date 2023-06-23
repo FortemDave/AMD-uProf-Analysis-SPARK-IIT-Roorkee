@@ -1,0 +1,1395 @@
+{
+    "metrics": [
+        {
+            "cpu": [
+                {
+                    "title": "L1_ITLB_MISSES (PTI)",
+                    "name": "L1 ITLB Misses (PTI)",
+                    "expression": "((L1_ITLB_MISSES_L2_HITS + L2_ITLB_MISSES) * 1000) / RETIRED_INST",
+                    "description": "The number of L1 ITLB Misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L1_ITLB_MISS_RATE",
+                    "name": "L1 ITLB Miss Rate",
+                    "expression": "(L1_ITLB_MISSES_L2_HITS + L2_ITLB_MISSES) / RETIRED_INST",
+                    "description": "The ITLB L1 Miss rate is the number of ITLB L1_Miss_L2_Hits and L1_Miss_L2_Miss divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L2_ITLB_MISSES (PTI)",
+                    "name": "L2 ITLB Misses (PTI)",
+                    "expression": "(L2_ITLB_MISSES * 1000) / RETIRED_INST",
+                    "description": "The number of L2 ITLB Misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_ITLB_MISS_RATE",
+                    "name": "L2 ITLB Miss Rate",
+                    "expression": "L2_ITLB_MISSES / RETIRED_INST",
+                    "description": "The ITLB L2 Miss rate is the number of ITLB L2 Miss divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L2_ITLB_HIT_RATE",
+                    "name": "L2 ITLB Hit Rate",
+                    "expression": "L1_ITLB_MISSES_L2_HITS / RETIRED_INST",
+                    "description": "The ITLB L2 Hit rate is the number of ITLB L1_Miss_L2_Hits divided by the total number of retired instructions."
+                },
+                {
+                    "title": "IPC",
+                    "name": "Instructions Per Cycle",
+                    "expression": "RETIRED_INST / CYCLES_NOT_IN_HALT",
+                    "description": "The average number of retired instructions per CPU Cycle. The lower IPC value means the application consumes more cycles due to  cache misses, branch mispredictions, pipeline stalls, I/O or any other performance bottlenecks."
+                },
+                {
+                    "title": "CPI",
+                    "name": "Cycles Per Instruction",
+                    "expression": "CYCLES_NOT_IN_HALT / RETIRED_INST",
+                    "confidence_threshold": 10,
+                    "issue_Threshold_min": 0.05,
+                    "issue_Threshold_max": 1,
+                    "advice": "The CPI may be too high. This could be caused due to issues like memory stalls, instruction starvation, branch misprediction or long latency instructions",
+                    "description": "The average number of CPU cycles consumed to retire an instruction. This metric is computed as the ratio of CYCLES_NOT_IN_HALT to RETIRED_INST event. The higher values means the application consumes more CPU cycles to retire an instruction due to high cache misses, branch mispredictions, pipeline stalls, I/O or any other bottlenecks. If the CPI values exceeds a threshold value, it will be highlighted in pink."
+                },
+                {
+                    "title": "INST_PER_CALL",
+                    "name": "Instr per call",
+                    "expression": "RETIRED_INST / ExRetNearRet",
+                    "description": "The number of retired instructions per call."
+                },
+                {
+                    "title": "RETIRED_BR_INST (PTI)",
+                    "name": "Retired Branch Instructions (PTI)",
+                    "expression": "( RETIRED_BR_INST * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired branch instructions per thousand retired instructions."
+                },
+                {
+                    "title": "RETIRED_BR_INST_RATE",
+                    "name": "RETIRED_BR_INST_RATE",
+                    "expression": "RETIRED_BR_INST / RETIRED_INST",
+                    "description": "The number of retired branch instructions rate. This metric is computed as retired branches divided by the total number of retired instructions."
+                },
+                {
+                    "title": "RETIRED_BR_INST_MISP (PTI)",
+                    "name": "Retired Branch Instructions Mispredicted (PTI)",
+                    "expression": "( RETIRED_BR_INST_MISP * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired mispredicted branches per thousand retired instructions. Branch mispredictions incur significant performance penalty and this metric value should be reduced."
+                },
+                {
+                    "title": "RETIRED_BR_INST_MISP_RATE",
+                    "name": "Retired Branch Instructions Mispredicted Rate",
+                    "expression": "RETIRED_BR_INST_MISP / RETIRED_INST",
+                    "description": "This metric is computed as retired mispredicted branches divided by the total number of retired instructions."
+                },
+                {
+                    "title": "RETIRED_BR_INST_MISP_RATIO",
+                    "name": "Retired Branch Instructions Mispredicted Ratio",
+                    "expression": "RETIRED_BR_INST_MISP / RETIRED_BR_INST",
+                    "description": "This metric is computed as retired mispredicted branches divided by the total number of retired branch instructions."
+                },
+                {
+                    "title": "%RETIRED_BR_INST_MISP",
+                    "name": "%Retired Branch Instructions Mispredicted",
+                    "expression": "( RETIRED_BR_INST_MISP * 100 ) / RETIRED_BR_INST",
+                    "description": "The percentage of retired mispredicted branches with respect to the total number of retired branches."
+                },
+                {
+                    "title": "RETIRED_TAKEN_BR_INST (PTI)",
+                    "name": "Retired Taken Branch Instructions (PTI)",
+                    "expression": "( ExRetBrnTkn * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired taken branches per thousand instructions."
+                },
+                {
+                    "title": "RETIRED_TAKEN_BR_INST_RATE",
+                    "name": "Retired Taken Branch Instruction Rate",
+                    "expression": "ExRetBrnTkn / RETIRED_INST",
+                    "description": "The number of retired taken branches rate. This metric is computed as retired taken branches divided by the total number of retired instructions."
+                },
+                {
+                    "title": "RETIRED_TAKEN_BR_INST_MISP (PTI)",
+                    "name": "Retired Taken Branch Instructions Mispredicted (PTI)",
+                    "expression": "( ExRetBrnTknMisp * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired mispredicted taken branches per thousand instructions."
+                },
+                {
+                    "title": "RETIRED_INDIRECT_BR_INST_MISP (PTI)",
+                    "name": "Retired Indirect Branch Instructions Mispredicted (PTI)",
+                    "expression": "( ExRetBrnIndMisp * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired indirect branches per thousand instructions."
+                },
+                {
+                    "title": "RETIRED_NEAR_RETURNS (PTI)",
+                    "name": "Retired Near Return Instructions (PTI)",
+                    "expression": "( ExRetNearRet * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired near branches per thousand instructions."
+                },
+                {
+                    "title": "RETIRED_NEAR_RETURNS_MISP (PTI)",
+                    "name": "Retired Near Return Instructions Mispredicted (PTI)",
+                    "expression": "( ExRetNearRetMispred * 1000 ) / RETIRED_INST",
+                    "description": "The number of retired mispredicted near branches per thousand instructions."
+                },
+                {
+                    "title": "RETIRED_NEAR_RETURNS_MISP_RATE",
+                    "name": "Retired Near Return Instructions Mispredicted Rate",
+                    "expression": "ExRetNearRetMispred / RETIRED_INST",
+                    "description": "This metric is computed as retired mispredicted near returns divided by the total number of retired instructions."
+                },
+                {
+                    "title": "RETIRED_NEAR_RETURNS_MISP_RATIO",
+                    "name": "Retired Near Return Instructions Mispredicted Ratio",
+                    "expression": "ExRetNearRetMispred / ExRetNearRet",
+                    "description": "This metric is computed as retired mispredicted near returns divided by the total number of retired return  instructions."
+                },
+                {
+                    "title": "L2_BTB_CORRECTION (PTI)",
+                    "name": "L2_BTB_CORRECTION (PTI)",
+                    "expression": "( BpL2BTBCorrect * 1000 ) / RETIRED_INST",
+                    "description": "L2 Branch Prediction Overrides Existing Prediction (speculative)."
+                },
+                {
+                    "title": "L1_DTLB_REQUESTS (PTI)",
+                    "name": "L1 DTLB Requests (PTI)",
+                    "expression": "( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST",
+                    "description": "The number of L1 Data Translation Lookaside buffer (DTLB) requests from load-store micro-ops."
+                },
+                {
+                    "title": "L1_DTLB_MISSES (PTI)",
+                    "name": "L1 DTLB Misses (PTI)",
+                    "expression": "( L1_DTLB_MISSES * 1000 ) / RETIRED_INST",
+                    "description": "The number of L1 Data Translation Lookaside buffer (DTLB) misses from load-store micro-ops."
+                },
+                {
+                    "title": "L1_DTLB_HITS (PTI)",
+                    "name": "L1 DTLB HITs (PTI)",
+                    "expression": "L1_DC_ACCESSES_ALL - ((L1_DTLB_MISSES * 1000) / RETIRED_INST)",
+                    "description": "The number of L1 Data Translation Lookaside buffer (DTLB) Hits from load-store micro-ops."
+                },
+                {
+                    "title": "L1_DTLB_REQUEST_RATE",
+                    "name": "L1 DTLB Request Rate",
+                    "expression": "L1_DC_ACCESSES_ALL / RETIRED_INST",
+                    "description": "The DTLB request rate is the number of DC accesses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DTLB_MISS_RATE",
+                    "name": "L1 DTLB Miss Rate",
+                    "expression": "L1_DTLB_MISSES / RETIRED_INST",
+                    "description": "The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DTLB_HIT_RATE",
+                    "name": "L1 DTLB Hit Rate",
+                    "expression": "(L1_DC_ACCESSES_ALL - L1_DC_MISSESS) / RETIRED_INST",
+                    "description": "The DTLB L1 miss rate is the number of DTLB L1 misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L2_DTLB_MISSES (PTI)",
+                    "name": "L2 DTLB Misses (PTI)",
+                    "expression": "(L2_DTLB_MISSES * 1000) / RETIRED_INST",
+                    "description": "The number of L2 DTLB misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_DTLB_MISS_RATE",
+                    "name": "L2 DTLB Miss Rate",
+                    "expression": "L2_DTLB_MISSES / RETIRED_INST",
+                    "description": "The L2 DTLB miss rate is the number of L2 DTLB misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DC_ACCESSES (PTI)",
+                    "name": "Data Cache Accesses (PTI)",
+                    "expression": "( L1_DC_ACCESSES_ALL * 1000 ) / RETIRED_INST",
+                    "description": "The number of load and store operations per thousand instructions. This counts the dispatch of single op that performs a memory load, dispatch of single op that performs a memory store, dispatch of a single op that performs a load from and store to the same memory address"
+                },
+                {
+                    "title": "L1_DC_MISSES (PTI)",
+                    "name": "Data Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+                },
+                {
+                    "title": "L1_DC_ACCESS_RATE",
+                    "name": "Data Cache Access Rate",
+                    "expression": "L1_DC_ACCESSES_ALL / RETIRED_INST",
+                    "description": "The L1 Data Cache access rate is the number of L1 Data Cache accesses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DC_MISS_RATE",
+                    "name": "Data Cache Miss Rate",
+                    "expression": "L2_CACHE_ACCESS_FROM_L1_DC_MISS / RETIRED_INST",
+                    "description": "The L1 Data Cache miss rate is the number of L1 Data Cache misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DC_MISS_RATIO",
+                    "name": "Data Cache Miss Ratio",
+                    "expression": "L2_CACHE_ACCESS_FROM_L1_DC_MISS / L1_DC_ACCESSES_ALL",
+                    "description": "The L1 Data Cache miss ratio is the number of L1 Data Cache misses divided by the total number of L1 Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DC_MISSES",
+                    "name": "Data Cache Miss Percentage",
+                    "expression": "( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "The percentage of L2 cache access requests due to L1 data cache misses with respect to the total number of load and store operations. This also counts the hardware and software prefetches."
+                },
+                {
+                    "title": "L2_CACHE_ACCESSES_FROM_DC_MISSES (PTI)",
+                    "name": "L2 Cache Accesses from Data Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_ACCESS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache access requests due to L1 data cache misses, per thousand retired instructions. This L2 cache access requests also includes the hardware and software prefetches."
+                },
+                {
+                    "title": "L2_CACHE_MISSES_FROM_DC_MISSES (PTI)",
+                    "name": "L2 Cache Misses from Data Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_MISS_FROM_L1_DC_MISS * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache misses from L1 data cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_HITS_FROM_DC_MISSES (PTI)",
+                    "name": "L2 Cache Hits from Data Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_HIT_FROM_L1_DC_MISS * 1000) / RETIRED_INST",
+                    "description": "The number of L2 cache hits from L1 data cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_ACCESSES_FROM_IC_MISSES (PTI)",
+                    "name": "L2 Cache Accesses from Instruction Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_ACCESS_FROM_L1_IC_MISS * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache access requests due to L1 instruction cache misses, per thousand retired instructions. This L2 cache access requests also includes the prefetches."
+                },
+                {
+                    "title": "L2_CACHE_MISSES_FROM_IC_MISSES (PTI)",
+                    "name": "L2 Cache Misses from Instruction Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_MISS_FROM_L1_IC_MISS * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache misses from L1 Instruction cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_HITS_FROM_IC_MISSES (PTI)",
+                    "name": "L2 Cache Hits from Instruction Cache Misses (PTI)",
+                    "expression": "( L2_CACHE_HIT_FROM_L1_IC_MISS * 1000) / RETIRED_INST",
+                    "description": "The number of L2 cache hits from L1 Instruction cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_ACCESSES_FROM_L2_CACHE_HWPF (PTI)",
+                    "name": "L2 Cache Accesses from L2 Cache Hardware prefetches (PTI)",
+                    "expression": "((L2_HWPF_HIT_IN_L2 + L2_HWPF_HIT_IN_L3 + L2_HWPF_MISS_IN_L2_L3) * 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache access requests due to L2 Cache hardware prefetches, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_MISSES_FROM_L2_CACHE_HWPF (PTI)",
+                    "name": "L2 Cache Misses from L2 Cache Hardware prefetches (PTI)",
+                    "expression": "((L2_HWPF_HIT_IN_L3 + L2_HWPF_MISS_IN_L2_L3)* 1000 ) / RETIRED_INST",
+                    "description": "The number of L2 cache misses due to L2 Cache hardware prefetches, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_HITS_FROM_L2_CACHE_HWPF (PTI)",
+                    "name": "L2 Cache Hits from L2 Cache Hardware prefetches (PTI)",
+                    "expression": "( L2_HWPF_HIT_IN_L2 * 1000) / RETIRED_INST",
+                    "description": "The number of L2 cache hits due to L2 Cache hardware prefetches, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_ACCESSES_ALL (PTI)",
+                    "name": "All L2 Cache Accesses (PTI)",
+                    "expression": "((L2_CACHE_ACCESS_FROM_L1_DC_MISS + L2_CACHE_ACCESS_FROM_L1_IC_MISS + L2_HWPF_HIT_IN_L2 + L2_HWPF_HIT_IN_L3 + L2_HWPF_MISS_IN_L2_L3) * 1000 ) / RETIRED_INST",
+                    "description": "The number of all L2 cache access requests due to L1 Data Cache misses, L1 Instruction cache misses and L2 Cache hardware prefetches, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_MISSES_ALL (PTI)",
+                    "name": "All L2 Cache Misses (PTI)",
+                    "expression": "((L2_CACHE_MISS_FROM_L1_DC_MISS + L2_CACHE_MISS_FROM_L1_IC_MISS + L2_HWPF_HIT_IN_L3 + L2_HWPF_MISS_IN_L2_L3)* 1000 ) / RETIRED_INST",
+                    "description": "The number of all L2 cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "L2_CACHE_HITS_ALL (PTI)",
+                    "name": "All L2 Cache Hits (PTI)",
+                    "expression": "((L2_CACHE_HIT_FROM_L1_DC_MISS + L2_CACHE_HIT_FROM_L1_IC_MISS + L2_HWPF_HIT_IN_L2)* 1000) / RETIRED_INST",
+                    "description": "The number of all L2 cache hits, per thousand retired instructions."
+                },
+                {
+                    "title": "MISALIGNED_LOADS (PTI)",
+                    "name": "Misaligned Loads (PTI)",
+                    "expression": "( MISALIGNED_LOADS * 1000 ) / RETIRED_INST",
+                    "description": "The number of misaligned loads per thousand retired instructions."
+                },
+                {
+                    "title": "MISALIGNED_LOADS_RATE",
+                    "name": "Misaligned Loads Rate",
+                    "expression": "MISALIGNED_LOADS / RETIRED_INST",
+                    "description": "The Misalign rate is the number of misaligned loads divided by the total number of retired instructions."
+                },
+                {
+                    "title": "MISALIGNED_LOADS_RATIO",
+                    "name": "Misaligned Loads Ratio",
+                    "expression": "MISALIGNED_LOADS / L1_DC_ACCESSES_ALL",
+                    "description": "The Misalign ratio is the number of misaligned loads divided by the total number of DC accesses."
+                },
+                {
+                    "title": "INEFFECTIVE_SW_PF (PTI)",
+                    "name": "Inefffective Software Prefetch (PTI)",
+                    "expression": "( INEFFECTIVE_SW_PF * 1000 ) / RETIRED_INST",
+                    "description": "The number of ineffective software prefetches per thousand instructions."
+                },
+                {
+                    "title": "STLI_OTHER (PTI)",
+                    "name": "StliOther PTI",
+                    "expression": "( LsBadStatus2.StliOther * 1000 ) / RETIRED_INST",
+                    "description": "Store-to-load conflicts: A load was unable to complete due to a non-forwardable conflict with an older store. Most commonly, a load's address range partially but not completely overlaps with an uncompleted older store. Software can avoid this problem by using same-size and same-alignment loads and stores when accessing the same data. Vector/SIMD code is particularly susceptible to this problem; software should construct wide vector stores by manipulating vector elements in registers using shuffle/blend/swap instructions prior to storing to memory, instead of using narrow element-by-element stores."
+                },
+                {
+                    "title": "WCB_FULLL (PTI)",
+                    "name": "WcbFull PTI",
+                    "expression": "( LsStCommitCancel2.StCommitCancelWcbFull * 1000 ) / RETIRED_INST",
+                    "description": "A non-cacheable store and the non-cacheable commit buffer is full."
+                },
+                {
+                    "title": "IBS_IC_MISS_RATIO",
+                    "name": "IC Miss Ratio",
+                    "expression": "IBS_IC_MISS / IBS_FETCH_ATTEMPT",
+                    "description": "IBS_IC_MISS_RATIO"
+                },
+                {
+                    "title": "AVE_FETCH_LATENCY",
+                    "name": "Average Fetch Latency",
+                    "expression": "IBS_FETCH_LAT / IBS_FETCH_ATTEMPT",
+                    "description": "AVE_FETCH_LATENCY"
+                },
+                {
+                    "title": "L1_ITLB_MISS_RATIO",
+                    "name": "L1_ITLB_MISS_RATIO",
+                    "expression": "IBS_ITLB_L1M_L2H / IBS_FETCH_ATTEMPT",
+                    "description": "L1_ITLB_MISS_RATIO"
+                },
+                {
+                    "title": "L2_ITLB_MISS_RATIO",
+                    "name": "L2_ITLB_MISS_RATIO",
+                    "expression": "IBS_ITLB_L1M_L2M / IBS_FETCH_ATTEMPT",
+                    "description": "L2_ITLB_MISS_RATIO"
+                },
+                {
+                    "title": "MISP_RATIO",
+                    "name": "Branch Mispredicted Ratio",
+                    "expression": "IBS_MISP_BR / IBS_BR",
+                    "description": "MISP_RATIO"
+                },
+                {
+                    "title": "AVE_TAG_TO_RET",
+                    "name": "AVE_TAG_TO_RET",
+                    "expression": "IBS_TAG_TO_RET / IBS_ALL_OPS",
+                    "description": "AVE_TAG_TO_RET"
+                },
+                {
+                    "title": "AVE_COMP_TO_RET",
+                    "name": "AVE_COMP_TO_RET",
+                    "expression": "IBS_COMP_TO_RET / IBS_ALL_OPS",
+                    "description": "AVE_COMP_TO_RET"
+                },
+                {
+                    "title": "AVE_DC_MISS_LAT",
+                    "name": "AVE_DC_MISS_LAT",
+                    "expression": "IBS_DC_MISS_LAT / IBS_DC_MISS",
+                    "description": "AVE_DC_MISS_LAT"
+                },
+                {
+                    "title": "IBS_DC_MISS_RATE",
+                    "name": "IBS_DC_MISS_RATE",
+                    "expression": "IBS_DC_MISS / IBS_ALL_OPS",
+                    "description": "IBS_DC_MISS_RATE"
+                },
+                {
+                    "title": "IBS_DC_MISS_RATIO",
+                    "name": "IBS_DC_MISS_RATIO",
+                    "expression": "IBS_DC_MISS / IBS_LOAD_STORE",
+                    "description": "IBS_DC_MISS_RATIO"
+                },
+                {
+                    "title": "L1M_L2H_RATE",
+                    "name": "L1M_L2H_RATE",
+                    "expression": "IBS_DTLB_L1M_L2H / IBS_ALL_OPS",
+                    "description": "L1M_L2H_RATE"
+                },
+                {
+                    "title": "L1M_L2M_RATE",
+                    "name": "L1M_L2M_RATE",
+                    "expression": "IBS_DTLB_L1M_L2M / IBS_ALL_OPS",
+                    "description": "L1M_L2M_RATE"
+                },
+                {
+                    "title": "AVE_LOCAL_LAT",
+                    "name": "AVE_LOCAL_LAT",
+                    "expression": "IBS_NB_LOCAL_LAT / IBS_NB_LOCAL",
+                    "description": "AVE_LOCAL_LAT"
+                },
+                {
+                    "title": "AVE_REMOTE_LAT",
+                    "name": "AVE_REMOTE_LAT",
+                    "expression": "IBS_NB_REMOTE_LAT / IBS_NB_REMOTE",
+                    "description": "AVE_REMOTE_LAT"
+                },
+                {
+                    "title": "MISPREDICT_RATIO",
+                    "name": "MISPREDICT_RATIO",
+                    "expression": "IBS_MISP_RET / IBS_RET",
+                    "description": "MISPREDICT_RATIO"
+                }
+            ],
+            "gpu": [
+                {
+                    "title": "VALU_INSTR (IPW)",
+                    "name": "VALU Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_VALU / SQ_WAVES",
+                    "description": "Average number of VALU instructions per wave."
+                },
+                {
+                    "title": "SALU_INSTR (IPW)",
+                    "name": "SALU Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_SALU / SQ_WAVES",
+                    "description": "Average number of SALU instructions per wave."
+                },
+                {
+                    "title": "SMEM_INSTR (IPW)",
+                    "name": "SMEM Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_SMEM / SQ_WAVES",
+                    "description": "Average number of SMEM instructions per wave."
+                },
+                {
+                    "title": "LDS_INSTR (IPW)",
+                    "name": "LDS Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_LDS / SQ_WAVES",
+                    "description": "Average number of LDS instructions per wave."
+                },
+                {
+                    "title": "GDS_INSTR (IPW)",
+                    "name": "GDS Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_GDS / SQ_WAVES",
+                    "description": "Average number of GDS instructions per wave."
+                },
+                {
+                    "title": "FLAT_LDS_INSTR (IPW)",
+                    "name": "FLAT LDS Instruction Mix (Instructions Per Wave)",
+                    "expression": "SQ_INSTS_FLAT_LDS_ONLY / SQ_WAVES",
+                    "description": "Average number of FLAT LDS instructions per wave."
+                },
+                {
+                    "title": "FLAT_VMEM_INSTR (IPW)",
+                    "name": "FLAT VMEM Instruction Mix (Instructions Per Wave)",
+                    "expression": "(SQ_INSTS_FLAT - SQ_INSTS_FLAT_LDS_ONLY) / SQ_WAVES",
+                    "description": "Average number of FLAT VMEM instructions per wave."
+                },
+                {
+                    "title": "LDS_ONLY_INSTR (IPW)",
+                    "name": "LDS Only Instruction Mix (Instructions Per Wave)",
+                    "expression": "(SQ_INSTS_LDS - SQ_INSTS_FLAT_LDS_ONLY) / SQ_WAVES",
+                    "description": "Average number of LDS instructions per wave."
+                },
+                {
+                    "title": "SQ_ALU_STALLED_BY_LDS",
+                    "name": "SQ_ALU_STALLED_BY_LDS",
+                    "expression": "100 * SQ_WAIT_INST_LDS * 4 / SQ_WAVES / GRBM_GUI_ACTIVE",
+                    "description": "Percentage of GPUTime ALU units are stalled by the LDS."
+                },
+                {
+                    "title": "SQ_VWRITE_INSTR",
+                    "name": "SQ_VWRITE_INSTR",
+                    "expression": "(SQ_INSTS_VMEM_WR - TA_FLAT_WRITE_WAVEFRONTS_SUM) / SQ_WAVES",
+                    "description": "Average number of vector write instructions to the video memory executed per work-item."
+                },
+                {
+                    "title": "SQ_VFETCH_INSTR",
+                    "name": "SQ_VFETCH_INSTR",
+                    "expression": "(SQ_INSTS_VMEM_RD - TA_FLAT_READ_WAVEFRONTS_sum) / SQ_WAVES",
+                    "description": "Average number of vector fetch instructions from the video memory executed per work-item."
+                },
+                {
+                    "title": "VALU_THREAD_DIVERGENCE (%)",
+                    "name": "VALU Thread divergence in percentage",
+                    "expression": "100 * ( 1 - SQ_THREAD_CYCLES_VALU / SQ_ACTIVE_INST_VALU / 64)",
+                    "description": "Average VALU thread divergence."
+                },
+                {
+                    "title": "VALU_UTIL (%)",
+                    "name": "VALU Utilization (Percentage)",
+                    "expression": "100 * SQ_THREAD_CYCLES_VALU / (SQ_ACTIVE_INST_VALU * maxWaveSize)",
+                    "description": "VALU utilization."
+                },
+                {
+                    "title": "GPU_UTIL (%)",
+                    "name": "GPU Utilization (Percentage)",
+                    "expression": "100 * GRBM_GUI_ACTIVE / GRBM_COUNT",
+                    "description": "GPU utilization."
+                },
+                {
+                    "title": "L2_CACHE_HITS (PW)",
+                    "name": "L2 Cache hits per wave",
+                    "expression": "TCC_HIT_sum / SQ_WAVES",
+                    "description": "average number of cache hits per wave."
+                },
+                {
+                    "title": "L2_CACHE_MISSES (PW)",
+                    "name": "L2 Cache Misses per wave",
+                    "expression": "TCC_MISS_sum / SQ_WAVES",
+                    "description": "average number of cache misses per wave."
+                },
+                {
+                    "title": "L2_CACHE_HIT_RATE (%)",
+                    "name": "L2 Cache hit rate (Percentage)",
+                    "expression": "100 * TCC_HIT_sum / (TCC_HIT_sum + TCC_MISS_sum)",
+                    "description": "average TCC cache hit rate."
+                },
+                {
+                    "title": "EA_32B_READ (PW)",
+                    "name": "32B Reads Per wave",
+                    "expression": "TCC_EA_RDREQ_32B_sum / SQ_WAVES",
+                    "description": "average number of 32-byte reads per wave."
+                },
+                {
+                    "title": "EA_64B_READ (PW)",
+                    "name": "64B Reads Per wave",
+                    "expression": "(TCC_EA_RDREQ_sum - TCC_EA_RDREQ_32B_sum) / SQ_WAVES",
+                    "description": "average number of 64-byte reads per wave."
+                },
+                {
+                    "title": "FETCH_SIZE",
+                    "name": "FETCH_SIZE",
+                    "expression": "(TCC_EA_RDREQ_32B_sum * 32 + (TCC_EA_RDREQ_sum - TCC_EA_RDREQ_32B_sum) * 64) / 1024",
+                    "description": "Total kilobytes fetched from the video memory."
+                },
+                {
+                    "title": "EA_32B_WRITE (PW)",
+                    "name": "32B Writes Per wave",
+                    "expression": "(TCC_EA_WRREQ_sum - TCC_EA_WRREQ_64B_sum) / SQ_WAVES",
+                    "description": "average number of 64-byte writes per wave."
+                },
+                {
+                    "title": "EA_64B_WRITE (PW)",
+                    "name": "64B Writes Per wave",
+                    "expression": "TCC_EA_WRREQ_64B_sum / SQ_WAVES",
+                    "description": "average number of 64-byte writes per wave."
+                },
+                {
+                    "title": "WRITE_SIZE",
+                    "name": "WRITE_SIZE",
+                    "expression": "((TCC_EA_WRREQ_sum - TCC_EA_WRREQ_64B_sum) * 32 + TCC_EA_WRREQ_64B_sum * 64) / 1024",
+                    "description": "Total kilobytes written to the video memory."
+                },
+                {
+                    "title": "EA_WRITE_BW (GB/sec)",
+                    "name": "Write Bandwidth in GB per second",
+                    "expression": "(TCC_EA_WRREQ_64B_sum * 64 + (TCC_EA_WRREQ_sum - TCC_EA_WRREQ_64B_sum) * 32) / elapsedTime",
+                    "description": "TCC-EA write bandwidth."
+                },
+                {
+                    "title": "EA_READ_BW (GB/sec)",
+                    "name": "Read Bandwidth in GB per second",
+                    "expression": "(TCC_EA_RDREQ_32B_sum * 32 + (TCC_EA_RDREQ_sum - TCC_EA_RDREQ_32B_sum) * 64) / elapsedTime",
+                    "description": "TCC-EA read bandwidth."
+                }
+            ]
+        },
+        {
+            "family": "0x17",
+            "model": "00-0f,10-1f,20-2f",
+            "cpu": [
+                {
+                    "title": "L1_ITLB_REQUESTS (PTI)",
+                    "name": "L1 ITLB Requests (PTI)",
+                    "expression": "((L1_ITLB_MISSES_L2_HITS + L2_ITLB_MISSES + BpL1TlbFetchHit) * 1000) / RETIRED_INST",
+                    "description": "The number of L1 ITLB Requests, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISSES (PTI)",
+                    "name": "Instruction Cache Misses (PTI)",
+                    "expression": "(L1_IC_32B_FETCH_MISS * 1000) / RETIRED_INST",
+                    "description": "The number of L1 instruction cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISS_RATE",
+                    "name": "Instruction Cache miss rate",
+                    "expression": "L1_IC_32B_FETCH_MISS / RETIRED_INST",
+                    "description": "The IC Miss Rate is computed as the number of number of instruction cache misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "FP_DISP_FAULTS (PTC)",
+                    "name": "FP_DISP_FAULTS (PTC)",
+                    "expression": "( FpLongLatOpsIss.SRT1.SRT0.PremUnit * 1000 ) / CYCLES_NOT_IN_HALT",
+                    "description": "Floating point Dispatch faults in per thousand cycles."
+                },
+                {
+                    "title": "L1_BTB_CORRECTION (PTI)",
+                    "name": "L1_BTB_CORRECTION (PTI)",
+                    "expression": "( BpL1BTBCorrect * 1000 ) / RETIRED_INST",
+                    "description": "L1_BTB_CORRECTION (PTI)"
+                },
+                {
+                    "title": "ALU_TOKEN_STALL (PTI)",
+                    "name": "ALU Token Stall PTI",
+                    "expression": "( DeDisDispatchTokenStalls0.ALURsrcStall * 1000 ) / RETIRED_INST",
+                    "description": "ALU Token Stall PTI"
+                },
+                {
+                    "title": "CACHEABLE_LOCKS (PTI)",
+                    "name": "Cacheable Locks PTI",
+                    "expression": "( LS_LOCKS_CACHEABLE * 1000 ) / RETIRED_INST",
+                    "description": "Cacheable Locks PTI"
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                    "name": "Demand Data Cache Refills from Local L2 (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These DC fills are from local L2 cache to the core."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Local Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from same the cache of same CCX or cache of different CCX in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Local DRAM (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Remote Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from remote cache."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Remote DRAM or IO (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the different package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL (PTI)",
+                    "name": "Data Cache Refills.ALL (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_ALL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from all the data sources like Local L2/L3 cache, remote caches, local dram and remote dram."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_L2",
+                    "name": "Percentage of Demand Data Cache Refills from Local L2",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local L2, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Local Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Local DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Remote Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_CACHE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Remote DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL_RATE",
+                    "name": "Demand Data Cache Refills Rate",
+                    "expression": "L1_DEMAND_DC_REFILLS_ALL / RETIRED_INST",
+                    "description": "The DC refill rate is the number of DC refills from all the data sources divided by the total number of retired instructions."
+                }
+            ]
+        },
+        {
+            "family": "0x17",
+            "model": "00-0f",
+            "uncore": {
+                "memory": [
+                    {
+                        "title": "Umc0RdBw (GB/s)",
+                        "name": "Umc0RdBw (GB/s)",
+                        "expression": "( ( DFCS0Umc0ReqRd * 64 ) / ( ElapsedTimeinUsMem * 1000 ) )",
+                        "description": "Umc0RdBw (GB/s)"
+                    },
+                    {
+                        "title": "Umc0WrBw (GB/s)",
+                        "name": "Umc0WrBw (GB/s)",
+                        "expression": "( ( DFCS0Umc0ReqWr * 64 ) / ( ElapsedTimeinUsMem * 1000 ) )",
+                        "description": "Umc0WrBw (GB/s)"
+                    },
+                    {
+                        "title": "Umc1RdBw (GB/s)",
+                        "name": "Umc1RdBw (GB/s)",
+                        "expression": "( ( DFCS1Umc1ReqRd * 64 ) / ( ElapsedTimeinUsMem * 1000 ) )",
+                        "description": "Umc1RdBw (GB/s)"
+                    },
+                    {
+                        "title": "Umc1WrBw (GB/s)",
+                        "name": "Umc1WrBw (GB/s)",
+                        "expression": "( ( DFCS1Umc1ReqWr * 64 ) / ( ElapsedTimeinUsMem * 1000 ) )",
+                        "description": "Umc1WrBw (GB/s)"
+                    }
+                ],
+                "xgmi": []
+            }
+        },
+        {
+            "family": "0x17",
+            "model": "30-3f,60-6f,70-7f",
+            "cpu": [
+                {
+                    "title": "L1_ITLB_REQUESTS (PTI)",
+                    "name": "L1 ITLB Requests (PTI)",
+                    "expression": "((L1_ITLB_MISSES_L2_HITS + L2_ITLB_MISSES + BpL1TlbFetchHit.IF1G.IF2M.IF4K) * 1000) / RETIRED_INST",
+                    "description": "The number of L1 ITLB Requests, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISSES (PTI)",
+                    "name": "Instruction Cache Misses (PTI)",
+                    "expression": "(L1_IC_32B_FETCH_MISS * 1000) / RETIRED_INST",
+                    "description": "The number of L1 instruction cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISS_RATE",
+                    "name": "Instruction Cache miss rate",
+                    "expression": "L1_IC_32B_FETCH_MISS / RETIRED_INST",
+                    "description": "The IC Miss Rate is computed as the number of number of instruction cache misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "FP_DISP_FAULTS (PTC)",
+                    "name": "FP_DISP_FAULTS (PTC)",
+                    "expression": "( FpDispFaults.YmmSpillFault.YmmFillFault.XmmFillFault.x87FillFault * 1000 ) / CYCLES_NOT_IN_HALT",
+                    "description": "Floating point Dispatch faults in per thousand cycles."
+                },
+                {
+                    "title": "SSE_AVX_STALLS (PTC)",
+                    "name": "SSE_AVX_STALLS (PTC)",
+                    "expression": "( FpDispFaults.YmmSpillFault.YmmFillFault.XmmFillFault * 1000 ) / CYCLES_NOT_IN_HALT",
+                    "description": "SSE AVX Dispatch Stalls."
+                },
+                {
+                    "title": "L1_BTB_CORRECTION (PTI)",
+                    "name": "L1_BTB_CORRECTION (PTI)",
+                    "expression": "( BpL1BTBCorrect * 1000 ) / RETIRED_INST",
+                    "description": "L1_BTB_CORRECTION (PTI)"
+                },
+                {
+                    "title": "CACHEABLE_LOCKS (PTI)",
+                    "name": "Cacheable Locks PTI",
+                    "expression": "( LS_LOCKS_CACHEABLE * 1000 ) / RETIRED_INST",
+                    "description": "Cacheable Locks PTI"
+                },
+                {
+                    "title": "RdSized (PTI)",
+                    "name": "RdSized (PTI)",
+                    "expression": "( L2RequestG2.LsRdSized * 1000 ) / RETIRED_INST",
+                    "description": "Requests to L2 Data Cache Read Sized Non-Cacheable, per thousand retired instructions."
+                },
+                {
+                    "title": "RdSizedNC (PTI)",
+                    "name": "RdSizedNC (PTI)",
+                    "expression": "( L2RequestG2.LsRdSizedNC * 1000 ) / RETIRED_INST",
+                    "description": "Requests to L2 Data Cache Read Sized Non-Cacheable Non-Coherent, per thousand retired instructions."
+                },
+                {
+                    "title": "WCB_WRITE (PTI)",
+                    "name": "WcbWrite PTI",
+                    "expression": "( L2WcbReq.WcbWrite * 1000 ) / RETIRED_INST",
+                    "description": "WcbWrite per thousand retired instructions."
+                },
+                {
+                    "title": "%WCB_WRITE_TO_CLOSE",
+                    "name": "Wcb Write to Close Percentage",
+                    "expression": "(L2WcbReq.WcbWrite * 100 ) / L2WcbReq.WcbClose",
+                    "description": "The precentage of Write Combining Buffer Write operations to Write Combining Buffer Close operations."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                    "name": "Demand Data Cache Refills from Local L2 (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These DC fills are from local L2 cache to the core."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Local Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from same the cache of same CCX or cache of different CCX in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Local DRAM (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Remote Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from remote cache."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Remote DRAM or IO (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the different package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL (PTI)",
+                    "name": "Data Cache Refills.ALL (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_ALL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from all the data sources like Local L2/L3 cache, remote caches, local dram and remote dram."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_L2",
+                    "name": "Percentage of Demand Data Cache Refills from Local L2",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local L2, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Local Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Local DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Remote Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_CACHE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Remote DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL_RATE",
+                    "name": "Demand Data Cache Refills Rate",
+                    "expression": "L1_DEMAND_DC_REFILLS_ALL / RETIRED_INST",
+                    "description": "The DC refill rate is the number of DC refills from all the data sources divided by the total number of retired instructions."
+                }
+            ]
+        },
+        {
+            "family": "0x17",
+            "model": "30-3f",
+            "uncore": {
+                "memory": [
+                    {
+                        "title": "SocketMemBw",
+                        "name": "SocketMemBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw + MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemBw"
+                    },
+                    {
+                        "title": "SocketMemRdBw",
+                        "name": "SocketMemRdBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw )",
+                        "description": "SocketMemRdBw"
+                    },
+                    {
+                        "title": "SocketMemWrBw",
+                        "name": "SocketMemWrBw",
+                        "expression": "( MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemWrBw"
+                    },
+                    {
+                        "title": "Mem Ch-A Bw (GB/s)",
+                        "name": "Mem Ch-A Bw (GB/s)",
+                        "expression": "( MemChARdBw + MemChAWrBw )",
+                        "description": "Mem Ch-A Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-B Bw (GB/s)",
+                        "name": "Mem Ch-B Bw (GB/s)",
+                        "expression": "( MemChBRdBw + MemChBWrBw )",
+                        "description": "Mem Ch-B Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-C Bw (GB/s)",
+                        "name": "Mem Ch-C Bw (GB/s)",
+                        "expression": "( MemChCRdBw + MemChCWrBw )",
+                        "description": "Mem Ch-C Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-D Bw (GB/s)",
+                        "name": "Mem Ch-D Bw (GB/s)",
+                        "expression": "( MemChDRdBw + MemChDWrBw )",
+                        "description": "Mem Ch-D Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-E Bw (GB/s)",
+                        "name": "Mem Ch-E Bw (GB/s)",
+                        "expression": "( MemChERdBw + MemChEWrBw )",
+                        "description": "Mem Ch-E Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-F Bw (GB/s)",
+                        "name": "Mem Ch-F Bw (GB/s)",
+                        "expression": "( MemChFRdBw + MemChFWrBw )",
+                        "description": "Mem Ch-F Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-G Bw (GB/s)",
+                        "name": "Mem Ch-G Bw (GB/s)",
+                        "expression": "( MemChGRdBw + MemChGWrBw )",
+                        "description": "Mem Ch-G Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-H Bw (GB/s)",
+                        "name": "Mem Ch-H Bw (GB/s)",
+                        "expression": "( MemChHRdBw + MemChHWrBw )",
+                        "description": "Mem Ch-H Bw (GB/s)"
+                    }
+                ],
+                "xgmi": [
+                    {
+                        "title": "Approximate xGMI outbound data bytes (GB/s)",
+                        "name": "Approximate xGMI outbound data bytes (GB/s)",
+                        "expression": "( xGMI0Bw + xGMI1Bw + xGMI2Bw + xGMI3Bw )",
+                        "description": "Approximate xGMI outbound data bytes (GB/s)"
+                    }
+                ],
+                "pcie": [
+                    {
+                        "title": "Total PCIe (GB/s)",
+                        "name": "Total PCIe (GB/s)",
+                        "expression": "( PCIe0 + PCIe1 + PCIe2 + PCIe3 )",
+                        "description": "Total PCIe (GB/s)",
+                        "visibility": "public|nda|internal"
+                    }
+                ]
+            }
+        },
+        {
+            "family": "0x19",
+            "model": "00-0f,10-1f,20-2f,30-3f,40-4f,50-5f,60-6f",
+            "cpu": [
+                {
+                    "title": "L1_ITLB_REQUESTS (PTI)",
+                    "name": "L1 ITLB Requests (PTI)",
+                    "expression": "((L1_ITLB_MISSES_L2_HITS + L2_ITLB_MISSES + BpL1TlbFetchHit.IF1G.IF2M.IF4K) * 1000) / RETIRED_INST",
+                    "description": "The number of L1 ITLB Requests, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISSES (PTI)",
+                    "name": "Instruction Cache Misses (PTI)",
+                    "expression": "(IC_TAG_IC_MISS * 1000) / RETIRED_INST",
+                    "description": "The number of L1 instruction cache misses, per thousand retired instructions."
+                },
+                {
+                    "title": "IC_MISS_RATE",
+                    "name": "Instruction Cache miss rate",
+                    "expression": "IC_TAG_IC_MISS / RETIRED_INST",
+                    "description": "The IC Miss Rate is computed as the number of number of instruction cache misses divided by the total number of retired instructions."
+                },
+                {
+                    "title": "IC_MISS_RATIO",
+                    "name": "IC Miss Ratio",
+                    "expression": "IC_TAG_IC_MISS / IC_TAG_ALL_IC_ACCESS",
+                    "description": "IC Miss Ratio"
+                },
+                {
+                    "title": "IC_FETCH_RATE",
+                    "name": "IC fetch rate",
+                    "expression": "IC_TAG_ALL_IC_ACCESS / RETIRED_INST",
+                    "description": "IC fetch rate"
+                },
+                {
+                    "title": "OP_CACHE_64B_FETCH_MISS_RATIO",
+                    "name": "Op Cache 64B Fetch Miss Ratio",
+                    "expression": "OP_CACHE_MISS / OP_CACHE_ALL_ACCESS",
+                    "description": "Op Cache micro-tag miss ratio"
+                },
+                {
+                    "title": "FP_DISP_FAULTS (PTC)",
+                    "name": "FP_DISP_FAULTS (PTC)",
+                    "expression": "( FpDispFaults.YmmSpillFault.YmmFillFault.XmmFillFault.x87FillFault * 1000 ) / CYCLES_NOT_IN_HALT",
+                    "description": "Floating point Dispatch faults in per thousand cycles."
+                },
+                {
+                    "title": "SSE_AVX_STALLS (PTC)",
+                    "name": "SSE_AVX_STALLS (PTC)",
+                    "expression": "( FpDispFaults.YmmSpillFault.YmmFillFault.XmmFillFault * 1000 ) / CYCLES_NOT_IN_HALT",
+                    "description": "SSE AVX Dispatch Stalls."
+                },
+                {
+                    "title": "RdSized (PTI)",
+                    "name": "RdSized (PTI)",
+                    "expression": "( L2RequestG2.LsRdSized * 1000 ) / RETIRED_INST",
+                    "description": "Requests to L2 Data Cache Read Sized Non-Cacheable, per thousand retired instructions."
+                },
+                {
+                    "title": "RdSizedNC (PTI)",
+                    "name": "RdSizedNC (PTI)",
+                    "expression": "( L2RequestG2.LsRdSizedNC * 1000 ) / RETIRED_INST",
+                    "description": "Requests to L2 Data Cache Read Sized Non-Cacheable Non-Coherent, per thousand retired instructions."
+                },
+                {
+                    "title": "WCB_WRITE (PTI)",
+                    "name": "WcbWrite PTI",
+                    "expression": "( L2WcbReq.WcbWrite * 1000 ) / RETIRED_INST",
+                    "description": "WcbWrite per thousand retired instructions."
+                },
+                {
+                    "title": "%WCB_WRITE_TO_CLOSE",
+                    "name": "Wcb Write to Close Percentage",
+                    "expression": "(L2WcbReq.WcbWrite * 100 ) / L2WcbReq.WcbClose",
+                    "description": "The precentage of Write Combining Buffer Write operations to Write Combining Buffer Close operations."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                    "name": "Demand Data Cache Refills from Local L2 (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These DC fills are from local L2 cache to the core."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Local Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from same the cache of same CCX or cache of different CCX in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+                    "name": "Demand Data Cache Refills from External Cache Local (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These DC fills are from external cache to the core."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Local DRAM (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the same package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from Remote Cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_REMOTE * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from remote cache."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE_DRAM (PTI)",
+                    "name": "Demand Data Cache Refills from Remote DRAM or IO (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from DRAM or IO connected in the different package (node)."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL (PTI)",
+                    "name": "Demand Data Cache Refills Local (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from all the data sources like Local L2/L3, CCX and DRAM."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_L2",
+                    "name": "Percentage of Demand Data Cache Refills from Local L2",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_L2 * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local L2, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Local Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_CACHE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL",
+                    "name": "Percentage of Demand Data Cache Refills from External Cache Local",
+                    "expression": "( L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_LOCAL * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from some other CCX in same node, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_LOCAL_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Local DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_LOCAL_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Local DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_CACHE",
+                    "name": "Percentage of Demand Data Cache Refills from Remote Cache",
+                    "expression": "( L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE_REMOTE * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote Cache, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "%L1_DEMAND_DC_REFILLS_REMOTE_DRAM",
+                    "name": "Percentage of Demand Data Cache Refills from Remote DRAM",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE_DRAM * 100 ) / L1_DC_ACCESSES_ALL",
+                    "description": "Percentage of L1 demand data cache (DC) fills from Remote DRAM, with respect to all Data Cache accesses."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_LOCAL_RATE",
+                    "name": "Demand Data Cache Refills Local Rate",
+                    "expression": "L1_DEMAND_DC_REFILLS_LOCAL / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per retired instructions. These demand DC fills are from all the data sources like Local L2/L3, CCX and DRAM."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_REMOTE (PTI)",
+                    "name": "Demand Data Cache Refills Remote (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_REMOTE  * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from Remote Node Sources like CCX and DRAM."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_EXTERNAL_CACHE (PTI)",
+                    "name": "Demand Data Cache Refills from external cache (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_EXTENAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "DC_REFILLS_EXTERNAL_CACHE (PTI)"
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL (PTI)",
+                    "name": "Demand Data Cache Refills ALL (PTI)",
+                    "expression": "( L1_DEMAND_DC_REFILLS_ALL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of demand data cache (DC) fills per thousand retired instructions. These demand DC fills are from all the data sources like Local L2/L3 cache, remote caches, local dram and remote dram."
+                },
+                {
+                    "title": "L1_DEMAND_DC_REFILLS_ALL_RATE",
+                    "name": "Demand Data Cache Refills Rate",
+                    "expression": "L1_DEMAND_DC_REFILLS_ALL / RETIRED_INST",
+                    "description": "The DC refill rate is the number of DC refills from all the data sources divided by the total number of retired instructions."
+                },
+                {
+                    "title": "L1_DC_REFILLS_LOCAL_L2 (PTI)",
+                    "name": "Data Cache Refills from Local L2 (PTI)",
+                    "expression": "( L1_DC_REFILLS_LOCAL_L2 * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from local L2 cache to the core."
+                },
+                {
+                    "title": "L1_DC_REFILLS_LOCAL_CACHE (PTI)",
+                    "name": "Data Cache Refills from Local Cache (PTI)",
+                    "expression": "( L1_DC_REFILLS_LOCAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from same the cache of same CCX or cache of different CCX in the same package (node)."
+                },
+                {
+                    "title": "L1_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+                    "name": "L1_DC_REFILLS_EXTERNAL_CACHE_LOCAL (PTI)",
+                    "expression": "( L1_DC_REFILLS_EXTERNAL_CACHE_LOCAL * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from external cache to the core."
+                },
+                {
+                    "title": "L1_DC_REFILLS_LOCAL_DRAM (PTI)",
+                    "name": "Data Cache Refills from Local DRAM (PTI)",
+                    "expression": "( L1_DC_REFILLS_LOCAL_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from DRAM or IO connected in the same package (node)."
+                },
+                {
+                    "title": "L1_DC_REFILLS_EXTERNAL_CACHE_REMOTE (PTI)",
+                    "name": "Data Cache Refills from External Cache Remote (PTI)",
+                    "expression": "( L1_DC_REFILLS_EXTERNAL_CACHE_REMOTE * 1000 ) / RETIRED_INST",
+                    "description": "DC_REFILLS_REMOTE_CACHE (PTI)"
+                },
+                {
+                    "title": "L1_DC_REFILLS_REMOTE_DRAM (PTI)",
+                    "name": "Data Cache Refills from Remote DRAM or IO (PTI)",
+                    "expression": "( L1_DC_REFILLS_REMOTE_DRAM * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from DRAM or IO connected in the different package (node)."
+                },
+                {
+                    "title": "L1_DC_REFILLS_LOCAL (PTI)",
+                    "name": "Data Cache Refills Local (PTI)",
+                    "expression": "( L1_DC_REFILLS_LOCAL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from all the data sources like Local L2/L3, CCX and DRAM."
+                },
+                {
+                    "title": "L1_DC_REFILLS_LOCAL_RATE",
+                    "name": "Data Cache Refills Local Rate",
+                    "expression": "L1_DC_REFILLS_LOCAL / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per retired instructions. These DC fills are from all the data sources like Local L2/L3, CCX and DRAM."
+                },
+                {
+                    "title": "L1_DC_REFILLS_REMOTE (PTI)",
+                    "name": "Data Cache Refills Remote Node (PTI)",
+                    "expression": "( L1_DC_REFILLS_REMOTE_NODE  * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from Remote Node Sources like CCX and DRAM."
+                },
+                {
+                    "title": "L1_DC_REFILLS_EXTERNAL_CACHE (PTI)",
+                    "name": "L1_DC_REFILLS_EXTERNAL_CACHE (PTI)",
+                    "expression": "( L1_DC_REFILLS_EXTENAL_CACHE * 1000 ) / RETIRED_INST",
+                    "description": "L1_DC_REFILLS_EXTERNAL_CACHE (PTI)"
+                },
+                {
+                    "title": "L1_DC_REFILLS_ALL (PTI)",
+                    "name": "Data Cache Refills.ALL (PTI)",
+                    "expression": "( L1_DC_REFILLS_ALL  * 1000 ) / RETIRED_INST",
+                    "description": "The number of data cache (DC) fills per thousand retired instructions. These DC fills are from all the data sources like Local L2/L3 cache, remote caches, local dram and remote dram."
+                },
+                {
+                    "title": "L1_DC_REFILLS_ALL_RATE",
+                    "name": "Data Cache Refills Rate",
+                    "expression": "L1_DC_REFILLS_ALL / RETIRED_INST",
+                    "description": "The DC refill rate is the number of DC refills from all the data sources divided by the total number of retired instructions."
+                }
+            ]
+        },
+        {
+            "family": "0x19",
+            "model": "00-0f",
+            "uncore": {
+                "memory": [
+                    {
+                        "title": "SocketMemBw",
+                        "name": "SocketMemBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw + MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemBw"
+                    },
+                    {
+                        "title": "SocketMemRdBw",
+                        "name": "SocketMemRdBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw )",
+                        "description": "SocketMemRdBw"
+                    },
+                    {
+                        "title": "SocketMemWrBw",
+                        "name": "SocketMemWrBw",
+                        "expression": "( MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemWrBw"
+                    },
+                    {
+                        "title": "Mem Ch-A Bw (GB/s)",
+                        "name": "Mem Ch-A Bw (GB/s)",
+                        "expression": "( MemChARdBw + MemChAWrBw )",
+                        "description": "Mem Ch-A Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-B Bw (GB/s)",
+                        "name": "Mem Ch-B Bw (GB/s)",
+                        "expression": "( MemChBRdBw + MemChBWrBw )",
+                        "description": "Mem Ch-B Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-C Bw (GB/s)",
+                        "name": "Mem Ch-C Bw (GB/s)",
+                        "expression": "( MemChCRdBw + MemChCWrBw )",
+                        "description": "Mem Ch-C Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-D Bw (GB/s)",
+                        "name": "Mem Ch-D Bw (GB/s)",
+                        "expression": "( MemChDRdBw + MemChDWrBw )",
+                        "description": "Mem Ch-D Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-E Bw (GB/s)",
+                        "name": "Mem Ch-E Bw (GB/s)",
+                        "expression": "( MemChERdBw + MemChEWrBw )",
+                        "description": "Mem Ch-E Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-F Bw (GB/s)",
+                        "name": "Mem Ch-F Bw (GB/s)",
+                        "expression": "( MemChFRdBw + MemChFWrBw )",
+                        "description": "Mem Ch-F Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-G Bw (GB/s)",
+                        "name": "Mem Ch-G Bw (GB/s)",
+                        "expression": "( MemChGRdBw + MemChGWrBw )",
+                        "description": "Mem Ch-G Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-H Bw (GB/s)",
+                        "name": "Mem Ch-H Bw (GB/s)",
+                        "expression": "( MemChHRdBw + MemChHWrBw )",
+                        "description": "Mem Ch-H Bw (GB/s)"
+                    }
+                ],
+                "xgmi": [
+                    {
+                        "title": "Approximate xGMI outbound data bytes (GB/s)",
+                        "name": "Approximate xGMI outbound data bytes (GB/s)",
+                        "expression": "( xGMI0Bw + xGMI1Bw + xGMI2Bw + xGMI3Bw )",
+                        "description": "Approximate xGMI outbound data bytes (GB/s)"
+                    }
+                ],
+                "pcie": [
+                    {
+                        "title": "Total PCIe (GB/s)",
+                        "name": "Total PCIe (GB/s)",
+                        "expression": "( PCIe0 + PCIe1 + PCIe2 + PCIe3 )",
+                        "description": "Total PCIe (GB/s)",
+                        "visibility": "public|nda|internal"
+                    }
+                ]
+            }
+        },
+        {
+            "family": "0x19",
+            "model": "30-3f",
+            "uncore": {
+                "memory": [
+                    {
+                        "title": "SocketMemBw",
+                        "name": "SocketMemBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw + MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemBw"
+                    },
+                    {
+                        "title": "SocketMemRdBw",
+                        "name": "SocketMemRdBw",
+                        "expression": "( MemChARdBw + MemChBRdBw + MemChCRdBw + MemChDRdBw + MemChERdBw + MemChFRdBw + MemChGRdBw + MemChHRdBw )",
+                        "description": "SocketMemRdBw"
+                    },
+                    {
+                        "title": "SocketMemWrBw",
+                        "name": "SocketMemWrBw",
+                        "expression": "( MemChAWrBw + MemChBWrBw + MemChCWrBw + MemChDWrBw + MemChEWrBw + MemChFWrBw + MemChGWrBw + MemChHWrBw )",
+                        "description": "SocketMemWrBw"
+                    },
+                    {
+                        "title": "Mem Ch-A Bw (GB/s)",
+                        "name": "Mem Ch-A Bw (GB/s)",
+                        "expression": "( MemChARdBw + MemChAWrBw )",
+                        "description": "Mem Ch-A Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-B Bw (GB/s)",
+                        "name": "Mem Ch-B Bw (GB/s)",
+                        "expression": "( MemChBRdBw + MemChBWrBw )",
+                        "description": "Mem Ch-B Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-C Bw (GB/s)",
+                        "name": "Mem Ch-C Bw (GB/s)",
+                        "expression": "( MemChCRdBw + MemChCWrBw )",
+                        "description": "Mem Ch-C Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-D Bw (GB/s)",
+                        "name": "Mem Ch-D Bw (GB/s)",
+                        "expression": "( MemChDRdBw + MemChDWrBw )",
+                        "description": "Mem Ch-D Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-E Bw (GB/s)",
+                        "name": "Mem Ch-E Bw (GB/s)",
+                        "expression": "( MemChERdBw + MemChEWrBw )",
+                        "description": "Mem Ch-E Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-F Bw (GB/s)",
+                        "name": "Mem Ch-F Bw (GB/s)",
+                        "expression": "( MemChFRdBw + MemChFWrBw )",
+                        "description": "Mem Ch-F Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-G Bw (GB/s)",
+                        "name": "Mem Ch-G Bw (GB/s)",
+                        "expression": "( MemChGRdBw + MemChGWrBw )",
+                        "description": "Mem Ch-G Bw (GB/s)"
+                    },
+                    {
+                        "title": "Mem Ch-H Bw (GB/s)",
+                        "name": "Mem Ch-H Bw (GB/s)",
+                        "expression": "( MemChHRdBw + MemChHWrBw )",
+                        "description": "Mem Ch-H Bw (GB/s)"
+                    }
+                ]
+            }
+        }
+    ]
+}

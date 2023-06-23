@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# This script requires bash. Do not remove the above shebang line!
+
+# ----------------------------------------------------------------------------------------------------------------------------------
+# File name: AMDuProfCLI
+# This script sets AMDuProf CLI's related environment variables and
+# launches the AMDuProfCLI-bin binary executable.
+#
+# (c) 2022 Advanced Micro Devices Inc. All Rights Reserved.
+# ----------------------------------------------------------------------------------------------------------------------------------
+
+# Get this script full path:
+if echo "$0" | grep '^/' ; then
+	thisScriptFullPath="$0"
+else
+	thisScriptFullPath=`pwd`/$0
+fi
+
+# Enable the use of symbolic links to the script
+if [ -h ${thisScriptFullPath} ]
+then
+    LINKTARGET=`readlink -f "$thisScriptFullPath"`
+    thisScriptFullPath=${LINKTARGET}
+fi
+
+# AMDuProf's binaries directory is this scripts directory:
+AMDuProfBinariesDir=`dirname "$thisScriptFullPath"`
+
+# Calculate AMDuProf binary executable path:
+AMDuProfBinaryExePath="${AMDuProfBinariesDir}/AMDuProfCLI-bin"
+
+# Add AMDuProf binaries directory to LD_LIBRARY_PATH:
+if [ -z "$LD_LIBRARY_PATH" ]; then
+	export LD_LIBRARY_PATH="${AMDuProfBinariesDir}"
+else
+	export LD_LIBRARY_PATH="${AMDuProfBinariesDir}:$LD_LIBRARY_PATH"
+fi
+
+# Run AMDuProfCLI-bin:
+eval "$AMDuProfBinaryExePath $@"
+

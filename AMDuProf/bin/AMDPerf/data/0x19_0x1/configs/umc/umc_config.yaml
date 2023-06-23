@@ -1,0 +1,82 @@
+---
+ cpu:
+    - family:0x19
+    - modelLow:0x10
+    - modelHigh:0x1F
+ events:
+      group0:
+          - aperf
+          - mperf
+          - irperf
+          - tsc
+      group1:
+          - act_cmd.enable
+          - act_cmd.rd_wr_mask
+          - act_cmd.event_select
+          - cas_cmd.enable
+      group2:
+          - cas_cmd.rd_wr_mask
+          - cas_cmd.event_select
+          - data_slot_clks.enable
+          - data_slot_clks.rd_wr_mask
+      group3:
+          - data_slot_clks.event_select
+          - mem_clk.enable
+          - mem_clk.event_select
+          - pchg_cmd.enable
+      group4:
+          - pchg_cmd.rd_wr_mask
+          - pchg_cmd.event_select
+          - ip_clk_0000
+          - ip_clk_0001
+      group5:
+          - ip_clk_0002
+          - umc_act_cmd_0002
+          - umc_cas_cmd_0002
+          - ip_clk_0003
+      group6:
+          - umc_pchg_0003
+          - ip_clk_0004
+          - umc_cas_cmd_low_0004
+          - umc_cas_cmd_med_0004
+      group7:
+          - umc_cas_cmd_high_0004
+          - umc_cas_cmd_urg_0004
+          - ip_clk_0005
+          - umc_cas_cmd_rd_0005
+      group8:
+          - umc_cas_cmd_wr_0005
+          - umc_cas_cmd32_b_0005
+          - umc_cas_cmd64_b_0005
+          - ip_clk_0006
+      group9:
+          - ip_clk_0007
+          - umc_data_slot_clks_0007
+          - ip_clk_0008
+          - ip_clk_0009
+      group10:
+          - ip_clk_0010
+          - umc_act_cmd_cs0_0010
+          - umc_cas_cmd_cs0_0010
+          - ip_clk_0011
+      group11:
+          - ip_clk_0012
+          - umc_act_cmd_cs1_0012
+          - umc_cas_cmd_cs1_0012
+          - ip_clk_0013
+      group12:
+          - ip_clk_0014
+          - ip_clk_0015
+          - umc_act_cmd_cs2_0015
+          - umc_cas_cmd_cs2_0015
+      group13:
+          - ip_clk_0016
+          - umc_act_cmd_cs3_0016
+          - umc_cas_cmd_cs3_0016
+          - ip_clk_0017
+      group14:
+          - ip_clk_0018
+
+ reports:
+       - Section:Clocks
+       - Section:UMC

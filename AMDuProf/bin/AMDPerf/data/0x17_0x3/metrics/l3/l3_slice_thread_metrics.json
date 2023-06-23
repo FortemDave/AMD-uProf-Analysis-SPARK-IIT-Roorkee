@@ -1,0 +1,28 @@
+{ "metric":
+[
+{
+   "Abbreviation": "L3CacheableaccessesPTI",
+   "Name": "L3 Cacheable accesses PTI",
+   "Expression": "((l3_t0_accessed_l3.umask0xff.thread0x1.sliceId0xf)*1000)/((OsUserInst))",
+   "Description": "L3 Cacheable accesses PTI",
+   "Child": "",
+   "Unit": "unit"
+},
+{
+   "Abbreviation": "L3CacheableaccessesPTIT0",
+   "Name": "L3 Cacheable accesses PTI whole complex",
+   "Expression": "((l3_oa_accessed_l3.umask0xff.thread0xff.sliceId0xf)*1000)/((OsUserInst))",
+   "Description": "L3 Cacheable accesses PTI T0",
+   "Child": "",
+   "Unit": "unit"
+},
+{
+	"Abbreviation": "Avg_L3_rd_miss_latency",
+	"Name": "Average L3 Read Miss Latency",
+	"Expression": "(xi_fill_lat_rd_rsp_lat.umask0x0.thread0xff.sliceId0xf)*16/(xi_fill_rd_rsp_cnt.umask0x1f.thread0xff.sliceId0xf)",
+	"Description": "Average L3 Read Miss Latency",
+	"Child": "",
+	"Unit": "L3 clocks"
+}
+]
+}

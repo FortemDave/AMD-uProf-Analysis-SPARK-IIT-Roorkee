@@ -1,0 +1,48 @@
+{ "events":
+[
+{
+  "EventName": "l3_t0_accessed_l3.umask0xff.thread0x1.sliceId0xf",
+  "EventCode": "0x4",
+  "BriefDescription": "L3T0AccessedL3",
+  "PublicDescription": "Line state returned when looking up the L3 tags on a coherent L2 fill request.",
+  "Umask": "0xff",
+  "SliceId": "0xf",
+  "ThreadMask": "0x1",
+  "CounterType": "L3",
+  "EventType": "L3"
+},
+{
+  "EventName": "l3_oa_accessed_l3.umask0xff.thread0xff.sliceId0xf",
+  "EventCode": "0x4",
+  "BriefDescription": "L3OaAccessedL3",
+  "PublicDescription": "Line state returned when looking up the L3 tags on a coherent L2 fill request.",
+  "Umask": "0xff",
+  "SliceId": "0xf",
+  "ThreadMask": "0xff",
+  "CounterType": "L3",
+  "EventType": "L3"
+},
+{
+  "EventName": "xi_fill_lat_rd_rsp_lat.umask0x0.thread0xff.sliceId0xf",
+  "EventCode": "0x90",
+  "BriefDescription": "XiFillLatRdRspLat",
+  "PublicDescription": "Ignores SliceMask and ThreadMask. Total cycles for all transactions divided by 16.",
+  "Umask": "0x0",
+  "SliceId": "0xf",
+  "ThreadMask": "0xff",
+  "CounterType": "L3",
+  "EventType": "L3"
+},
+{
+  "EventName": "xi_fill_rd_rsp_cnt.umask0x1f.thread0xff.sliceId0xf",
+  "EventCode": "0x9a",
+  "BriefDescription": "XiFillRdRspCnt",
+  "PublicDescription": "Ignores SliceMask and ThreadMask. Requests from the core complex to the SDP.",
+  "Umask": "0x1f",
+  "SliceId": "0xf",
+  "ThreadMask": "0xff",
+  "CounterType": "L3",
+  "EventType": "L3"
+}
+]
+}

@@ -1,0 +1,1334 @@
+{ "events":
+[
+{
+  "EventName": "bp_dyn_ind_pred",
+  "EventCode": "0x8E",
+  "BriefDescription": "",
+  "PublicDescription": "The number of times a branch used the indirect predictor to make a prediction.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_fetch_hit.if1_g",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 Instruction TLB hit (1-G page size).",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB. ",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_fetch_hit.if2_m",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 Instruction TLB hit (2-M page size).",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB. ",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_fetch_hit.if4_k",
+  "EventCode": "0x94",
+  "BriefDescription": "L1 Instruction TLB hit (4-K or 16-K page size).",
+  "PublicDescription": "The number of instruction fetches that hit in the L1 ITLB. ",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_miss_l2_tlb_hit",
+  "EventCode": "0x84",
+  "BriefDescription": "",
+  "PublicDescription": "The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_miss_l2_tlb_miss.coalesced4_k",
+  "EventCode": "0x85",
+  "BriefDescription": "Walk for >4-K Coalesced page.",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_miss_l2_tlb_miss.if1_g",
+  "EventCode": "0x85",
+  "BriefDescription": "Walk for 1-G page.",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_miss_l2_tlb_miss.if2_m",
+  "EventCode": "0x85",
+  "BriefDescription": "Walk for 2-M page.",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l1_tlb_miss_l2_tlb_miss.if4_k",
+  "EventCode": "0x85",
+  "BriefDescription": "Walk to 4-K page.",
+  "PublicDescription": "The number of valid fills into the ITLB originating from the LS Page-Table Walker. Tablewalk requests are issued for L1-ITLB and L2-ITLB misses.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "bp_l2_btb_correct",
+  "EventCode": "0x8B",
+  "BriefDescription": "",
+  "PublicDescription": "Counts L2 branch prediction overrides by L2 BTB hits.L2 BTB hits indicate a capacity limitation of the L1 BTB. L2 BTB hits may create stalls in the fetch stream. Note that this event was intended to count all L2 prediction overrides but only counts L2 BTB based overrides.PMCx09F[5] (Core::X86::Pmc::Core::BpRedirect[BpL2Redir]) can be used to count all L2 BP redirects.Prediction time event.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_additional_resource_stalls.stall",
+  "EventCode": "0x1A2",
+  "BriefDescription": "",
+  "PublicDescription": "Public view of PMCx1A2.This PMC event counts additional resource stalls that are not captured by Core::X86::Pmc::Core::DeDisDispatchTokenStalls1 or Core::X86::Pmc::Core::DeDisDispatchTokenStalls2.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.fp_flush_recovery_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts FP Flush Recovery stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x80",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.fp_sch_rsrc_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts FP Scheduler token stall cycles. . ",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.fp_reg_file_rsrc_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts FP Register File token stall cycles. This applies to all ops that have an FP or SIMD destination register. .",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x20",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.taken_brnch_buffer_rsrc",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts Taken Branch Buffer token stall cycles. ",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.store_queue_rsrc_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts Store Queue token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.load_queue_rsrc_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts Load Queue token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls1.int_phy_reg_file_rsrc_stall",
+  "EventCode": "0xAE",
+  "BriefDescription": "Counts Integer PRF token stall cycles. This applies to all ops that have an integer destination register: 168 available.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a Token Stall. Also counts cycles when the thread is not selected to dispatch but would have been stalled due to a Token Stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls2.retire_token_stall",
+  "EventCode": "0xAF",
+  "BriefDescription": "Counts Retire Queue token stall cycles. ",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x20",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls2.int_sch3_token_stall",
+  "EventCode": "0xAF",
+  "BriefDescription": "Counts Integer Scheduler Queue 3 token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls2.int_sch2_token_stall",
+  "EventCode": "0xAF",
+  "BriefDescription": "Counts Integer Scheduler Queue 2 token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls2.int_sch1_token_stall",
+  "EventCode": "0xAF",
+  "BriefDescription": "Counts Integer Scheduler Queue 1 token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_dispatch_token_stalls2.int_sch0_token_stall",
+  "EventCode": "0xAF",
+  "BriefDescription": "Counts Integer Scheduler Queue 0 token stall cycles.",
+  "PublicDescription": "Cycles where a dispatch group is valid but does not get dispatched due to a token stall. UnitMask bits select the stall types included in the count.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_dis_ops_from_decoder.disp_op_type",
+  "EventCode": "0xAB",
+  "BriefDescription": "",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op type. The UnitMask value encodes which types of ops are counted.UnitMask[4:0] encodings for op types: 00001 - fastpath (any type) 01001 - fastpath integer 00101 - fastpath FP/SIMD 00010 - microcode (any type) 01010 - microcode integer 00110 - microcode FP/SIMD 10000 - fastpath sequencer (any type) 11000 - fastpath sequencer integer 10100 - fastpath sequncer FP/SIMD 01000 - integer (any source) 00100 - FP/SIMD (any source) other: counts 0",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_no_dispatch_per_slot.stall_reason",
+  "EventCode": "0x1A0",
+  "BriefDescription": "",
+  "PublicDescription": "Public view of PMCx1A0. Counts the number of dispatch slots (each cycle) that remained unused for reasons selected by StallReason.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_src_op_disp.loop_buffer",
+  "EventCode": "0xAA",
+  "BriefDescription": "Count of ops dispatched from Loop Buffer.",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_src_op_disp.op_cache",
+  "EventCode": "0xAA",
+  "BriefDescription": "Count of ops fetched from Op Cache and dispatched.",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_src_op_disp.decoder",
+  "EventCode": "0xAA",
+  "BriefDescription": "Count of ops fetched from Instruction Cache and dispatched.",
+  "PublicDescription": "Counts the number of ops dispatched from the decoder classified by op source.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_div_busy",
+  "EventCode": "0xD3",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_div_count",
+  "EventCode": "0xD4",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_no_retire.thread_not_selected",
+  "EventCode": "0xD6",
+  "BriefDescription": "The number cycles where ops could have retired (i.e. did not fall into UnitMask events [0]...[3]). but did not retire because thread arbitration did not select the thread for retire. ",
+  "PublicDescription": "This event counts cycles when the hardware thread does not retire any ops  for reasons selected by UnitMask[4:0]. UnitMask events [4:0] are mutually exclusive. If multiple reasons apply for a given cycle, the lowest numbered UnitMask event is counted.  UnitMask[7:5] act as a qualifier to UnitMask[1] and UnitMask[2] events. This event is similar to PMCx0D2.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_no_retire.other",
+  "EventCode": "0xD6",
+  "BriefDescription": "The number of cycles where ops could have retired (self and older ops are complete), but were stopped from retirement for other reasons: retire breaks, traps, faults, Spec Lock Map, etc.",
+  "PublicDescription": "This event counts cycles when the hardware thread does not retire any ops  for reasons selected by UnitMask[4:0]. UnitMask events [4:0] are mutually exclusive. If multiple reasons apply for a given cycle, the lowest numbered UnitMask event is counted.  UnitMask[7:5] act as a qualifier to UnitMask[1] and UnitMask[2] events. This event is similar to PMCx0D2.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_no_retire.not_complete",
+  "EventCode": "0xD6",
+  "BriefDescription": "The number of cycles where the oldest retire slot did not have its completion bits set.  Use UnitMask[7:5] to ignore the completion signaling of specific functional units.",
+  "PublicDescription": "This event counts cycles when the hardware thread does not retire any ops  for reasons selected by UnitMask[4:0]. UnitMask events [4:0] are mutually exclusive. If multiple reasons apply for a given cycle, the lowest numbered UnitMask event is counted.  UnitMask[7:5] act as a qualifier to UnitMask[1] and UnitMask[2] events. This event is similar to PMCx0D2.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_no_retire.empty",
+  "EventCode": "0xD6",
+  "BriefDescription": "The number of cycles when there were no valid ops in the retire queue. This may be caused by front-end bottlenecks or pipeline redirects.  Use PMCx0D9 (Core::X86::Pmc::Core::ExRetireEmpty) for a more detailed break-down of the reasons for all retire slots to be empty. ",
+  "PublicDescription": "This event counts cycles when the hardware thread does not retire any ops  for reasons selected by UnitMask[4:0]. UnitMask events [4:0] are mutually exclusive. If multiple reasons apply for a given cycle, the lowest numbered UnitMask event is counted.  UnitMask[7:5] act as a qualifier to UnitMask[1] and UnitMask[2] events. This event is similar to PMCx0D2.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn",
+  "EventCode": "0xC2",
+  "BriefDescription": "",
+  "PublicDescription": "The number of branch instructions retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn_far",
+  "EventCode": "0xC6",
+  "BriefDescription": "",
+  "PublicDescription": "The number of far control transfers retired including far call/jump/return, IRET, SYSCALL and SYSRET, plus exceptions and interrupts. Far control transfers are not subject to branch prediction.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn_ind_misp",
+  "EventCode": "0xCA",
+  "BriefDescription": "",
+  "PublicDescription": "The number of indirect branches retired that were not correctly predicted. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction. Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn_misp",
+  "EventCode": "0xC3",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired branch instructions, that were mispredicted. Note that only EX mispredicts (direction mispredicts and indirect target mispredicts) are counted. DE mispredicts (direct target correction misprediected unconditional direct branches) are not counted.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn_tkn",
+  "EventCode": "0xC4",
+  "BriefDescription": "",
+  "PublicDescription": "The number of taken branches that were retired. This includes all types of architectural control flow changes, including exceptions and interrupts.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_brn_tkn_misp",
+  "EventCode": "0xC5",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired taken branch instructions that were mispredicted.Note that only EX mispredicts are counted (and not DE mispredicts).",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_cond",
+  "EventCode": "0xD1",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_ind_brch_instr",
+  "EventCode": "0xCC",
+  "BriefDescription": "",
+  "PublicDescription": "The number of indirect branches retired.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_instr",
+  "EventCode": "0xC0",
+  "BriefDescription": "",
+  "PublicDescription": "The number of instructions retired (execution completed and architectural state updated). This count includes exceptions and interrupts. Each exception or interrupt is counted as one instruction.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_mmx_fp_instr.sse_instr",
+  "EventCode": "0xCB",
+  "BriefDescription": "SSE instructions (SSE, SSE2, SSE3, SSSE3, SSE4A, SSE41, SSE42, AVX). Also counts XGETBV and XSAVE instructions.",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_mmx_fp_instr.mmx_instr",
+  "EventCode": "0xCB",
+  "BriefDescription": "MMX instructions. Also counts XRSTOR instructions.",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_mmx_fp_instr.x87_instr",
+  "EventCode": "0xCB",
+  "BriefDescription": "",
+  "PublicDescription": "The number of MMX, SSE or x87 instructions retired. The UnitMask allows the selection of the individual classes of instructions as given in the table. Each increment represents one complete instruction. Since this event includes non-numeric instructions it is not suitable for measuring MFLOPs.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_msprd_brnch_instr_dir_msmtch",
+  "EventCode": "0x1C7",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired conditional branch instructions that were not correctly predicted because of a branch direction mismatch.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_near_ret",
+  "EventCode": "0xC8",
+  "BriefDescription": "",
+  "PublicDescription": "The number of near return instructions (RET or RET Iw) retired.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_near_ret_mispred",
+  "EventCode": "0xC9",
+  "BriefDescription": "",
+  "PublicDescription": "The number of near returns retired that were not correctly predicted by the return address predictor. Each such mispredict incurs the same penalty as a mispredicted conditional branch instruction.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_ops",
+  "EventCode": "0xC1",
+  "BriefDescription": "",
+  "PublicDescription": "The number of macro-ops retired. This count includes all processor activity (instructions, exceptions, interrupts, microcode assists, etc.). The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_ucode_instr",
+  "EventCode": "0x1C1",
+  "BriefDescription": "",
+  "PublicDescription": "Retired Microcoded Instructions. Includes Fastpath Sequenced Instructions. Note that exception handlers are counted as a microcoded instruction since the Jresync ending the sequence has .exit.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_uncond_brnch_instr",
+  "EventCode": "0x1C9",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired unconditional branch instructions.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_ret_uncond_brnch_instr_mispred",
+  "EventCode": "0x1C8",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired unconditional indirect branch instructions that were mispredicted. Note that only EX mispredicts are counted (and not DE mispredicts) which is why this only counts mispredicts of indirect branches.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_tagged_ibs_ops.ibs_count_rollover",
+  "EventCode": "0x1CF",
+  "BriefDescription": "Number of times an op could not be tagged by IBS because of a previous tagged op that has not retired. The actual implementation waits for a tagged op to signal an interrupt or be flushed before a new op can be tagged.",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_tagged_ibs_ops.ibs_tagged_ops_ret",
+  "EventCode": "0x1CF",
+  "BriefDescription": "Number of Ops tagged by IBS that retired.",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ex_tagged_ibs_ops.ibs_tagged_ops",
+  "EventCode": "0x1CF",
+  "BriefDescription": "Number of Ops tagged by IBS. ",
+  "PublicDescription": "Counts Op IBS related events.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_disp_faults.ymm_spill_fault",
+  "EventCode": "0xE",
+  "BriefDescription": "",
+  "PublicDescription": "Floating-point Dispatch Faults.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_disp_faults.ymm_fill_fault",
+  "EventCode": "0xE",
+  "BriefDescription": "",
+  "PublicDescription": "Floating-point Dispatch Faults.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_disp_faults.xmm_fill_fault",
+  "EventCode": "0xE",
+  "BriefDescription": "",
+  "PublicDescription": "Floating-point Dispatch Faults.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_disp_faults.x87_fill_fault",
+  "EventCode": "0xE",
+  "BriefDescription": "",
+  "PublicDescription": "Floating-point Dispatch Faults.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_type.vector_fp_op_type",
+  "EventCode": "0xA",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_type.scalar_fp_op_type",
+  "EventCode": "0xA",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.pack512u_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of packed 512-bit ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.pack256u_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of packed 256-bit ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.pack128u_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of packed 128-bit ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.scalaru_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of scalar ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.mm_xu_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of MMX ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ops_retired_by_width.x87u_ops_retired",
+  "EventCode": "0x8",
+  "BriefDescription": "Number of x87 ops retired.",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_pack_ops_retired.fp256_op_type",
+  "EventCode": "0xC",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_pack_ops_retired.fp128_op_type",
+  "EventCode": "0xC",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ret_sse_avx_ops.bfloat_mac_flo_ps",
+  "EventCode": "0x3",
+  "BriefDescription": "Each bfloat MAC operation is counted as 2 FLOPS.",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.21.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ret_sse_avx_ops.mac_flo_ps",
+  "EventCode": "0x3",
+  "BriefDescription": "Each MAC operation is counted as 2 FLOPS. This event does not include bfloat MAC operations.",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.21.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ret_sse_avx_ops.div_flo_ps",
+  "EventCode": "0x3",
+  "BriefDescription": "",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.21.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ret_sse_avx_ops.mult_flo_ps",
+  "EventCode": "0x3",
+  "BriefDescription": "",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.21.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_ret_sse_avx_ops.add_sub_flo_ps",
+  "EventCode": "0x3",
+  "BriefDescription": "",
+  "PublicDescription": "This is a retire-based event. The number of retired SSE/AVX FLOPs, not uOps. Software developers use this to predict/measure the performance of their code in FLOPs. The number of events logged per cycle can vary from 0 to 64. This event requires the use of the MergeEvent since it can count above 15 events per cycle. See 2.1.21.3 [Large Increment per Cycle Events]. It does not provide a useful count without the use of the MergeEvent.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retired_ser_ops.sse_bot_ret",
+  "EventCode": "0x5",
+  "BriefDescription": "SSE/AVX bottom-executing ops retired.",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retired_ser_ops.sse_ctrl_ret",
+  "EventCode": "0x5",
+  "BriefDescription": "SSE/AVX control word mispredict traps.",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retired_ser_ops.x87_bot_ret",
+  "EventCode": "0x5",
+  "BriefDescription": "x87 bottom-executing ops retired.",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retired_ser_ops.x87_ctrl_ret",
+  "EventCode": "0x5",
+  "BriefDescription": "x87 control word mispredict traps due to mispredictions in RC or PC, or changes in Exception Mask bits.",
+  "PublicDescription": "The number of serializing Ops retired.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retx87_fp_ops.div_sqr_r_ops",
+  "EventCode": "0x2",
+  "BriefDescription": "",
+  "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retx87_fp_ops.mul_ops",
+  "EventCode": "0x2",
+  "BriefDescription": "",
+  "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "fp_retx87_fp_ops.add_sub_ops",
+  "EventCode": "0x2",
+  "BriefDescription": "",
+  "PublicDescription": "The number of x87 floating-point Ops that have retired. The number of events logged per cycle can vary from 0 to 8.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ic_cache_fill_l2",
+  "EventCode": "0x82",
+  "BriefDescription": "",
+  "PublicDescription": "The number of 64-byte instruction cache lines fulfilled from the L2 cache.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ic_cache_fill_sys",
+  "EventCode": "0x83",
+  "BriefDescription": "",
+  "PublicDescription": "The number of 64-byte instruction cache line fulfilled from system memory or another cache.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ic_tag_hit_miss.ic_access_types",
+  "EventCode": "0x18E",
+  "BriefDescription": "Instruction Cache accesses.",
+  "PublicDescription": "Counts various IC tag related hit and miss events.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_alloc_mab_count",
+  "EventCode": "0x5F",
+  "BriefDescription": "",
+  "PublicDescription": "This event counts the in-flight L1 data cache misses (allocated Miss Address Buffers) each cycle.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.dram_io_far",
+  "EventCode": "0x44",
+  "BriefDescription": "Requests that target another NUMA node and return from DRAM or MMIO from another NUMA node, either from the same or different socket.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.far_cache_near_far",
+  "EventCode": "0x44",
+  "BriefDescription": "Requests that return from another CCX cache in a different NUMA node.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.dram_io_near",
+  "EventCode": "0x44",
+  "BriefDescription": "Requests that target the same NUMA node and return from either DRAM or MMIO in the same NUMA node.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.ext_cache_local",
+  "EventCode": "0x44",
+  "BriefDescription": "Requests that return from another CCX cache in the same NUMA node.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.local_ccx",
+  "EventCode": "0x44",
+  "BriefDescription": "Data returned from L3 or different L2 in the same CCX.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_any_fills_from_sys.local_l2",
+  "EventCode": "0x44",
+  "BriefDescription": "Data returned from the local L2.",
+  "PublicDescription": "Any Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_bad_status2.stli_other",
+  "EventCode": "0x24",
+  "BriefDescription": "Store-to-load conflicts: A load was unable to complete due to a non-forwardable conflict with an older store. Most commonly, a load's address range partially but not completely overlaps with an uncompleted older store. Software can avoid this problem by using same-size and same-alignment loads and stores when accessing the same data. Vector/SIMD code is particularly susceptible to this problem; software should construct wide vector stores by manipulating vector elements in registers using shuffle/blend/swap instructions prior to storing to memory, instead of using narrow element-by-element stores.",
+  "PublicDescription": "Store To Load Interlock (STLI) are loads that were unable to complete because of a possible match with an older store, and the older store could not do STLF for some reason. There are a number of reasons why this occurs, and this perfmon organizes them into three major groups. UnitMask events are ORed within same pipe and then ADDed across pipes. Use PMCx02F UnitMask = 0x3 to count all picked loads.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dispatch.ld_st_dispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "Dispatch of a single op that performs a load from and store to the same memory address.",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dispatch.store_dispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "Dispatch of a single op that performs a memory store.",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dispatch.ld_dispatch",
+  "EventCode": "0x29",
+  "BriefDescription": "Dispatch of a single op that performs a memory load.",
+  "PublicDescription": "Counts the number of operations dispatched to the LS unit. Unit Masks events are ADDed.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.dram_io_far",
+  "EventCode": "0x43",
+  "BriefDescription": "Requests that target another NUMA node and return from DRAM or MMIO from another NUMA node, either from the same or different socket.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.far_cache_near_far",
+  "EventCode": "0x43",
+  "BriefDescription": "Requests that return from another CCX cache in a different NUMA node.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.dram_io_near",
+  "EventCode": "0x43",
+  "BriefDescription": "Requests that target the same NUMA node and return from either DRAM or MMIO in the same NUMA node.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.near_cache_near_far",
+  "EventCode": "0x43",
+  "BriefDescription": "Requests that return from another CCX cache in the same NUMA node.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.local_ccx",
+  "EventCode": "0x43",
+  "BriefDescription": "Data returned from L3 or different L2 in the same CCX.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_dmnd_fills_from_sys.local_l2",
+  "EventCode": "0x43",
+  "BriefDescription": "Data returned from the local L2.",
+  "PublicDescription": "Demand Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.dram_io_far",
+  "EventCode": "0x5A",
+  "BriefDescription": "Requests that target another NUMA node and return from DRAM or MMIO from another NUMA node, either from the same or different socket.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.far_cache_near_far",
+  "EventCode": "0x5A",
+  "BriefDescription": "Requests that return from another CCX cache in a different NUMA node.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.dram_io_near",
+  "EventCode": "0x5A",
+  "BriefDescription": "Requests that target the same NUMA node and return from either DRAM or MMIO in the same NUMA node.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.near_cache_near_far",
+  "EventCode": "0x5A",
+  "BriefDescription": "Requests that return from another CCX cache in the same NUMA node.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.local_ccx",
+  "EventCode": "0x5A",
+  "BriefDescription": "Data returned from L3 or different L2 in the same CCX.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_hw_pf_dc_fills.local_l2",
+  "EventCode": "0x5A",
+  "BriefDescription": "Data returned from the local L2.",
+  "PublicDescription": "Hardware Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_inef_sw_pref.mab_mch_cnt",
+  "EventCode": "0x52",
+  "BriefDescription": "Software PREFETCH instruction saw a match on an already-allocated miss request buffer.",
+  "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_inef_sw_pref.data_pipe_sw_pf_dc_hit",
+  "EventCode": "0x52",
+  "BriefDescription": "Software PREFETCH instruction saw a DC hit.",
+  "PublicDescription": "The number of software prefetches that did not fetch data outside of the processor core.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_int_taken.int_taken",
+  "EventCode": "0x2C",
+  "BriefDescription": "Number of Interrupts taken. This event is also counted when UnitMask[7:0]=0.",
+  "PublicDescription": "Counts the number of interrupts taken. UnitMask[7:0]=0 counts the legacy event which is also counted with UnitMask[0]=1.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload1_gl2_miss",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 1-G page that also missed in the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x80",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload2_ml2_miss",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 2-M page that also missed in the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload_coalesced_page_miss",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a coalesced page that also missed in the L2 TLB. Coalesced pages are 16-K.",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload4_kl2_miss",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 4-K page that missed the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload1_gl2_hit",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 1-G page that hit in the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload2_ml2_hit",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 2-M page that hit in the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload_coalesced_page_hit",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a coalesced page that hit in the L2 TLB. Coalesced pages are 16K.",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_l1_d_tlb_miss.tlb_reload4_kl2_hit",
+  "EventCode": "0x45",
+  "BriefDescription": "DTLB reload to a 4-K page that hit in the L2 TLB.",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_locks.bus_lock",
+  "EventCode": "0x25",
+  "BriefDescription": "Non-cacheable or cacheline-misaligned lock. Comparable to legacy bus lock.",
+  "PublicDescription": "UnitMask events are ORed.Any combination of UnitMask[3:0] events (UnitMask events ORed), or any combination of UnitMask[6:4] events (UnitMask events ADDed), may be used. However, attempting to set UnitMasks in both the [3:0] and the [6:4] groups may result in incorrect counts.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_mab_alloc.ls_mab_allocation",
+  "EventCode": "0x41",
+  "BriefDescription": "",
+  "PublicDescription": "Counts when a LS pipe allocates a MAB entry.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_misal_loads.ma4_k",
+  "EventCode": "0x47",
+  "BriefDescription": "The number of 4-KB misaligned (i.e., page crossing) loads.",
+  "PublicDescription": "The number of misaligned loads. UnitMask events are ORed within each pipe and then then ADDed across pipes.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_misal_loads.ma64",
+  "EventCode": "0x47",
+  "BriefDescription": "The number of 64-B misaligned (i.e., cacheline crossing) loads.",
+  "PublicDescription": "The number of misaligned loads. UnitMask events are ORed within each pipe and then then ADDed across pipes.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_not_halted_cyc",
+  "EventCode": "0x76",
+  "BriefDescription": "",
+  "PublicDescription": "",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_not_halted_p0_cyc.p0_freq_cyc",
+  "EventCode": "0x120",
+  "BriefDescription": "Counts at the P0 frequency (same as Core::X86::Msr::MPERF) when not in Halt. This PMC event does not work in PS.A0 or PS.A1. ",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_pref_instr_disp.prefetchnta",
+  "EventCode": "0x4B",
+  "BriefDescription": "PREFETCH [0F 18 /0]. PrefetchNTA instruction. See docAPM3 PREFETCHlevel.",
+  "PublicDescription": "UnitMask events are ADDed.Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_pref_instr_disp.prefetchw",
+  "EventCode": "0x4B",
+  "BriefDescription": "PREFETCH [0F 0D /1, /3]. PrefetchW instruction. See docAPM3 PREFETCHW.",
+  "PublicDescription": "UnitMask events are ADDed.Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_pref_instr_disp.prefetch",
+  "EventCode": "0x4B",
+  "BriefDescription": "PREFETCH [0F 0D /0, /2, /4-/7]. PREFETCH [0F 18 /1-/7]. PrefetchT0, T1 and T2 instructions. See docAPM3 PREFETCHlevel.",
+  "PublicDescription": "UnitMask events are ADDed.Dispatch of prefetch instructions when they are not disabled via Core::X86::Msr::DE_CFG[PREFETCHTONOP_WM8,PREFETCHTONOP_T2,PREFETCHTONOP_T1,PREFETCHTONOP_T0,PREFETCHTONOP_NTA].Software Prefetch Instructions Dispatched (Speculative). ",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_ret_cl_clush",
+  "EventCode": "0x26",
+  "BriefDescription": "",
+  "PublicDescription": "The number of retired CLFLUSH instructions. This is a non-speculative event.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_ret_cpuid",
+  "EventCode": "0x27",
+  "BriefDescription": "",
+  "PublicDescription": "The number of CPUID instructions retired.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_stlf",
+  "EventCode": "0x35",
+  "BriefDescription": "",
+  "PublicDescription": "Number of STLF hits.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_st_commit_cancel2.st_commit_cancel_wcb_full",
+  "EventCode": "0x37",
+  "BriefDescription": "A non-cacheable store and the non-cacheable commit buffer is full.",
+  "PublicDescription": "UnitMask events ORed.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.dram_io_far",
+  "EventCode": "0x59",
+  "BriefDescription": "Requests that target another NUMA node and return from DRAM or MMIO from another NUMA node, either from the same or different socket.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x40",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.far_cache_near_far",
+  "EventCode": "0x59",
+  "BriefDescription": "Requests that return from another CCX cache in a different NUMA node.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.dram_io_near",
+  "EventCode": "0x59",
+  "BriefDescription": "Requests that target the same NUMA node and return from either DRAM or MMIO in the same NUMA node.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x8",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.near_cache_near_far",
+  "EventCode": "0x59",
+  "BriefDescription": "Requests that return from another CCX cache in the same NUMA node.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x4",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.local_ccx",
+  "EventCode": "0x59",
+  "BriefDescription": "Data returned from L3 or different L2 in the same CCX.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x2",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_sw_pf_dc_fills.local_l2",
+  "EventCode": "0x59",
+  "BriefDescription": "Data returned from the local L2.",
+  "PublicDescription": "Software Prefetch Data Cache Fills by Data Source.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "ls_tlb_flush",
+  "EventCode": "0x78",
+  "BriefDescription": "",
+  "PublicDescription": "Various TLB flush events. The following UnitMask event groups are ORed before the result is ADDed: 0-3, 4-6, 7.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "merge",
+  "EventCode": "0xFFF",
+  "BriefDescription": "",
+  "PublicDescription": "See 2.1.21.3 [Large Increment per Cycle Events].",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "op_cache_hit_miss.op_cache_accesses",
+  "EventCode": "0x28F",
+  "BriefDescription": "",
+  "PublicDescription": "Counts Op Cache micro-tag hit/miss events.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "packed_int_op_type.int256_op_type",
+  "EventCode": "0xD",
+  "BriefDescription": "This event also counts FP data type packed and scalar MOV and  shuffle operations.",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "packed_int_op_type.int128_op_type",
+  "EventCode": "0xD",
+  "BriefDescription": "This event also counts FP data type packed and scalar MOV and  shuffle operations.",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "resyncs_or_nc_redirects",
+  "EventCode": "0x96",
+  "BriefDescription": "",
+  "PublicDescription": "Counts the number of HW resyncs (pipeline restarts) or NC redirects. NC redirects occur when the front-end transitions to fetching from UC (un-cacheable) memory. This event does not count JRESYNC redirects.",
+  "Umask": "0x0",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "sse_avx_ops_retired.sse_avx_op_type",
+  "EventCode": "0xB",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x10",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "sse_avx_ops_retired.mmx_op_type",
+  "EventCode": "0xB",
+  "BriefDescription": "",
+  "PublicDescription": "Note: Shuffle op counts may count for instructions that are not necessarily thought of as including shuffles. For example, Horizontal Add, Dot Product, and certain MOV instructions may include or use only shuffle type ops.",
+  "Umask": "0x1",
+  "CounterType": "core",
+  "EventType": "FP"
+},
+{
+  "EventName": "de_no_dispatch_per_slot.stall_reason.cmask0x6",
+  "EventCode": "0x1a0",
+  "Umask": "0x1",
+  "Cmask": "0x6",
+  "CounterType": "core",
+  "EventType": "topdown"
+},
+{
+  "EventName": "ex_ret_ops.cmask0x1",
+  "EventCode": "0xc1",
+  "Umask": "0x0",
+  "Cmask": "0x1",
+  "CounterType": "core",
+  "EventType": "ex"
+}
+]
+}

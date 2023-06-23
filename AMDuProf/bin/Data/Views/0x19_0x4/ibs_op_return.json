@@ -1,0 +1,51 @@
+{
+    "__comment": "Processor: AMD family 19h, model 40h-4Fh",
+    "view": {
+        "name": "IBS BR return",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_RET",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_ALL_OPS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_BR",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_MISP_RET",
+                "sort": "none"
+            },
+            {
+                "title": "MISPREDICT_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_TAG_TO_RET",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_COMP_TO_RET",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "AVE_TAG_TO_RET",
+                "sort": "none"
+            },
+            {
+                "title": "AVE_COMP_TO_RET",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show IBS return op measurements including the return misprediction ratio."
+    }
+}

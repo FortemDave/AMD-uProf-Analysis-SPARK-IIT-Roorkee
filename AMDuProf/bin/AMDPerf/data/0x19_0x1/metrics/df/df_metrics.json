@@ -1,0 +1,244 @@
+{ "metric":
+[
+{
+  "Abbreviation": "Section:receipe",
+  "Name": "Section:receipe",
+  "Expression": "",
+  "Description": "",
+  "Child": "ElapsedTimeinUsMem,NonPrintingTotalDramLocalRdBw,NonPrintingTotalDramLocalWrBw,NonPrintingTotalDramRemoteRdBw,NonPrintingTotalDramRemoteWrBw,TotalMemoryBw,NonPrintingTotalDmaLocalRdBw,NonPrintingTotalDmaLocalWrBw,NonPrintingTotalDmaRemoteRdBw,NonPrintingTotalDmaRemoteWrBw,TotalUpstreamDMAReadWriteDataBytesGBs,NonPrintingTotalInbLocalRdBw,NonPrintingTotalOutLocalWrBw,NonPrintingTotalInbRemoteRdBw,NonPrintingTotalOutRemoteWrBw,LocalInboundDataBytesGBs,LocalOutboundDataBytesGBs,RemoteInboundDataBytesGBs,RemoteOutboundDataBytesGBs,NonPrintingTotalOutLocalWrBwAll,xGMIOutboundDataBytesGBs",
+  "Unit": ""
+},
+{
+  "Abbreviation": "ElapsedTimeinUsMem",
+  "Name": "Elapsed Timein Us Mem",
+  "Expression": "(((tsc))/((CpuMhz)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDramLocalRdBw",
+  "Name": "NonPrinting Total Dram Local Rd Bw",
+  "Expression": "((dram_local_rd_ev0)+(dram_local_rd_ev1)+(dram_local_rd_ev2)+(dram_local_rd_ev3)+(dram_local_rd_ev4)+(dram_local_rd_ev5)+(dram_local_rd_ev6)+(dram_local_rd_ev7)+(dram_local_rd_ev8)+(dram_local_rd_ev9)+(dram_local_rd_ev10)+(dram_local_rd_ev11))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDramLocalWrBw",
+  "Name": "NonPrinting Total Dram Local Wr Bw",
+  "Expression": "((dram_local_wr_ev0)+(dram_local_wr_ev1)+(dram_local_wr_ev2)+(dram_local_wr_ev3)+(dram_local_wr_ev4)+(dram_local_wr_ev5)+(dram_local_wr_ev6)+(dram_local_wr_ev7)+(dram_local_wr_ev8)+(dram_local_wr_ev9)+(dram_local_wr_ev10)+(dram_local_wr_ev11))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDramRemoteRdBw",
+  "Name": "NonPrinting Total Dram Remote Rd Bw",
+  "Expression": "((dram_remote_rd_ev0)+(dram_remote_rd_ev1)+(dram_remote_rd_ev2)+(dram_remote_rd_ev3)+(dram_remote_rd_ev4)+(dram_remote_rd_ev5)+(dram_remote_rd_ev6)+(dram_remote_rd_ev7)+(dram_remote_rd_ev8)+(dram_remote_rd_ev9)+(dram_remote_rd_ev10)+(dram_remote_rd_ev11))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDramRemoteWrBw",
+  "Name": "NonPrinting Total Dram Remote Wr Bw",
+  "Expression": "((dram_remote_wr_ev0)+(dram_remote_wr_ev1)+(dram_remote_wr_ev2)+(dram_remote_wr_ev3)+(dram_remote_wr_ev4)+(dram_remote_wr_ev5)+(dram_remote_wr_ev6)+(dram_remote_wr_ev7)+(dram_remote_wr_ev8)+(dram_remote_wr_ev9)+(dram_remote_wr_ev10)+(dram_remote_wr_ev11))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "TotalMemoryBw",
+  "Name": "Total Memory Bw (GB/s)",
+  "Expression": "((64)*((NonPrintingTotalDramLocalRdBw)+(NonPrintingTotalDramLocalWrBw)+(NonPrintingTotalDramRemoteRdBw)+(NonPrintingTotalDramRemoteWrBw)))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "LocalDRAMReadDataBytesGBs,LocalDRAMWriteDataBytesGBs,RemoteDRAMReadDataBytesGBs,RemoteDRAMWriteDataBytesGBs",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalDRAMReadDataBytesGBs",
+  "Name": "Local DRAM Read Data Bytes(GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDramLocalRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalDRAMWriteDataBytesGBs",
+  "Name": "Local DRAM Write Data Bytes(GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDramLocalWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteDRAMReadDataBytesGBs",
+  "Name": "Remote DRAM Read Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDramRemoteRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteDRAMWriteDataBytesGBs",
+  "Name": "Remote DRAM Write Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDramRemoteWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDmaLocalRdBw",
+  "Name": "NonPrinting Total Dma Local Rd Bw",
+  "Expression": "((dma_local_rd_ev0)+(dma_local_rd_ev1)+(dma_local_rd_ev2)+(dma_local_rd_ev3))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDmaLocalWrBw",
+  "Name": "NonPrinting Total Dma Local Wr Bw",
+  "Expression": "((dma_local_wr_ev0)+(dma_local_wr_ev1)+(dma_local_wr_ev2)+(dma_local_wr_ev3))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDmaRemoteRdBw",
+  "Name": "NonPrinting Total Dma Remote Rd Bw",
+  "Expression": "((dma_remote_rd_ev0)+(dma_remote_rd_ev1)+(dma_remote_rd_ev2)+(dma_remote_rd_ev3))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalDmaRemoteWrBw",
+  "Name": "NonPrinting Total Dma Remote Wr Bw",
+  "Expression": "((dma_remote_wr_ev0)+(dma_remote_wr_ev1)+(dma_remote_wr_ev2)+(dma_remote_wr_ev3))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "TotalUpstreamDMAReadWriteDataBytesGBs",
+  "Name": "Total Upstream DMA Read Write Data Bytes (GB/s)",
+  "Expression": "((64)*((NonPrintingTotalDmaLocalRdBw)+(NonPrintingTotalDmaLocalWrBw)+(NonPrintingTotalDmaRemoteRdBw)+(NonPrintingTotalDmaRemoteWrBw)))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "LocalUpstreamDMAReadDataBytesGB,LocalUpstreamDMAWriteDataBytesGBs,RemoteUpstreamDMAReadDataBytesGBs,RemoteUpstreamDMAWriteDataBytesGBs",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalUpstreamDMAReadDataBytesGB",
+  "Name": "Local Upstream DMA Read Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDmaLocalRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalUpstreamDMAWriteDataBytesGBs",
+  "Name": "Local Upstream DMA Write Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDmaLocalWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteUpstreamDMAReadDataBytesGBs",
+  "Name": "Remote Upstream DMA Read Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDmaRemoteRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteUpstreamDMAWriteDataBytesGBs",
+  "Name": "Remote Upstream DMA Write Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalDmaRemoteWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalInbLocalRdBw",
+  "Name": "NonPrinting Total Inb Local Rd Bw",
+  "Expression": "((inb_local_rd_ev0)+(inb_local_rd_ev1)+(inb_local_rd_ev2)+(inb_local_rd_ev3)+(inb_local_rd_ev4)+(inb_local_rd_ev5)+(inb_local_rd_ev6)+(inb_local_rd_ev7)+(inb_local_rd_ev8)+(inb_local_rd_ev9)+(inb_local_rd_ev10)+(inb_local_rd_ev11)+(inb_local_rd_ev12)+(inb_local_rd_ev13)+(inb_local_rd_ev14)+(inb_local_rd_ev15))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalOutLocalWrBw",
+  "Name": "NonPrinting Total Out Local W rBw",
+  "Expression": "((out_local_wr_ev0)+(out_local_wr_ev1)+(out_local_wr_ev2)+(out_local_wr_ev3)+(out_local_wr_ev4)+(out_local_wr_ev5)+(out_local_wr_ev6)+(out_local_wr_ev7)+(out_local_wr_ev8)+(out_local_wr_ev9)+(out_local_wr_ev10)+(out_local_wr_ev11)+(out_local_wr_ev12)+(out_local_wr_ev13)+(out_local_wr_ev14)+(out_local_wr_ev15))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalInbRemoteRdBw",
+  "Name": "NonPrinting Total Inb Remote Rd Bw",
+  "Expression": "((inb_remote_rd_ev0)+(inb_remote_rd_ev1)+(inb_remote_rd_ev2)+(inb_remote_rd_ev3)+(inb_remote_rd_ev4)+(inb_remote_rd_ev5)+(inb_remote_rd_ev6)+(inb_remote_rd_ev7)+(inb_remote_rd_ev8)+(inb_remote_rd_ev9)+(inb_remote_rd_ev10)+(inb_remote_rd_ev11)+(inb_remote_rd_ev12)+(inb_remote_rd_ev13)+(inb_remote_rd_ev14)+(inb_remote_rd_ev15))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalOutRemoteWrBw",
+  "Name": "NonPrinting Total Out Remote Wr Bw",
+  "Expression": "((out_remote_wr_ev0)+(out_remote_wr_ev1)+(out_remote_wr_ev2)+(out_remote_wr_ev3)+(out_remote_wr_ev4)+(out_remote_wr_ev5)+(out_remote_wr_ev6)+(out_remote_wr_ev7)+(out_remote_wr_ev8)+(out_remote_wr_ev9)+(out_remote_wr_ev10)+(out_remote_wr_ev11)+(out_remote_wr_ev12)+(out_remote_wr_ev13)+(out_remote_wr_ev14)+(out_remote_wr_ev15))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalInboundDataBytesGBs",
+  "Name": "Local Inbound Data Bytes(GB/s)",
+  "Expression": "((32)*(NonPrintingTotalInbLocalRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LocalOutboundDataBytesGBs",
+  "Name": "Local outbound Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalOutLocalWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteInboundDataBytesGBs",
+  "Name": "Remote Inbound Data Bytes(GB/s)",
+  "Expression": "((32)*(NonPrintingTotalInbRemoteRdBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RemoteOutboundDataBytesGBs",
+  "Name": "Remote outbound Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalOutRemoteWrBw))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingTotalOutLocalWrBwAll",
+  "Name": "NonPrinting Total OutLocal Wr Bw All",
+  "Expression": "((out_local_all0)+(out_local_all1)+(out_local_all2)+(out_local_all3)+(out_local_all4)+(out_local_all5)+(out_local_all6)+(out_local_all7))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "xGMIOutboundDataBytesGBs",
+  "Name": "xGMI Outbound Data Bytes (GB/s)",
+  "Expression": "((64)*(NonPrintingTotalOutLocalWrBwAll))/((ElapsedTimeinUsMem)*(1000))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+}
+]
+}

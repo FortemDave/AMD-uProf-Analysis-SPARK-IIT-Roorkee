@@ -1,0 +1,48 @@
+{
+    "__comment": "Processor: AMD family 17h, model 70h-7Fh",
+    "view": {
+        "name": "Taken Branch",
+        "dc_config": [
+            "branch"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_TAKEN_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_TAKEN_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_TAKEN_BR_INST_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to find code with a high number of taken branches."
+    }
+}

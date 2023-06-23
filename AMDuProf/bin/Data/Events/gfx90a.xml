@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    AMD processor micro-architecture performance monitor events.
+
+    Family   : MI200
+    Model    : gfx90a
+    Flavor   : Public
+    Copyright (c) 2021 Advanced Micro Devices, Inc.
+-->
+<gpu_events>
+    <source unit="Gpu">
+        <event name="GRBM_COUNT" abbrev="GRBM_COUNT" value="0">
+            <description>GPU free running clock</description>
+        </event>
+        <event name="GRBM_GUI_ACTIVE" abbrev="GRBM_GUI_ACTIVE" value="2">
+            <description>GPU busy clock</description>
+        </event>
+        <event name="SQ_WAVES" abbrev="SQ_WAVES" value="4">
+            <description>Count number of waves sent to SQs. (per-simd, emulated, global)</description>
+        </event>
+        <event name="SQ_INSTS_VALU" abbrev="SQ_INSTS_VALU" value="1A">
+            <description>Number of VALU instructions issued. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_VMEM_WR" abbrev="SQ_INSTS_VMEM_WR" value="35">
+            <description>Number of VMEM write instructions issued (including FLAT). (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_VMEM_RD" abbrev="SQ_INSTS_VMEM_RD" value="36">
+            <description>Number of VMEM read instructions issued (including FLAT). (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_SALU" abbrev="SQ_INSTS_SALU" value="37">
+            <description>Number of SALU instructions issued. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_SMEM" abbrev="SQ_INSTS_SMEM" value="38">
+            <description>Number of SMEM instructions issued. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_FLAT" abbrev="SQ_INSTS_FLAT" value="39">
+            <description>Number of FLAT instructions issued. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_FLAT_LDS_ONLY" abbrev="SQ_INSTS_FLAT_LDS_ONLY" value="3A">
+            <description>Number of FLAT instructions issued that read/wrote only from/to LDS (only works if EARLY_TA_DONE is enabled). (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_LDS" abbrev="SQ_INSTS_LDS" value="3B">
+            <description>Number of LDS instructions issued (including FLAT). (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_INSTS_GDS" abbrev="SQ_INSTS_GDS" value="3C">
+            <description>Number of GDS instructions issued. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_WAIT_INST_LDS" abbrev="SQ_WAIT_INST_LDS" value="5B">
+            <description>Number of wave-cycles spent waiting for LDS instruction issue. In units of 4 cycles. (per-simd, nondeterministic)</description>
+        </event>
+        <event name="SQ_ACTIVE_INST_VALU" abbrev="SQ_ACTIVE_INST_VALU" value="63">
+            <description>Number of cycles the SQ instruction arbiter is working on a VALU instruction. (per-simd, nondeterministic)</description>
+        </event>
+        <event name="SQ_INST_CYCLES_SALU" abbrev="SQ_INST_CYCLES_SALU" value="70">
+            <description>Number of cycles needed to execute non-memory read scalar operations. (per-simd, emulated)</description>
+        </event>
+        <event name="SQ_THREAD_CYCLES_VALU" abbrev="SQ_THREAD_CYCLES_VALU" value="71">
+            <description>Number of thread-cycles used to execute VALU operations. (per-simd)</description>
+        </event>
+        <event name="SQ_LDS_BANK_CONFLICT" abbrev="SQ_LDS_BANK_CONFLICT" value="79">
+            <description>Number of cycles LDS is stalled by bank conflicts. (emulated)</description>
+        </event>
+        <event name="TA_BUSY_max" abbrev="TA_BUSY_max" value="F">
+            <description>TA block is busy. Perf_Windowing not supported for this counter.</description>
+        </event>
+        <event name="TA_FLAT_READ_WAVEFRONTS_sum" abbrev="TA_FLAT_READ_WAVEFRONTS_sum" value="65">
+            <description>Number of flat opcode reads processed by the TA.</description>
+        </event>
+        <event name="TA_FLAT_WRITE_WAVEFRONTS_sum" abbrev="TA_FLAT_WRITE_WAVEFRONTS_sum" value="66">
+            <description>Number of flat opcode writes processed by the TA.</description>
+        </event>
+        <event name="TCC_HIT_sum" abbrev="TCC_HIT_sum" value="11">
+            <description>Number of cache hits.</description>
+        </event>
+        <event name="TCC_MISS_sum" abbrev="TCC_MISS_sum" value="13">
+            <description>Number of cache misses. UC reads count as misses.</description>
+        </event>
+        <event name="TCC_EA_WRREQ_sum" abbrev="TCC_EA_WRREQ_sum" value="1A">
+            <description>Number of transactions (either 32-byte or 64-byte) going over the TC_EA_wrreq interface. Atomics may travel over the same interface and are generally classified as write requests. This does not include probe commands.</description>
+        </event>
+        <event name="TCC_EA_WRREQ_64B_sum" abbrev="TCC_EA_WRREQ_64B_sum" value="1B">
+            <description>Number of 64-byte transactions going (64-byte write or CMPSWAP) over the TC_EA_wrreq interface.</description>
+        </event>
+        <event name="TCC_EA_WRREQ_STALL_sum" abbrev="TCC_EA_WRREQ_STALL_sum" value="1E">
+            <description>Number of cycles a write request was stalled.</description>
+        </event>
+        <event name="TCC_EA_RDREQ_sum" abbrev="TCC_EA_RDREQ_sum" value="26">
+            <description>Number of TCC/EA read requests (either 32-byte or 64-byte)</description>
+        </event>
+        <event name="TCC_EA_RDREQ_32B_sum" abbrev="TCC_EA_RDREQ_32B_sum" value="27">
+            <description>Number of 32-byte TCC/EA read requests</description>
+        </event>
+        <event name="TCP_TCP_TA_DATA_STALL_CYCLES" abbrev="TCP_TCP_TA_DATA_STALL_CYCLES" value="6">
+            <description>TCP stalls TA data interface. Now Windowed.</description>
+        </event>
+    </source>
+</gpu_events>

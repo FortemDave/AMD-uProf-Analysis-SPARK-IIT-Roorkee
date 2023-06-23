@@ -1,0 +1,45 @@
+{
+    "__comment": "Processor: AMD family 17h, model 20h-2Fh",
+    "view": {
+        "name": "IBS MEM forwarding and bank conflicts",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending",
+                "visible": false
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_BANK_CONF_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_BANK_CONF_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_FORWARDED",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STLF_CANCELLED",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_MAB_HIT",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show memory access bank conflicts, data forwarding and Missed Address Buffer (MAB) hits."
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "__comment": "Processor: AMD family 17h, model 70h-7Fh",
+    "view": {
+        "name": "Data Cache",
+        "dc_config": [
+            "data_access",
+            "assess_ext"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DC_ACCESSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "%L1_DC_MISSES",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_DRAM (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_CACHE (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_DEMAND_DC_REFILLS_LOCAL_L2 (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "MISALIGNED_LOADS (PTI)",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to identify regions of code that miss in the L1 data cache."
+    }
+}

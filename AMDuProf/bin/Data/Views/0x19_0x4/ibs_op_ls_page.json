@@ -1,0 +1,40 @@
+{
+    "__comment": "Processor: AMD family 19h, model 40h-4Fh",
+    "view": {
+        "name": "IBS MEM translations by page size",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_L1_DTLB_4K",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L1_DTLB_2M",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L1_DTLB_1G",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L2_DTLB_4K",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L2_DTLB_2M",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_L2_DTLB_1G",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of DTLB address translations broken out by page size."
+    }
+}

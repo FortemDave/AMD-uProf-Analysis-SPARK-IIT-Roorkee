@@ -1,0 +1,21 @@
+{ "metric":
+[
+{
+	 "Abbreviation": "RemoteLinkOutboundBytes",
+	 "Name": "Remote Link outbound data bytes",
+	 "Expression": "((CAKE0_TX_DAT.Data)+(CAKE1_TX_DAT.Data)+(CAKE2_TX_DAT.Data)+(CAKE3_TX_DAT.Data))*32",
+	 "Description": "Remote Link outbound data bytes",
+	 "Child": "",
+	 "Unit": "Bytes"
+},
+{
+	 "Abbreviation": "CombinedDRAMBytes",
+	 "Name": "Combined DRAM Bytes on a NPS1 node (all channels)",
+	 "Expression": "((CS_UMC0_REQ.RdWr)+(CS_UMC1_REQ.RdWr)+(CS_UMC2_REQ.RdWr)+(CS_UMC3_REQ.RdWr)+(CS_UMC4_REQ.RdWr)+(CS_UMC5_REQ.RdWr)+(CS_UMC6_REQ.RdWr)+(CS_UMC7_REQ.RdWr))*64",
+	 "Description": "Combined DRAM Bytes on a NPS1 node (all channels)",
+	 "Child": "",
+	 "Unit": "unit"
+}
+]
+}
+

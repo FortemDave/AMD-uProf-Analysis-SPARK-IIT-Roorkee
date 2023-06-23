@@ -1,0 +1,349 @@
+{ "events":
+[
+{
+  "EventName": "l3_lookup_state.l3_lookup_mask",
+  "EventCode": "0x4",
+  "BriefDescription": "L3 Request Types",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from alternate memories",
+  "PublicDescription": "",
+  "Umask": "0x80",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___6",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from alternate memories",
+  "PublicDescription": "",
+  "Umask": "0x40",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.ext_far",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from Extension Memory (CXL)",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.ext_near",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from Extension Memory (CXL)",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___3",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from another CCX's cache. Could be from the same or a different NUMA node",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___2",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target a different NUMA node and return from another CCX's cache. Could be from the same or a different NUMA node",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.dram_far",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from DRAM",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency.dram_near",
+  "EventCode": "0xAC",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from DRAM",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from alternate memories",
+  "PublicDescription": "",
+  "Umask": "0x80",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___6",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from alternate memories",
+  "PublicDescription": "",
+  "Umask": "0x40",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.ext_far",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from Extension Memory (CXL)",
+  "PublicDescription": "",
+  "Umask": "0x20",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.ext_near",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from Extension Memory (CXL)",
+  "PublicDescription": "",
+  "Umask": "0x10",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___3",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from another CCX's cache. Could be from the same or a different NUMA node",
+  "PublicDescription": "",
+  "Umask": "0x8",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___2",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target a different NUMA node and return from another CCX's cache. Could be from the same or a different NUMA node",
+  "PublicDescription": "",
+  "Umask": "0x4",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.dram_far",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target another NUMA node and return from DRAM",
+  "PublicDescription": "",
+  "Umask": "0x2",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.dram_near",
+  "EventCode": "0xAD",
+  "BriefDescription": "Read-write. Requests that target the same NUMA node and return from DRAM",
+  "PublicDescription": "",
+  "Umask": "0x1",
+  "CounterType": "l3",
+  "EventType": "FP"
+},
+{
+  "EventName": "l3_lookup_state.l3_lookup_mask_l3_t0_missed_l3",
+  "EventCode": "0x4",
+  "Umask": "0x1",
+  "SliceId": "0x0",
+  "ThreadMask": "0x1",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x0",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_lookup_state.l3_lookup_mask_l3_t0_accessed_l3",
+  "EventCode": "0x4",
+  "Umask": "0xff",
+  "SliceId": "0x0",
+  "ThreadMask": "0x1",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x0",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_lookup_state.l3_lookup_mask_l3_oa_missed_l3",
+  "EventCode": "0x4",
+  "Umask": "0x1",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_lookup_state.l3_lookup_mask_l3_oa_accessed_l3",
+  "EventCode": "0x4",
+  "Umask": "0xff",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src3_lat_cache_far",
+  "EventCode": "0xac",
+  "Umask": "0x8",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src3_req_cache_far",
+  "EventCode": "0xad",
+  "Umask": "0x8",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_near",
+  "EventCode": "0xac",
+  "Umask": "0x1",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_near",
+  "EventCode": "0xad",
+  "Umask": "0x1",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_dram_far",
+  "EventCode": "0xac",
+  "Umask": "0x2",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_dram_far",
+  "EventCode": "0xad",
+  "Umask": "0x2",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src4_lat_cache_near",
+  "EventCode": "0xac",
+  "Umask": "0x4",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src4_req_cache_near",
+  "EventCode": "0xad",
+  "Umask": "0x4",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all",
+  "EventCode": "0xad",
+  "Umask": "0xff",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all",
+  "EventCode": "0xac",
+  "Umask": "0xff",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency_requests.unnamed___7_xi_fill_lat_src5_req_all_no_other",
+  "EventCode": "0xad",
+  "Umask": "0x3f",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+},
+{
+  "EventName": "l3_xi_sampled_latency.unnamed___7_xi_fill_lat_src5_lat_all_no_other",
+  "EventCode": "0xac",
+  "Umask": "0x3f",
+  "SliceId": "0x3",
+  "ThreadMask": "0x3",
+  "CoreId": "0x0",
+  "EnAllSlices": "0x1",
+  "EnAllCores": "0x1",
+  "CounterType": "l3",
+  "EventType": "v5"
+}
+]
+}

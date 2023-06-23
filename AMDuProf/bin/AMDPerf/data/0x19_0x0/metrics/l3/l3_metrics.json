@@ -1,0 +1,20 @@
+{ "metric":
+[
+{
+   "Abbreviation": "L3CacheableaccessesPTI",
+   "Name": "L3 Cacheable accesses PTI",
+   "Expression": "((L3LookupState)*1000)/((OsUserInst))",
+   "Description": "L3 Cacheable accesses PTI T0",
+   "Child": "",
+   "Unit": "unit"
+},
+{
+  "Abbreviation": "Avg_L3_rd_miss_latency",
+  "Name": "Average L3 Read Miss Latency",
+  "Expression": "(XiSysFillLatency) *16 /(XiCcxSdpReq1)",
+  "Description": "Average L3 Read Miss Latency",
+  "Child": "",
+  "Unit": "core clocks"
+}
+]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+    Basic profile type to analyse the CPI and IPC metrics.
+
+    Family : 19h
+    Model  : 50h-5Fh
+    Flavor : Public
+    Copyright (c) 2022 Advanced Micro Devices, Inc.
+-->
+<dc_configuration name="Investigate CPI">
+    <ebp os="linux|windows">
+        <event select="76" mask="00" os="T" user="T" count="250000" call_graph="T" />
+        <event select="C0" mask="00" os="T" user="T" count="250000" call_graph="T" />
+    </ebp>
+    <tool_tip>Basic profile type to analyse the CPI and IPC metrics of the running application or the entire system.</tool_tip>
+    <description>Basic profile type to analyse the CPI and IPC metrics of the running application or the entire system.</description>
+</dc_configuration>

@@ -1,0 +1,1436 @@
+{ "metric":
+[
+{
+  "Abbreviation": "Section:topdown",
+  "Name": "Section:topdown",
+  "Expression": "",
+  "Description": "",
+  "Child": "PmcGrp03TopDownFrontendBound,PmcGrp01TopDownRetiring",
+  "Unit": ""
+},
+{
+  "Abbreviation": "PmcGrp03TopDownFrontendBound",
+  "Name": "Frontend Bound (% slots)",
+  "Expression": "(100)*((de_no_dispatch_per_slot.stall_reason)/(ls_not_halted_cyc))/(6)",
+  "Description": "",
+  "Child": "PmcGrp03TopDownFrontendBoundLatency,PmcGrp03TopDownFrontendBoundBw",
+  "Unit": ""
+},
+{
+  "Abbreviation": "PmcGrp03TopDownFrontendBoundLatency",
+  "Name": "latency (% slots)",
+  "Expression": "(100)*(6)*(de_no_dispatch_per_slot.stall_reason.cmask0x6)/((6)*(ls_not_halted_cyc))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "PmcGrp03TopDownFrontendBoundBw",
+  "Name": "BW (% slots)",
+  "Expression": "(100)*((de_no_dispatch_per_slot.stall_reason)-(6)*(de_no_dispatch_per_slot.stall_reason.cmask0x6))/((6)*(ls_not_halted_cyc))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "PmcGrp01TopDownRetiring",
+  "Name": "Retiring (% slots)",
+  "Expression": "(100)*(ex_ret_ops)/((ls_not_halted_cyc)*(6))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:ipc",
+  "Name": "Section:ipc",
+  "Expression": "",
+  "Description": "",
+  "Child": "Ipc1,Upc1,Cpi1,Cpu1,Ipc2,Upc2,Cpi2,Cpu2,UserIpc,UserUpc,OsIpc,OsUpc,UserCpi,UserCpu,OsCpi,OsCpu,ClkTotal,InstTotal,UopTotal,McInstrTotal,UserInstPct,OsInstPct,UserTimePct,OsTimePct,OverallUtil,CpuSpeed,EffFreq,CpuSpeedTimer",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Ipc1",
+  "Name": "Avg IPC (w/ halt)",
+  "Expression": "(OsUserInst)/((tsc)*(aperf)/(mperf))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Upc1",
+  "Name": "Avg UPC (w/ halt)",
+  "Expression": "((ex_ret_ops:k)+(ex_ret_ops:u))/((tsc)*(aperf)/(mperf))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Cpi1",
+  "Name": "Avg CPI (w/ halt)",
+  "Expression": "((tsc)*(aperf)/(mperf))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Cpu1",
+  "Name": "Avg CPU (w/ halt)",
+  "Expression": "((tsc)*(aperf)/(mperf))/((ex_ret_ops:k)+(ex_ret_ops:u))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Ipc2",
+  "Name": "Avg IPC (w/o halt)",
+  "Expression": "(OsUserInst)/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Upc2",
+  "Name": "Avg UPC (w/o halt)",
+  "Expression": "((ex_ret_ops:k)+(ex_ret_ops:u))/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Cpi2",
+  "Name": "Avg CPI (w/o halt)",
+  "Expression": "(aperf)/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Cpu2",
+  "Name": "Avg CPU (w/o halt)",
+  "Expression": "(aperf)/((ex_ret_ops:k)+(ex_ret_ops:u))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserIpc",
+  "Name": "User IPC",
+  "Expression": "(ex_ret_instr:u)/(ls_not_halted_cyc:u)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserUpc",
+  "Name": "User UPC",
+  "Expression": "(ex_ret_ops:u)/(ls_not_halted_cyc:u)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsIpc",
+  "Name": "System IPC",
+  "Expression": "(ex_ret_instr:k)/(ls_not_halted_cyc:k)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsUpc",
+  "Name": "System UPC",
+  "Expression": "(ex_ret_ops:k)/(ls_not_halted_cyc:k)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserCpi",
+  "Name": "User CPI",
+  "Expression": "(ls_not_halted_cyc:u)/(ex_ret_instr:u)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserCpu",
+  "Name": "User CPU",
+  "Expression": "(ls_not_halted_cyc:u)/(ex_ret_ops:u)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsCpi",
+  "Name": "System CPI",
+  "Expression": "(ls_not_halted_cyc:k)/(ex_ret_instr:k)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsCpu",
+  "Name": "System CPU",
+  "Expression": "(ls_not_halted_cyc:k)/(ex_ret_ops:k)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "ClkTotal",
+  "Name": "Total clocks (M)",
+  "Expression": "(EventSets)*(tsc)/(1000000.0)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "InstTotal",
+  "Name": "Total inst (M)",
+  "Expression": "(EventSets)*((ex_ret_instr:k)+(ex_ret_instr:u))/(1000000.0)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopTotal",
+  "Name": "Total uops (M)",
+  "Expression": "(EventSets)*((ex_ret_ops:k)+(ex_ret_ops:u))/(1000000.0)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "McInstrTotal",
+  "Name": "Total microcode inst (M)",
+  "Expression": "(EventSets)*((ex_ret_ucode_instr))/(1000000.0)",
+  "Description": "",
+  "Child": "McInstrPct",
+  "Unit": ""
+},
+{
+  "Abbreviation": "McInstrPct",
+  "Name": "% of all inst",
+  "Expression": "(100.0)*(McInstrTotal)/(InstTotal)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserInstPct",
+  "Name": "User inst (%)",
+  "Expression": "(ex_ret_instr:u)*(100.0)/((ex_ret_instr:u)+(ex_ret_instr:k))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsInstPct",
+  "Name": "System inst (%)",
+  "Expression": "((ex_ret_instr:k))*(100.0)/((ex_ret_instr:u)+((ex_ret_instr:k)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UserTimePct",
+  "Name": "User time (%)",
+  "Expression": "(ls_not_halted_cyc:u)*(100.00)/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsTimePct",
+  "Name": "System time (%)",
+  "Expression": "(ls_not_halted_cyc:k)*(100.00)/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OverallUtil",
+  "Name": "Overall utilization (%)",
+  "Expression": "((mperf))*(100.0)/(tsc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CpuSpeed",
+  "Name": "CPU reference (MHz)",
+  "Expression": "(CpuMhz)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "EffFreq",
+  "Name": "CPU effective (Mhz)",
+  "Expression": "((aperf)/(mperf))*(CpuMhz)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CpuSpeedTimer",
+  "Name": "Timer (MHz)",
+  "Expression": "(CpuMhz)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:de",
+  "Name": "Section:de",
+  "Expression": "",
+  "Description": "",
+  "Child": "UopsWrittenToUopQ,UopsInstWrToUopQ,DsInstDispPerClk,DsClksPti,EmptySlots",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopsWrittenToUopQ",
+  "Name": "Total SPEC instr (M)",
+  "Expression": "(EventSets)*((de_src_op_disp.decoder)+(de_src_op_disp.op_cache)+(de_src_op_disp.loop_buffer))/(1000000.0)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopsInstWrToUopQ",
+  "Name": "Instr wr to UopQ",
+  "Expression": "(((de_src_op_disp.decoder)+(de_src_op_disp.op_cache)+(de_src_op_disp.loop_buffer))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "UopsWrittenToUopQFrmDe,UopsWrittenToUopQFrmOc,UopsWrittenToUopQFrmLb",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopsWrittenToUopQFrmDe",
+  "Name": "DE (%)",
+  "Expression": "((de_src_op_disp.decoder)*(100.0))/((de_src_op_disp.decoder)+(de_src_op_disp.op_cache)+(de_src_op_disp.loop_buffer))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopsWrittenToUopQFrmOc",
+  "Name": "Uop$ (%)",
+  "Expression": "(((de_src_op_disp.op_cache))*(100.0))/((de_src_op_disp.decoder)+((de_src_op_disp.op_cache))+(de_src_op_disp.loop_buffer))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UopsWrittenToUopQFrmLb",
+  "Name": "LB (%)",
+  "Expression": "(((de_src_op_disp.loop_buffer))*(100.0))/((de_src_op_disp.decoder)+(de_src_op_disp.op_cache)+((de_src_op_disp.loop_buffer)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DsInstDispPerClk",
+  "Name": "DSP IPC (w/o halt)",
+  "Expression": "(((OsUserInst)))/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DsClksPti",
+  "Name": "clks per 1000 instr",
+  "Expression": "((aperf)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "EmptySlots",
+  "Name": "Empty Dispatch Slots (slots/cycles)",
+  "Expression": "(de_no_dispatch_per_slot.stall_reason)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:bp",
+  "Name": "Section:bp",
+  "Expression": "",
+  "Description": "",
+  "Child": "NonPrintingBp0RetBrNotMispd,NonPrintingBp0RetBrNotTak,NonPrintingBp0RetBrNotTakMispd,BrEx,L2BtbHitFxups,IttageRedirects,InstInLoopMode,InstInOCMode,InstInDeMode",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingBp0RetBrNotMispd",
+  "Name": "NonPrintingBp0RetBrNotMispd",
+  "Expression": "(ex_ret_brn)-(ex_ret_brn_misp)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingBp0RetBrNotTak",
+  "Name": "NonPrintingBp0RetBrNotTak",
+  "Expression": "(ex_ret_brn)-(ex_ret_brn_tkn)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingBp0RetBrNotTakMispd",
+  "Name": "NonPrintingBp0RetBrNotTakMispd",
+  "Expression": "(ex_ret_brn_misp)-(ex_ret_brn_tkn_misp)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrEx",
+  "Name": "Branches Retired",
+  "Expression": "((ex_ret_brn)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExMispred,BrExTakn,BrExNotTakn,BrExJcc,BrExUncond,BrExIndirJmp,BrExNearRet,BrExFarCntlTrnsfr",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExMispred",
+  "Name": "mispred",
+  "Expression": "((ex_ret_brn_misp)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExMispredPct",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExMispredPct",
+  "Name": "%",
+  "Expression": "(100.0)*(ex_ret_brn_misp)/(ex_ret_brn)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExTakn",
+  "Name": "taken",
+  "Expression": "((ex_ret_brn_tkn)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExTaknMispred",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExTaknMispred",
+  "Name": "mispred",
+  "Expression": "((ex_ret_brn_tkn_misp)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExNotTakn",
+  "Name": "not-taken",
+  "Expression": "((NonPrintingBp0RetBrNotTak)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExNotTaknMispred",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExNotTaknMispred",
+  "Name": "mispred",
+  "Expression": "((NonPrintingBp0RetBrNotTakMispd)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExJcc",
+  "Name": "conditional",
+  "Expression": "((ex_ret_cond)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExJccMispred",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExJccMispred",
+  "Name": "mispred",
+  "Expression": "((ex_ret_msprd_brnch_instr_dir_msmtch)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExUncond",
+  "Name": "dir jmp/call",
+  "Expression": "(((ex_ret_uncond_brnch_instr)-(ex_ret_near_ret))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExIndirJmp",
+  "Name": "indirect jump",
+  "Expression": "((ex_ret_ind_brch_instr)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExMispredIndirJmp",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExMispredIndirJmp",
+  "Name": "mispred",
+  "Expression": "((ex_ret_brn_ind_misp)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExNearRet",
+  "Name": "near return",
+  "Expression": "((ex_ret_near_ret)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "BrExMispredNearRet",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExMispredNearRet",
+  "Name": "mispred",
+  "Expression": "((ex_ret_near_ret_mispred)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "BrExFarCntlTrnsfr",
+  "Name": "far-ctrl-trnsfr",
+  "Expression": "((ex_ret_brn_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L2BtbHitFxups",
+  "Name": "L2 BTB Hit",
+  "Expression": "((bp_l2_btb_correct)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IttageRedirects",
+  "Name": "ITTAGE Hit",
+  "Expression": "((bp_dyn_ind_pred)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "InstInLoopMode",
+  "Name": "Inst In LB Mode",
+  "Expression": "((de_src_op_disp.loop_buffer)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "InstInOCMode",
+  "Name": "Inst In OC Mode",
+  "Expression": "((de_src_op_disp.op_cache)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "InstInDeMode",
+  "Name": "Inst In DE Mode",
+  "Expression": "((de_src_op_disp.decoder)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:IcOc",
+  "Name": "Section:IcOc",
+  "Expression": "",
+  "Description": "",
+  "Child": "IcMissL2Fill,IcMissL3MemFill,L1ItlbMissL2Hit,RetInstrRetired,OcInstrPer1kRetire,LoopModeInstr,OcFullHit,IcMicroTagHit",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IcMissL2Fill",
+  "Name": "L2 fill",
+  "Expression": "((ic_cache_fill_l2)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IcMissL3MemFill",
+  "Name": "L3/Mem fill",
+  "Expression": "((ic_cache_fill_sys)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1ItlbMissL2Hit",
+  "Name": "L2 Itlb Hit",
+  "Expression": "((bp_l1_tlb_miss_l2_tlb_hit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RetInstrRetired",
+  "Name": "RETURN Inst Retired",
+  "Expression": "(((ex_ret_near_ret)*(1000.0))/(OsUserInst))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OcInstrPer1kRetire",
+  "Name": "OC instr/1000-ret-instr",
+  "Expression": "((de_src_op_disp.op_cache)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LoopModeInstr",
+  "Name": "Loop Mode Instr",
+  "Expression": "((de_src_op_disp.loop_buffer)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OcFullHit",
+  "Name": "OC Full Hit",
+  "Expression": "((op_cache_hit_miss.op_cache_accesses)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IcMicroTagHit",
+  "Name": "IC MicroTag Hit",
+  "Expression": "((ic_tag_hit_miss.ic_access_types)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:ex",
+  "Name": "Section:ex",
+  "Expression": "",
+  "Description": "",
+  "Child": "DivOpCnt,FpInstrRetired,RetiredUops,CycleRetUops,RetEmpty,CyclesNoRetireNotCompSelf,CyclesNoRetireOther,CyclesNoRetireSmtCont",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DivOpCnt",
+  "Name": "EX DIV Ops",
+  "Expression": "((ex_div_count)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "DivOpLat",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DivOpLat",
+  "Name": "lat (CCLKs)",
+  "Expression": "((ex_div_busy)/(ex_div_count))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpInstrRetired",
+  "Name": "FP Instr Retired",
+  "Expression": "(((ex_ret_mmx_fp_instr.sse_instr)+(ex_ret_mmx_fp_instr.mmx_instr)+(ex_ret_mmx_fp_instr.x87_instr))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "FpInstrSseAvx,FpInstrMmx,FpInstrX87",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpInstrSseAvx",
+  "Name": "avx/sse",
+  "Expression": "((ex_ret_mmx_fp_instr.sse_instr)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpInstrMmx",
+  "Name": "mmx",
+  "Expression": "((ex_ret_mmx_fp_instr.mmx_instr)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpInstrX87",
+  "Name": "x87",
+  "Expression": "((ex_ret_mmx_fp_instr.x87_instr)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RetiredUops",
+  "Name": "Retired uops(ops per cycle)",
+  "Expression": "(ex_ret_ops)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CycleRetUops",
+  "Name": "Retired Ops(% cycle)",
+  "Expression": "((ex_ret_ops.cmask0x1)*(100.0))/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "RetEmpty",
+  "Name": "Retire empty/nothing to retire(% cycle)",
+  "Expression": "(ex_no_retire.empty)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CyclesNoRetireNotCompSelf",
+  "Name": "Retire Not complete self(% cycle)",
+  "Expression": "(ex_no_retire.not_complete)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CyclesNoRetireOther",
+  "Name": "Other Retire Stall (breaks/traps/faults/etc)(% cycle)",
+  "Expression": "(ex_no_retire.other)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CyclesNoRetireSmtCont",
+  "Name": "No Retire due to SMT contention(% cycle)",
+  "Expression": "(ex_no_retire.thread_not_selected)/(ls_not_halted_cyc)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:fp",
+  "Name": "Section:fp",
+  "Expression": "",
+  "Description": "",
+  "Child": "NonPrintingFpMacFlop,NonPrintingFpFlop,FpFlopPerInstr,FpFlopPerClk,FpFlops,FpAddScal,FpAdd128,FpAdd256,FpCountRet512,IntAdd128,IntAdd256",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingFpMacFlop",
+  "Name": "NonPrintingFpMacFlop",
+  "Expression": "(fp_ret_sse_avx_ops.mac_flo_ps)*(2.0)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingFpFlop",
+  "Name": "NonPrintingFpFlop",
+  "Expression": "(fp_ret_sse_avx_ops.add_sub_flo_ps)+(fp_ret_sse_avx_ops.mult_flo_ps)+(fp_ret_sse_avx_ops.div_flo_ps)+(NonPrintingFpMacFlop)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopPerInstr",
+  "Name": "FLOP per instr",
+  "Expression": "(NonPrintingFpFlop)/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopPerClk",
+  "Name": "FLOP per cclk",
+  "Expression": "(NonPrintingFpFlop)/(aperf)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlops",
+  "Name": "FLOPs (GFLOPs)",
+  "Expression": "(NonPrintingFpFlop)/(mperf)*(CpuMhz)/(1000.0)",
+  "Description": "",
+  "Child": "FpFlopsAddSub,FpFlopsMul,FpFlopsDiv,FpFlopsFmac",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopsAddSub",
+  "Name": "% add or sub",
+  "Expression": "((100.0)*(fp_ret_sse_avx_ops.add_sub_flo_ps))/(NonPrintingFpFlop)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopsMul",
+  "Name": "% mul",
+  "Expression": "((100.0)*(fp_ret_sse_avx_ops.mult_flo_ps))/(NonPrintingFpFlop)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopsDiv",
+  "Name": "% div",
+  "Expression": "((100.0)*(fp_ret_sse_avx_ops.div_flo_ps))/(NonPrintingFpFlop)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpFlopsFmac",
+  "Name": "% fmac",
+  "Expression": "((100.0)*(NonPrintingFpMacFlop))/(NonPrintingFpFlop)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpAddScal",
+  "Name": "scal",
+  "Expression": "(((fp_ops_retired_by_type.scalar_fp_op_type))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpAdd128",
+  "Name": "128",
+  "Expression": "(((fp_pack_ops_retired.fp128_op_type))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpAdd256",
+  "Name": "256",
+  "Expression": "(((fp_pack_ops_retired.fp256_op_type))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "FpCountRet512",
+  "Name": "FpCountRet512 (PMC_008)",
+  "Expression": "((fp_ops_retired_by_width.pack512u_ops_retired)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IntAdd128",
+  "Name": "128",
+  "Expression": "(((packed_int_op_type.int128_op_type))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "IntAdd256",
+  "Name": "256",
+  "Expression": "(((packed_int_op_type.int256_op_type))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:ls",
+  "Name": "Section:ls",
+  "Expression": "",
+  "Description": "",
+  "Child": "LsUopDisp,NonPrintingL1DtlbMissL2DtlbHit,NonPrintingL1DtlbMissL2DtlbMiss,NonPrintingL1DtlbMiss,L1DtlbReq,L1DtlbMissL2Miss,L1DtlbMissL2Miss4K,L1DtlbMissL2Miss16K,L1DtlbMissL2Miss2M,L1DtlbMissL2Miss1G,LsBadStatus2StliOther,StCommitCnclWcbFull,SwPrefLdT0T1T2W,SwPrefIneff,SwPfDcFills,MabBusyTime,DcFillNewAnyMem,DcFillNewRemote,DcFillNewLocCCX,PublicDcFillNewRemOtherCache,DcFillNewLocAdd,DcFillsNewRemote,NonPrintingDcFillsLocal1Dem,NonPrintingDcFillsLocal1HwPf,DcFillsLocalDem,DcFillsLocalDemL2,DcFillsLocalDemOtherCache,DcFillsLocalDemExtCache,DcFillsLocalDemMem,DcFillsLocalHwPf,DcFillsLocalHwPfL2,DcFillsLocalHwPfOtherCache,DcFillsLocalHwPfExtCache,DcFillsLocalHwPfMem,NonPrintingDcFillsRemDem,NonPrintingDcFillsRemHwPf,DcFillsRemoteDem,DcFillsRemoteDemOtherCache,DcFillsRemoteDemMem,DcFillsRemoteHwPf,DcFillsRemoteHwPfOtherCache,DcFillsRemoteHwPfMem,LsFillsAndSmiLclL2,LsFillsAndSmiLclCache,LsFillsAndSmiRmtCacheNearCs,LsFillsAndSmiLclDram,LsFillsAndSmiRmtCacheFarCs,LsFillsAndSmiRmtDram,OsLsBusLock,UsrLsBusLock,LsStlf,CpuidInstr,ClflushInstr",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsUopDisp",
+  "Name": "LS uop disp",
+  "Expression": "(((ls_dispatch.ld_dispatch)+(ls_dispatch.store_dispatch)+(ls_dispatch.ld_st_dispatch))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "LsDispLd,LsDispSt,LsDispLdOpSt",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsDispLd",
+  "Name": "Ld",
+  "Expression": "((ls_dispatch.ld_dispatch)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsDispSt",
+  "Name": "St",
+  "Expression": "((ls_dispatch.store_dispatch)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsDispLdOpSt",
+  "Name": "Ld-Op-St",
+  "Expression": "((ls_dispatch.ld_st_dispatch)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingL1DtlbMissL2DtlbHit",
+  "Name": "NonPrintingL1DtlbMissL2DtlbHit",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload4_kl2_hit)+(ls_l1_d_tlb_miss.tlb_reload_coalesced_page_hit)+(ls_l1_d_tlb_miss.tlb_reload2_ml2_hit)+(ls_l1_d_tlb_miss.tlb_reload1_gl2_hit))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingL1DtlbMissL2DtlbMiss",
+  "Name": "NonPrintingL1DtlbMissL2DtlbMiss",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload4_kl2_miss)+(ls_l1_d_tlb_miss.tlb_reload_coalesced_page_miss)+(ls_l1_d_tlb_miss.tlb_reload2_ml2_miss)+(ls_l1_d_tlb_miss.tlb_reload1_gl2_miss))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingL1DtlbMiss",
+  "Name": "NonPrintingL1DtlbMiss",
+  "Expression": "((NonPrintingL1DtlbMissL2DtlbHit)+(NonPrintingL1DtlbMissL2DtlbMiss))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbReq",
+  "Name": "DTLB Req",
+  "Expression": "(LsUopDisp)",
+  "Description": "",
+  "Child": "L1DtlbHit,L1DtlbMiss",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbHit",
+  "Name": "Hit",
+  "Expression": "(LsUopDisp)-(((NonPrintingL1DtlbMiss)*(1000.0))/(OsUserInst))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMiss",
+  "Name": "Miss",
+  "Expression": "((NonPrintingL1DtlbMiss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "L1DtlbMissL2Hit",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Hit",
+  "Name": "L2 DTLB Hit",
+  "Expression": "((NonPrintingL1DtlbMissL2DtlbHit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "L1DtlbMissL2Hit4K,L1DtlbMissL2Hit16K,L1DtlbMissL2Hit2M,L1DtlbMissL2Hit1G",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Hit4K",
+  "Name": "4K",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload4_kl2_hit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Hit16K",
+  "Name": "4K+",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload_coalesced_page_hit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Hit2M",
+  "Name": "2M",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload2_ml2_hit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Miss",
+  "Name": "Miss",
+  "Expression": "((NonPrintingL1DtlbMissL2DtlbMiss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Miss4K",
+  "Name": "4K",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload4_kl2_miss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Miss16K",
+  "Name": "4K+",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload_coalesced_page_miss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Miss2M",
+  "Name": "2M",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload2_ml2_miss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L1DtlbMissL2Miss1G",
+  "Name": "1G",
+  "Expression": "((ls_l1_d_tlb_miss.tlb_reload1_gl2_miss)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsBadStatus2StliOther",
+  "Name": "STLI Other",
+  "Expression": "((ls_bad_status2.stli_other)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "StCommitCnclWcbFull",
+  "Name": "wcb full",
+  "Expression": "((ls_st_commit_cancel2.st_commit_cancel_wcb_full)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "SwPrefLdT0T1T2W",
+  "Name": "T0/T1/T2/W",
+  "Expression": "((ls_pref_instr_disp.prefetch)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "SwPrefIneff",
+  "Name": "Sw Pf Ineff",
+  "Expression": "(((ls_inef_sw_pref.data_pipe_sw_pf_dc_hit)+(ls_inef_sw_pref.mab_mch_cnt))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "SwPrefDcHit,SwPrefMabMatch",
+  "Unit": ""
+},
+{
+  "Abbreviation": "SwPrefDcHit",
+  "Name": "Dc Hit",
+  "Expression": "((ls_inef_sw_pref.data_pipe_sw_pf_dc_hit)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "SwPrefMabMatch",
+  "Name": "Mab Hit",
+  "Expression": "((ls_inef_sw_pref.mab_mch_cnt)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "SwPfDcFills",
+  "Name": "incomplete overlap",
+  "Expression": "((ls_bad_status2.stli_other)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "MabBusyTime",
+  "Name": "Ave MAB busy time %",
+  "Expression": "((ls_alloc_mab_count)*(100.0)/(aperf))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewAnyMem",
+  "Name": "DC Fill any mem",
+  "Expression": "(((ls_any_fills_from_sys.dram_io_near)+(ls_any_fills_from_sys.dram_io_far))*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewRemote",
+  "Name": "DC Fill remote node",
+  "Expression": "(((ls_any_fills_from_sys.far_cache_near_far)+(ls_any_fills_from_sys.dram_io_far))*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocCCX",
+  "Name": "DC Fill same CCX",
+  "Expression": "(((ls_any_fills_from_sys.local_l2)+(ls_any_fills_from_sys.local_ccx))*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "PublicDcFillNewRemOtherCache",
+  "Name": "DC Fill external CCX cache",
+  "Expression": "(((ls_any_fills_from_sys.ext_cache_local)+(ls_any_fills_from_sys.far_cache_near_far))*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocAdd",
+  "Name": "DC Fill New (adding ind masks) (local)",
+  "Expression": "(((ls_any_fills_from_sys.local_l2)+(ls_any_fills_from_sys.local_ccx)+(ls_any_fills_from_sys.ext_cache_local)+(ls_any_fills_from_sys.dram_io_near))*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "DcFillNewLocL2,DcFillNewLocOtherCache,DcFillNewLocExtCache,DcFillNewLocMem",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocL2",
+  "Name": "L2",
+  "Expression": "((ls_any_fills_from_sys.local_l2)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocOtherCache",
+  "Name": "other cache",
+  "Expression": "((ls_any_fills_from_sys.local_ccx)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocExtCache",
+  "Name": "ext cache",
+  "Expression": "((ls_any_fills_from_sys.ext_cache_local)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillNewLocMem",
+  "Name": "mem",
+  "Expression": "((ls_any_fills_from_sys.dram_io_near)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsNewRemote",
+  "Name": "DC Fill New (remote)",
+  "Expression": "(((ls_any_fills_from_sys.far_cache_near_far)+(ls_any_fills_from_sys.dram_io_far))*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "DcFillsNewRemoteOtherCache,DcFillsNewRemMem",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsNewRemoteOtherCache",
+  "Name": "cache",
+  "Expression": "((ls_any_fills_from_sys.far_cache_near_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsNewRemMem",
+  "Name": "mem",
+  "Expression": "((ls_any_fills_from_sys.dram_io_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingDcFillsLocal1Dem",
+  "Name": "NonPrintingDcFillsLocal1Dem",
+  "Expression": "((ls_dmnd_fills_from_sys.local_l2)+(ls_dmnd_fills_from_sys.local_ccx)+(ls_dmnd_fills_from_sys.near_cache_near_far)+(ls_dmnd_fills_from_sys.dram_io_near))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingDcFillsLocal1HwPf",
+  "Name": "NonPrintingDcFillsLocal1HwPf",
+  "Expression": "((ls_hw_pf_dc_fills.local_l2)+(ls_hw_pf_dc_fills.local_ccx)+(ls_hw_pf_dc_fills.near_cache_near_far)+(ls_hw_pf_dc_fills.dram_io_near))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalDem",
+  "Name": "demand",
+  "Expression": "((NonPrintingDcFillsLocal1Dem)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalDemL2",
+  "Name": "L2",
+  "Expression": "((ls_dmnd_fills_from_sys.local_l2)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalDemOtherCache",
+  "Name": "other cache",
+  "Expression": "((ls_dmnd_fills_from_sys.local_ccx)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalDemExtCache",
+  "Name": "ext cache",
+  "Expression": "((ls_dmnd_fills_from_sys.near_cache_near_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalDemMem",
+  "Name": "mem",
+  "Expression": "((ls_dmnd_fills_from_sys.dram_io_near)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalHwPf",
+  "Name": "hw pf",
+  "Expression": "((NonPrintingDcFillsLocal1HwPf)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalHwPfL2",
+  "Name": "L2",
+  "Expression": "((ls_hw_pf_dc_fills.local_l2)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalHwPfOtherCache",
+  "Name": "other cache",
+  "Expression": "((ls_hw_pf_dc_fills.local_ccx)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalHwPfExtCache",
+  "Name": "ext cache",
+  "Expression": "((ls_hw_pf_dc_fills.near_cache_near_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsLocalHwPfMem",
+  "Name": "mem",
+  "Expression": "((ls_hw_pf_dc_fills.dram_io_near)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingDcFillsRemDem",
+  "Name": "NonPrintingDcFillsRemDem",
+  "Expression": "((ls_dmnd_fills_from_sys.far_cache_near_far)+(ls_dmnd_fills_from_sys.dram_io_far))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingDcFillsRemHwPf",
+  "Name": "NonPrintingDcFillsRemHwPf",
+  "Expression": "((ls_hw_pf_dc_fills.far_cache_near_far)+(ls_hw_pf_dc_fills.dram_io_far))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteDem",
+  "Name": "demand",
+  "Expression": "((NonPrintingDcFillsRemDem)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteDemOtherCache",
+  "Name": "cache",
+  "Expression": "((ls_dmnd_fills_from_sys.far_cache_near_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteDemMem",
+  "Name": "mem",
+  "Expression": "((ls_dmnd_fills_from_sys.dram_io_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteHwPf",
+  "Name": "hw pf",
+  "Expression": "((NonPrintingDcFillsRemHwPf)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteHwPfOtherCache",
+  "Name": "cache",
+  "Expression": "((ls_hw_pf_dc_fills.far_cache_near_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "DcFillsRemoteHwPfMem",
+  "Name": "mem",
+  "Expression": "((ls_hw_pf_dc_fills.dram_io_far)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiLclL2",
+  "Name": "Local L2",
+  "Expression": "((ls_any_fills_from_sys.local_l2)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiLclCache",
+  "Name": "Local Cache",
+  "Expression": "((ls_any_fills_from_sys.local_ccx)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiRmtCacheNearCs",
+  "Name": "Remote Cache Near Cs",
+  "Expression": "((ls_any_fills_from_sys.ext_cache_local)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiLclDram",
+  "Name": "Local DRAM",
+  "Expression": "((ls_any_fills_from_sys.dram_io_near)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiRmtCacheFarCs",
+  "Name": "Remote Cache Far Cs",
+  "Expression": "((ls_any_fills_from_sys.far_cache_near_far)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsFillsAndSmiRmtDram",
+  "Name": "Remote DRAM",
+  "Expression": "((ls_any_fills_from_sys.dram_io_far)*(1000))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "OsLsBusLock",
+  "Name": "bus lock",
+  "Expression": "((ls_locks.bus_lock:k)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "UsrLsBusLock",
+  "Name": "bus lock",
+  "Expression": "((ls_locks.bus_lock:u)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "LsStlf",
+  "Name": "STLF",
+  "Expression": "((ls_stlf)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "CpuidInstr",
+  "Name": "CPUID Instruction",
+  "Expression": "((ls_ret_cpuid)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "ClflushInstr",
+  "Name": "CLFLUSH Instruction",
+  "Expression": "((ls_ret_cl_clush)*(1000.0))/(OsUserInst)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:l2",
+  "Name": "Section:l2",
+  "Expression": "",
+  "Description": "",
+  "Child": "L2MibLatCpuFreq",
+  "Unit": ""
+},
+{
+  "Abbreviation": "L2MibLatCpuFreq",
+  "Name": "Effective CPU frequency",
+  "Expression": "((aperf)/(tsc))*(CpuMhz)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+}
+]
+}

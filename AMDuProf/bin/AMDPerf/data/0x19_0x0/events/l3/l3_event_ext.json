@@ -1,0 +1,31 @@
+{ "events":
+[
+{
+  "EventName": "L3LookupState",
+  "EventCode": "0x4",
+  "BriefDescription": "All L3 Cache Requests",
+  "PublicDescription": "Line state returned when looking up the L3 tags on a coherent L2 fill request.",
+  "Umask": "0xff",
+  "CounterType": "L3",
+  "EventType": ""
+},
+{
+  "EventName": "XiCcxSdpReq1",
+  "EventCode": "0x9a",
+  "BriefDescription": "L3 Misses by Request Type",
+  "PublicDescription": "Ignores SliceMask and ThreadMask.   Requests from the core complex to the SDP.",
+  "Umask": "0x1f",
+  "CounterType": "L3",
+  "EventType": ""
+},
+{
+  "EventName": "XiSysFillLatency",
+  "EventCode": "0x90",
+  "BriefDescription": "L3 Cache Miss Latency",
+  "PublicDescription": "Ignores SliceMask and ThreadMask.  Total cycles for all transactions divided by 16.",
+  "Umask": "0x00",
+  "CounterType": "L3",
+  "EventType": ""
+}
+]
+}

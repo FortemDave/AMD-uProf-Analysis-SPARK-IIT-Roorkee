@@ -1,0 +1,52 @@
+{
+    "__comment": "Processor: AMD family 19h, model 00h-0Fh",
+    "view": {
+        "name": "ITLB",
+        "dc_config": [
+            "inst_access"
+        ],
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "IC_MISS_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "IC_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_REQUESTS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L2_ITLB_MISSES (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "L1_ITLB_MISS_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "L2_ITLB_MISS_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to analyze and break out instruction translation lookaside buffer (ITLB) miss rates by level (L1 and L2.)"
+    }
+}

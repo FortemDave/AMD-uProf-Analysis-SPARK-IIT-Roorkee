@@ -1,0 +1,252 @@
+{ "metric":
+[
+{
+  "Abbreviation": "Section:Clocks",
+  "Name": "Section:Clocks",
+  "Expression": "",
+  "Description": "",
+  "Child": "Formula_0000,Formula_0005",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0000",
+  "Name": "CPU reference (MHz)",
+  "Expression": "(CpuMhz)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0005",
+  "Name": "INI version",
+  "Expression": "(10)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Section:UMC",
+  "Name": "Section:UMC",
+  "Expression": "",
+  "Description": "",
+  "Child": "Formula_0006,NonPrintingUmcAllReqCas,Formula_0037,Formula_0038,Formula_0039,Formula_0040,NonPrintingUmcAllReq1,Formula_0044,Formula_0045,Formula_0046,NonPrintingUmcAllReq2,Formula_0047,Formula_0048,NonPrintingElapsedTime,Formula_0049,Formula_0050,Formula_0066,Formula_0067,Formula_0072,Formula_0079,Formula_0081,Formula_0083,Formula_0085,Formula_0087,Formula_0089,Formula_0091,Formula_0093",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0006",
+  "Name": "UMC data bus util (%)",
+  "Expression": "(umc_data_slot_clks_0007)*(100)/(ip_clk_0007)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingUmcAllReqCas",
+  "Name": "NonPrintingUmcAllReqCas",
+  "Expression": "(umc_cas_cmd_low_0004)+(umc_cas_cmd_med_0004)+(umc_cas_cmd_high_0004)+(umc_cas_cmd_urg_0004)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0037",
+  "Name": "% UMC CAS for lopri",
+  "Expression": "(umc_cas_cmd_low_0004)*(100)/(NonPrintingUmcAllReqCas)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0038",
+  "Name": "% UMC CAS for mdpri",
+  "Expression": "(umc_cas_cmd_med_0004)*(100)/(NonPrintingUmcAllReqCas)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0039",
+  "Name": "% UMC CAS for hipri",
+  "Expression": "(umc_cas_cmd_high_0004)*(100)/(NonPrintingUmcAllReqCas)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0040",
+  "Name": "% UMC CAS for urgent",
+  "Expression": "(umc_cas_cmd_urg_0004)*(100)/(NonPrintingUmcAllReqCas)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingUmcAllReq1",
+  "Name": "NonPrintingUmcAllReq1",
+  "Expression": "(umc_cas_cmd_rd_0005)+(umc_cas_cmd_wr_0005)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0044",
+  "Name": "UMC CAS rate",
+  "Expression": "(NonPrintingUmcAllReq1)*(1000)/(ip_clk_0005)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0045",
+  "Name": "% UMC CAS for reads",
+  "Expression": "(umc_cas_cmd_rd_0005)*(100)/(NonPrintingUmcAllReq1)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0046",
+  "Name": "% UMC CAS for writes",
+  "Expression": "(umc_cas_cmd_wr_0005)*(100)/(NonPrintingUmcAllReq1)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingUmcAllReq2",
+  "Name": "NonPrintingUmcAllReq2",
+  "Expression": "(umc_cas_cmd32_b_0005)+(umc_cas_cmd64_b_0005)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0047",
+  "Name": "% UMC CAS for 32B access",
+  "Expression": "(umc_cas_cmd32_b_0005)*(100)/(NonPrintingUmcAllReq2)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0048",
+  "Name": "% UMC CAS for 64B access",
+  "Expression": "(umc_cas_cmd64_b_0005)*(100)/(NonPrintingUmcAllReq2)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "NonPrintingElapsedTime",
+  "Name": "NonPrintingElapsedTime",
+  "Expression": "(((umc_cas_cmd_rd_0005))*(tsc))/((CpuMhz)*((umc_cas_cmd_rd_0005)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0049",
+  "Name": "UMC est read BW (GB/s)",
+  "Expression": "((umc_cas_cmd_rd_0005)*(64)/((NonPrintingElapsedTime)*(1000)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0050",
+  "Name": "UMC est write BW (GB/s)",
+  "Expression": "((umc_cas_cmd_wr_0005)*(64)/((NonPrintingElapsedTime)*(1000)))",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0066",
+  "Name": "UMC activate rate",
+  "Expression": "(umc_act_cmd_0002)*(1000)/(ip_clk_0002)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0067",
+  "Name": "UMC precharge rate",
+  "Expression": "(umc_pchg_0003)*(1000)/(ip_clk_0003)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0072",
+  "Name": "UMC total CAS rate",
+  "Expression": "(umc_cas_cmd_0002)*(1000)/(ip_clk_0002)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0079",
+  "Name": "UMC D0_R0 activate rate",
+  "Expression": "(umc_act_cmd_cs0_0010)*(1000)/(ip_clk_0010)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0081",
+  "Name": "UMC D0_R0 CAS rate",
+  "Expression": "(umc_cas_cmd_cs0_0010)*(1000)/(ip_clk_0010)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0083",
+  "Name": "UMC D0_R1 activate rate",
+  "Expression": "(umc_act_cmd_cs1_0012)*(1000)/(ip_clk_0012)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0085",
+  "Name": "UMC D0_R1 CAS rate",
+  "Expression": "(umc_cas_cmd_cs1_0012)*(1000)/(ip_clk_0012)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0087",
+  "Name": "UMC D1_R0 activate rate",
+  "Expression": "(umc_act_cmd_cs2_0015)*(1000)/(ip_clk_0015)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0089",
+  "Name": "UMC D1_R0 CAS rate",
+  "Expression": "(umc_cas_cmd_cs2_0015)*(1000)/(ip_clk_0015)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0091",
+  "Name": "UMC D1_R1 activate rate",
+  "Expression": "(umc_act_cmd_cs3_0016)*(1000)/(ip_clk_0016)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+},
+{
+  "Abbreviation": "Formula_0093",
+  "Name": "UMC D1_R1 CAS rate",
+  "Expression": "(umc_cas_cmd_cs3_0016)*(1000)/(ip_clk_0016)",
+  "Description": "",
+  "Child": "",
+  "Unit": ""
+}
+]
+}

@@ -1,0 +1,104 @@
+{
+    "__comment": "Processor: AMD family 19h, model 30h-3Fh",
+    "view": {
+        "name": "Branch (Detailed)",
+        "dc_config": [
+            "branch"
+        ],
+        "default_config": "branch",
+        "event": [
+            {
+                "title": "CYCLES_NOT_IN_HALT",
+                "sort": "descending"
+            },
+            {
+                "title": "RETIRED_INST",
+                "sort": "none"
+            },
+            {
+                "title": "CPI",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetBrnTkn",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetBrnTknMisp",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetNearRet",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetNearRetMispred",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "ExRetBrnIndMisp",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "RETIRED_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP_RATIO",
+                "sort": "none"
+            },
+            {
+                "title": "%RETIRED_BR_INST_MISP",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_TAKEN_BR_INST (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_TAKEN_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_INDIRECT_BR_INST_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_NEAR_RETURNS_MISP (PTI)",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_RATE",
+                "sort": "none"
+            },
+            {
+                "title": "RETIRED_BR_INST_MISP_RATE",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to find code with a high branch density and poorly predicted branches."
+    }
+}

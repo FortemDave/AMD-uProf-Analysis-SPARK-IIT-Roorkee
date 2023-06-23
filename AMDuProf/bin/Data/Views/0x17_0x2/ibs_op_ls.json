@@ -1,0 +1,38 @@
+{
+    "__comment": "Processor: AMD family 17h, model 20h-2Fh",
+    "view": {
+        "name": "IBS MEM all load/store",
+        "dc_config": [
+            "ibs"
+        ],
+        "event": [
+            {
+                "title": "IBS_LOAD_STORE",
+                "sort": "descending"
+            },
+            {
+                "title": "IBS_LOAD",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_STORE",
+                "sort": "none"
+            },
+            {
+                "title": "IBS_DC_MISS",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "IBS_DC_MISS_LAT",
+                "sort": "none",
+                "visible": false
+            },
+            {
+                "title": "AVE_DC_MISS_LAT",
+                "sort": "none"
+            }
+        ],
+        "description": "Use this view to show a summary of IBS load/store op data."
+    }
+}
