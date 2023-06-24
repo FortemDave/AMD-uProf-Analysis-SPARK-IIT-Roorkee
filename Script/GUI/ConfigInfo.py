@@ -6,4 +6,6 @@ class UserInfo():
         self.options = None
         self.duration = None
         self.interval = None
+    
+    def ExportToFile(self):
         

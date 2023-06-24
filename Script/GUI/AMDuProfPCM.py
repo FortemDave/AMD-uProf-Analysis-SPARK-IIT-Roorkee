@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QStackedWidget, QLineEdit, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QStackedWidget, QLineEdit, QFileDialog, QMessageBox
 from PyQt5.QtGui import QFont
 
 
@@ -102,7 +102,6 @@ class AMDuProfPCM(QWidget):
             self.line_buttons.append((label, button))
             self.layout.addLayout(line_layout)
 
-        
 
         self.next_button = QPushButton("Next")
         self.next_button.setGeometry(350, 50, 30, 30)
@@ -123,7 +122,7 @@ class AMDuProfPCM(QWidget):
         else:
             button.setStyleSheet("")
         
-    def save_status(self):
+    def save_status(self):  
         options = ['ipc','dma','fp','l1','l2','l3','dc','memory','pcie','xgmi']
         final_options = []
         for index, (label, button) in enumerate(self.line_buttons):
@@ -131,7 +130,7 @@ class AMDuProfPCM(QWidget):
                 final_options.append(options[index]) 
         
         self.options_selected = final_options
-        if len(final_options) != 0:
+        if len(final_options) != 0 and (self.directory or self.input_box.text() not in [None,'']):
             return True
         return False
     
@@ -291,11 +290,13 @@ class TimeAndDuration(QWidget):
     def __init__(self):
         super().__init__()
         self.options_selected = None
-        self.setWindowTitle("AMDuProf PCM Customizer")
+        self.resize(850, 500)
+        self.setWindowTitle("<font color='white'>AMDuProf Logger Customizer</font>")
+        self.setStyleSheet("background-color: lightgray;")
         self.setStyleSheet(
             """
             QMainWindow {
-                background-color: #000000;
+                background-color: #0A10F0;
             }
 
             QLabel#heading_label {
@@ -320,17 +321,13 @@ class TimeAndDuration(QWidget):
             }
             """
         )
-        self.resize(850, 500)
         self.layout = QVBoxLayout()
         self.custom_font = QFont("Cascadia Mono", 13)
 
         # Add the subheading label
-        self.subheading_label = QLabel("<font color='gold'><center><h2>Enter Profiling Duration & Frequency.</font></h2></center>", self)
+        self.subheading_label = QLabel("<font color='gold'><center><h1>Enter Profiling Duration & Frequency.</font></h2></center>", self)
         self.subheading_label.setObjectName("subheading_label")
-        self.layout.addWidget(self.subheading_label)
-        
-
-        
+        self.layout.addWidget(self.subheading_label)        
 
          # Add bullet points for additional information
         self.bullet_points_label = QLabel(self)
@@ -342,7 +339,7 @@ class TimeAndDuration(QWidget):
             "</ul>"
         )
         self.bullet_points_label.setWordWrap(True)
-
+        self.layout.addWidget(self.bullet_points_label)
         self.custom_font = QFont("Cascadia Mono", 13)
 
         # Take input for the Address of AMDuProf/bin/ file
@@ -354,38 +351,40 @@ class TimeAndDuration(QWidget):
         self.input_box = QLineEdit(self)
         self.input_box.setFont(self.custom_font)
         self.input_box.setStyleSheet("background-color: grey;")
-        self.input_box.setGeometry(50, 50, 300, 30)  # user_input = self.input_box.text()
+        self.input_box.setGeometry(100, 100, 100, 50)  # user_input = self.input_box.text()
         input_layout.addWidget(self.input_box)
 
         self.layout.addLayout(input_layout)
 
         # Take input for the Address of AMDuProf/bin/ file
         input_layout2 = QHBoxLayout()
-        self.label2 = QLabel(f"<font color='white'>Duration [in seconds]</font>")
+        self.label2 = QLabel(f"<font color='white'>Logging Interval[PMC] [in Milliseconds]</font>")
         self.label2.setFont(self.custom_font)
         input_layout2.addWidget(self.label2)
 
         self.input_box2 = QLineEdit(self)
         self.input_box2.setFont(self.custom_font)
         self.input_box2.setStyleSheet("background-color: grey;")
-        self.input_box2.setGeometry(50, 50, 300, 30)  # user_input = self.input_box2.text()
+
+        self.input_box2.setGeometry(100, 100, 100, 50)  # user_input = self.input_box2.text()
         input_layout2.addWidget(self.input_box2)
 
         self.layout.addLayout(input_layout2)
 
+        self.next_button = QPushButton("Next")
+        self.next_button.setGeometry(350, 50, 30, 30)
+        self.layout.addWidget(self.next_button)
 
+        self.setLayout(self.layout)        
 
-        self.layout = QVBoxLayout()
-        self.custom_font = QFont("Cascadia Mono", 13)
-    
-    def add_warning(self):
-            self.warning_label = QLabel(self)
-            custom_font = QFont("Cascadia Mono", 13)
-            self.warning_label.setFont(custom_font)
-            self.warning_label.setText(
-                "<ul>"
-                "<li><font color='orange'><b>Enter the Range! </font></b></li>"
-                "</ul>"
-            )
-            self.warning_label.setWordWrap(True)
-            self.layout.addWidget(self.warning_label)
+    def VerifyInputs(self):
+        try:
+            self.duration = int(self.duration_input.text())
+            self.interval = int(self.interval_input.text())
+        except:
+            QMessageBox.warning(self, "Invalid Input", "Enter Integer/Float input!")
+            return False
+        if interval > duration:
+            QMessageBox.warning(self, "Invalid Input", "Frequency Interval cannot be greater than Duration.")
+            return False
+        return True
