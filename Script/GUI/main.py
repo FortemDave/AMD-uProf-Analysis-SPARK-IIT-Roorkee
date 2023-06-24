@@ -4,7 +4,7 @@ from PyQt5.QtGui import QFont
 from TitleWindow import TitleWindow
 from AMDuProfPCM import AMDuProfPCM
 from AMDuProfPCM import TargetSelect
-
+from AMDuProfPCM import TimeAndDuration
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -22,8 +22,8 @@ class MainWindow(QMainWindow):
 
         self.TitleWindow = TitleWindow()
         self.AMDuProfPCM = AMDuProfPCM()
-        self.TimeAndDuration = TargetSelect()
-
+        self.TargetSelect = TargetSelect()
+        self.TimeAndDuration = TimeAndDuration()
 
         self.stacked_widget.addWidget(self.TitleWindow)
         self.stacked_widget.addWidget(self.AMDuProfPCM)
@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
 
         self.TitleWindow.next_button.clicked.connect(self.navigate_to_PCM)
         self.AMDuProfPCM.next_button.clicked.connect(self.navigate_to_PCM_Page_2)
-        self.TimeAndDuration.next_button.clicked.connect(self.navigate_to_PCM_Page_3)
+        self.TargetSelect.next_button.clicked.connect(self.navigate_to_PCM_Page_3)
 
     def navigate_to_PCM(self):
         if not(self.TitleWindow.AMDUPROFPCM or self.TitleWindow.AMDUPROFCLI or self.TitleWindow.AMDUPROFSYS):
@@ -50,25 +50,32 @@ class MainWindow(QMainWindow):
     def navigate_to_PCM_Page_2(self):
         if self.AMDuProfPCM.save_status():
             # go to next page
-            self.setCentralWidget(self.TimeAndDuration)
+            self.setCentralWidget(self.TargetSelect)
             self.AMDuProfPCM.hide()
-            self.TimeAndDuration.show()
+            self.TargetSelect.show()
         else:
             self.AMDuProfPCM.add_warning()
 
 
     def navigate_to_PCM_Page_3(self):
-        if self.TimeAndDuration.options_selected is None:
-            # TODO: Warn to Select
-            pass
-        elif self.TimeAndDuration.options_selected == all:
+        print("Sike!")
+        print(f'A:{self.TargetSelect.options_selected} B: {self.TimeAndDuration.input_box.text()}')
+        if self.TargetSelect.options_selected is None:
+            self.TargetSelect.add_warning()
+        elif self.TargetSelect.options_selected == all:
             # TODO: Go to the Next Page
-            pass
+            self.setCentralWidget(self.TimeAndDuration)
+            self.TargetSelect.hide()
+            self.TimeAndDuration.show()
         else:
             # if the range is not set
-                # throw error
-            # go to the next Time and Duration Page
-            pass
+            if self.TargetSelect.input_box.text() not in [None,'']:
+                self.setCentralWidget(self.TimeAndDuration)
+                self.TargetSelect.hide()
+                self.TimeAndDuration.show()
+            else:
+                self.TargetSelect.add_warning()
+
         
 
 # if __name__ == "__main__":

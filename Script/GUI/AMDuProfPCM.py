@@ -257,8 +257,20 @@ class TargetSelect(QWidget):
 
         self.setLayout(self.layout)
 
-    def button_clicked(self, idx):
+    def add_warning(self):
+            self.warning_label = QLabel(self)
+            custom_font = QFont("Cascadia Mono", 13)
+            self.warning_label.setFont(custom_font)
+            self.warning_label.setText(
+                "<ul>"
+                "<li><font color='orange'><b>Enter the Address & Select at least one!</font></b></li>"
+                "</ul>"
+            )
+            self.warning_label.setWordWrap(True)
+            self.layout.addWidget(self.warning_label)
 
+    def button_clicked(self, idx):
+        print(idx,self.options[idx],self.options[idx].lower())
         self.options_selected = self.options[idx].lower()
         # Turn off glow for previously clicked buttons
         for i, button in enumerate(self.buttons):
@@ -309,11 +321,16 @@ class TimeAndDuration(QWidget):
             """
         )
         self.resize(850, 500)
+        self.layout = QVBoxLayout()
+        self.custom_font = QFont("Cascadia Mono", 13)
 
         # Add the subheading label
         self.subheading_label = QLabel("<font color='gold'><center><h2>Enter Profiling Duration & Frequency.</font></h2></center>", self)
         self.subheading_label.setObjectName("subheading_label")
         self.layout.addWidget(self.subheading_label)
+        
+
+        
 
          # Add bullet points for additional information
         self.bullet_points_label = QLabel(self)
@@ -360,3 +377,15 @@ class TimeAndDuration(QWidget):
 
         self.layout = QVBoxLayout()
         self.custom_font = QFont("Cascadia Mono", 13)
+    
+    def add_warning(self):
+            self.warning_label = QLabel(self)
+            custom_font = QFont("Cascadia Mono", 13)
+            self.warning_label.setFont(custom_font)
+            self.warning_label.setText(
+                "<ul>"
+                "<li><font color='orange'><b>Enter the Range! </font></b></li>"
+                "</ul>"
+            )
+            self.warning_label.setWordWrap(True)
+            self.layout.addWidget(self.warning_label)
