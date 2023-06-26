@@ -1,6 +1,8 @@
 from TitleWindow import TitleWindow
 from datetime import datetime
 import os
+import subprocess
+
 class UserInfo():
     def __init__(self):
         self.uProf_bin_address = None
@@ -8,8 +10,8 @@ class UserInfo():
         self.log_target = None #Values to Log
         self.log_metrics = None #Core/CCX/CCD/Package Indices
         self.duration = None
-        self.interval = None
-    
+        self.interval = None #Note: This is multiplexing interval. Divide by 4 to convert to sampling interval
+
 
     def generatePCMcommand(self):
 
@@ -21,8 +23,12 @@ class UserInfo():
 
         homeDir = os.popen('echo $HOME').read()
         current_datetime = datetime.now()
-        command = f"sudo {self.uProf_bin_address}/AMDuProfPCM -m {option_list} {self.log_target}{self.log_metrics} -d {self.duration} -t {self.interval} -o {homeDir.strip()}/uProf/Output/{current_datetime.strftime('%d%m_%H%M%S')}.csv"
+        # subprocess.run([])
+        os.system(f"mkdir -p {homeDir.strip()}/uProf/Output")
+        command = f"sudo {self.uProf_bin_address}/AMDuProfPcm -m {option_list} {self.log_target}{self.log_metrics} -d {self.duration} -t {self.interval/4} -o {homeDir.strip()}/uProf/Output/{current_datetime.strftime('%d%m_%H%M%S')}.csv"
         print(command)
+        os.system(command)
+        # subprocess.run([command]) 
 
     def ExportToFile(self):
 

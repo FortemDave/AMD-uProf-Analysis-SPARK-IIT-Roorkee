@@ -40,7 +40,7 @@ class AMDuProfPCM(QWidget):
         self.resize(850, 500)
 
         self.layout = QVBoxLayout()
-
+        self.directory = None
         # Add the heading label
         self.heading_label = QLabel("µProfCLI Option Customization", self)
         self.heading_label.setObjectName("heading_label")
@@ -53,7 +53,7 @@ class AMDuProfPCM(QWidget):
         self.label = QLabel(f"<font color='white'>Enter the Absolute Address of <b>uProf/bin</b> Folder.</font>")
         self.label.setFont(self.custom_font)
         # self.label.setStyleSheet("background-color: grey;")
-        input_layout.addWidget(self.label)
+        input_layout.addWidget(self.label)  
 
 
         self.input_box = QLineEdit(self)
@@ -108,11 +108,15 @@ class AMDuProfPCM(QWidget):
 
         self.layout.addWidget(self.next_button)
         self.setLayout(self.layout)
-
+    
     def select_directory(self):
         directory = QFileDialog.getExistingDirectory(self, "Select Directory")
         if directory:
             self.directory = directory
+        elif self.input_box.text() not in [None,'']:
+            self.directory = self.input_box.text()
+        else:
+            self.directory = None
 
     def toggle_variable(self):
         button = self.sender()
