@@ -85,7 +85,8 @@ class MainWindow(QMainWindow):
         if self.TimeAndDuration.VerifyInputs():
             self.UserConfig.duration = self.TimeAndDuration.duration
             self.UserConfig.interval = self.TimeAndDuration.interval
-            self.UserConfig.generatePCMcommand()
+            # self.UserConfig.generatePCMcommand()
+            self.UserConfig.ExportToFile()
             if self.TitleWindow.AMDUPROFCLI:
                 pass
             if self.TitleWindow.AMDUPROFSYS:
