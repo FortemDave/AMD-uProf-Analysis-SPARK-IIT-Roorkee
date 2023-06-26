@@ -379,12 +379,15 @@ class TimeAndDuration(QWidget):
 
     def VerifyInputs(self):
         try:
-            self.duration = int(self.duration_input.text())
-            self.interval = int(self.interval_input.text())
+            print(self.input_box.text())
+            print(self.input_box2.text())
+
+            self.duration = int(self.input_box.text())
+            self.interval = int(self.input_box2.text())
         except:
-            QMessageBox.warning(self, "Invalid Input", "Enter Integer/Float input!")
+            QMessageBox.warning(self, f"<font color='white'>Invalid Input</font>", "<font color='white'>Enter Integer/Float input!</font>")
             return False
-        if interval > duration:
-            QMessageBox.warning(self, "Invalid Input", "Frequency Interval cannot be greater than Duration.")
+        if self.interval/1000 > self.duration:
+            QMessageBox.warning(self, "<font color='white'>Invalid Input</font>", "<font color='white'>Frequency Interval cannot be greater than Duration.</font>")
             return False
         return True

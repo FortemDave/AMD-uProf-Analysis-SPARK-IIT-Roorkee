@@ -52,7 +52,7 @@ class MainWindow(QMainWindow):
             else:
                 self.UserConfig.uProf_bin_address = self.AMDuProfPCM.input_box.text()
 
-            self.UserConfig = self.AMDuProfPCM.options_selected
+            self.UserConfig.options = self.AMDuProfPCM.options_selected
             # go to next page
             self.setCentralWidget(self.TargetSelect)
             self.AMDuProfPCM.hide()
@@ -64,23 +64,28 @@ class MainWindow(QMainWindow):
     def navigate_to_PCM_Page_3(self):
         if self.TargetSelect.options_selected is None:
             self.TargetSelect.add_warning()
-        elif self.TargetSelect.options_selected == all:
+        elif self.TargetSelect.options_selected == 'all':
+            self.UserConfig.log_target = '-a'
+            self.UserConfig.log_metrics = ''
             self.setCentralWidget(self.TimeAndDuration)
             self.TargetSelect.hide()
             self.TimeAndDuration.show()
         else:
             if self.TargetSelect.input_box.text() not in [None,'']:
+                self.UserConfig.log_target = f'-c {self.TargetSelect.options_selected}='
+                self.UserConfig.log_metrics = self.TargetSelect.input_box.text()
                 self.setCentralWidget(self.TimeAndDuration)
                 self.TargetSelect.hide()
                 self.TimeAndDuration.show()
             else:
                 self.TargetSelect.add_warning()
 
+
     def navigate_to_CLI_Page_1_or_Quit(self):
         if self.TimeAndDuration.VerifyInputs():
             self.UserConfig.duration = self.TimeAndDuration.duration
             self.UserConfig.interval = self.TimeAndDuration.interval
-
+            self.UserConfig.generatePCMcommand()
             if self.TitleWindow.AMDUPROFCLI:
                 pass
             if self.TitleWindow.AMDUPROFSYS:
