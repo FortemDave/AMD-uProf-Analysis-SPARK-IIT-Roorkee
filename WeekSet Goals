@@ -1,0 +1,41 @@
+Visualize
+
+Predict IPC: Use all other stats to predict
+Build a GUI to show all the Stats
+Possible Candidate: Tensorboard. 
+
+
+Start with the ML part
+NLP + Timeseries
+
+IPC from other data.
+
+Cache Hit rates w.r.t differnet kind of accesses
+Demand, Prefetch Access
+
+Memory Bandwidth
+
+IPC, Branch Misprediction Ratio
+All access, misses, PTI values not ratios HWPF (Hardware Pre Fetch) (L1,L2,DC/IC)
+
+
+Leave aside L1, consier only L2 and L3
+DC/IC 
+
+Memory
+
+direct application: Timeseries analysis of memory bandwidth. 
+How it's varying with time and multiple
+
+
+Utility: Cloud Service Providers.
+
+RTL implementations
+===============================================
+Qualcomm Lab: Prediction of Perf of Next Gen Processors
+probably use GEM5
+
+Why not start using UCC. Early Stage as of now.
+Model starts working on that.
+
+[]
